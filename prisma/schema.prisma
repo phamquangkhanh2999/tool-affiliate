@@ -1,0 +1,270 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// USER
+// ============================================================
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  password      String?
+  image         String?
+  plan          Plan      @default(FREE)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  campaigns     Campaign[]
+  products      Product[]
+  contents      GeneratedContent[]
+  schedules     PostSchedule[]
+  apiKeys       ApiKey[]
+
+  @@map("users")
+}
+
+enum Plan {
+  FREE
+  PRO
+  ENTERPRISE
+}
+
+// ============================================================
+// API KEYS (Shopee / etc.)
+// ============================================================
+model ApiKey {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  platform    String   // "shopee" | "facebook" | "tiktok"
+  appId       String?
+  secretKey   String?
+  accessToken String?
+  expiresAt   DateTime?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([userId, platform])
+  @@map("api_keys")
+}
+
+// ============================================================
+// PRODUCT
+// ============================================================
+model Product {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  shopeeItemId    String?   // ID sản phẩm Shopee
+  shopeeShopId    String?   // ID shop Shopee
+  name            String
+  description     String?   @db.Text
+  imageUrl        String?
+  originalPrice   Float     @default(0)
+  discountedPrice Float     @default(0)
+  commissionRate  Float     @default(0) // %
+  category        String?
+  shopName        String?
+  rating          Float?
+  soldCount       Int       @default(0)
+  
+  status          ProductStatus @default(ACTIVE)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  affiliateLinks  AffiliateLink[]
+  contents        GeneratedContent[]
+  campaignItems   CampaignItem[]
+
+  @@index([userId, status])
+  @@index([category])
+  @@map("products")
+}
+
+enum ProductStatus {
+  ACTIVE
+  PAUSED
+  ARCHIVED
+}
+
+// ============================================================
+// AFFILIATE LINK
+// ============================================================
+model AffiliateLink {
+  id            String   @id @default(cuid())
+  productId     String
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  
+  originalUrl   String   @db.Text
+  shortUrl      String?  // rút gọn link
+  trackingCode  String   @unique @default(cuid())
+  
+  platform      String   @default("shopee") // shopee | lazada
+  clicks        Int      @default(0)
+  conversions   Int      @default(0)
+  revenue       Float    @default(0)
+  
+  expiresAt     DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  clickEvents   ClickEvent[]
+
+  @@map("affiliate_links")
+}
+
+// ============================================================
+// CLICK TRACKING
+// ============================================================
+model ClickEvent {
+  id              String        @id @default(cuid())
+  affiliateLinkId String
+  affiliateLink   AffiliateLink @relation(fields: [affiliateLinkId], references: [id], onDelete: Cascade)
+  
+  ipAddress       String?
+  userAgent       String?       @db.Text
+  referer         String?
+  country         String?
+  
+  converted       Boolean       @default(false)
+  orderValue      Float?
+  commission      Float?
+  
+  createdAt       DateTime      @default(now())
+
+  @@index([affiliateLinkId, createdAt])
+  @@map("click_events")
+}
+
+// ============================================================
+// CAMPAIGN
+// ============================================================
+model Campaign {
+  id          String         @id @default(cuid())
+  userId      String
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name        String
+  description String?
+  platform    String[]       @default(["facebook"]) // facebook | tiktok | zalo
+  status      CampaignStatus @default(DRAFT)
+  
+  startDate   DateTime?
+  endDate     DateTime?
+  
+  totalClicks      Int   @default(0)
+  totalConversions Int   @default(0)
+  totalRevenue     Float @default(0)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  items       CampaignItem[]
+  schedules   PostSchedule[]
+
+  @@index([userId, status])
+  @@map("campaigns")
+}
+
+enum CampaignStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  COMPLETED
+  ARCHIVED
+}
+
+model CampaignItem {
+  id          String   @id @default(cuid())
+  campaignId  String
+  campaign    Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@unique([campaignId, productId])
+  @@map("campaign_items")
+}
+
+// ============================================================
+// AI GENERATED CONTENT
+// ============================================================
+model GeneratedContent {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId   String?
+  product     Product?    @relation(fields: [productId], references: [id], onDelete: SetNull)
+  
+  contentType ContentType // CAPTION | SCRIPT | REVIEW | HASHTAG
+  platform    String      // facebook | tiktok | zalo | instagram
+  tone        String      @default("engaging") // engaging | professional | funny | urgency
+  
+  prompt      String      @db.Text
+  content     String      @db.Text
+  hashtags    String[]    @default([])
+  
+  isUsed      Boolean     @default(false)
+  isFavorite  Boolean     @default(false)
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([userId, platform])
+  @@map("generated_contents")
+}
+
+enum ContentType {
+  CAPTION
+  SCRIPT
+  REVIEW
+  HASHTAG
+  EMAIL
+}
+
+// ============================================================
+// POST SCHEDULE
+// ============================================================
+model PostSchedule {
+  id          String         @id @default(cuid())
+  userId      String
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  campaignId  String?
+  campaign    Campaign?      @relation(fields: [campaignId], references: [id], onDelete: SetNull)
+  
+  platform    String         // facebook | tiktok | zalo
+  content     String         @db.Text
+  imageUrls   String[]       @default([])
+  
+  scheduledAt DateTime
+  status      ScheduleStatus @default(PENDING)
+  
+  postedAt    DateTime?
+  errorLog    String?        @db.Text
+  
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@index([userId, status, scheduledAt])
+  @@map("post_schedules")
+}
+
+enum ScheduleStatus {
+  PENDING
+  PROCESSING
+  POSTED
+  FAILED
+  CANCELLED
+}
