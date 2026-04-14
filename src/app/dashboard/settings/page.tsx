@@ -44,20 +44,24 @@ function SettingRow({
       style={{
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '12px 0',
+        alignItems: 'flex-start',
+        padding: '16px 0',
         borderBottom: '1px solid rgba(42,42,61,0.5)',
+        flexWrap: 'wrap',
+        gap: '16px',
       }}
     >
-      <div>
+      <div style={{ flex: '1', minWidth: '240px' }}>
         <div style={{ fontSize: '14px', fontWeight: '500' }}>{label}</div>
         {hint && (
-          <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>
+          <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>
             {hint}
           </div>
         )}
       </div>
-      <div>{children}</div>
+      <div style={{ flex: '1.5', minWidth: '280px', display: 'flex', justifyContent: 'flex-end' }}>
+        {children}
+      </div>
     </div>
   );
 }
@@ -82,7 +86,7 @@ export default function SettingsPage() {
         const json = await res.json();
         if (json.success && json.data) {
           setGeminiKey(json.data.geminiApiKey || '');
-          setGeminiModel(json.data.geminiModel || 'gemini-2.5-flash');
+          setGeminiModel(json.data.geminiModel || 'gemini-1.5-flash');
           setShopeeAppId(json.data.shopeeAppId || '');
           setShopeeSecret(json.data.shopeeSecretKey || '');
         }
@@ -176,7 +180,7 @@ export default function SettingsPage() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '12px',
           marginBottom: '24px',
         }}
@@ -250,7 +254,7 @@ export default function SettingsPage() {
             <input
               type={showGeminiKey ? 'text' : 'password'}
               className='input'
-              style={{ width: '280px' }}
+              style={{ flex: 1, maxWidth: '400px' }}
               placeholder='AIza...'
               value={geminiKey}
               onChange={(e) => setGeminiKey(e.target.value)}
@@ -267,19 +271,13 @@ export default function SettingsPage() {
         <SettingRow label='Model AI' hint='Flash: nhanh, rẻ hơn. Pro: chất lượng cao hơn.'>
           <select
             className='input select'
-            style={{ width: '220px' }}
+            style={{ flex: 1, maxWidth: '400px' }}
             value={geminiModel}
             onChange={(e) => setGeminiModel(e.target.value)}
           >
-            <option value='gemini-2.5-flash'>gemini-2.5-flash (Khuyên dùng - Cân bằng nhất)</option>
-            <option value='gemini-2.5-pro'>gemini-2.5-pro (Mạnh mẽ, cho task khó)</option>
-            <option value='gemini-3.1-pro-preview'>
-              gemini-3.1-pro-preview (Tiên tiến nhất - Preview)
-            </option>
-            <option value='gemini-3.1-flash-lite-preview'>
-              gemini-3.1-flash-lite-preview (Siêu nhanh)
-            </option>
-            <option value='gemini-1.5-flash'>gemini-1.5-flash (Legacy)</option>
+            <option value='gemini-1.5-flash'>Gemini 1.5 Flash (Nhanh & Tiết kiệm - Mặc định)</option>
+            <option value='gemini-1.5-pro'>Gemini 1.5 Pro (Thông minh, cho Content khó)</option>
+            <option value='gemini-2.0-flash-exp'>Gemini 2.0 Flash (Experimental - Mới nhất)</option>
           </select>
         </SettingRow>
 
@@ -312,7 +310,7 @@ export default function SettingsPage() {
           <input
             type='text'
             className='input'
-            style={{ width: '280px' }}
+            style={{ flex: 1, maxWidth: '400px' }}
             placeholder='1234567890'
             value={shopeeAppId}
             onChange={(e) => setShopeeAppId(e.target.value)}
@@ -324,7 +322,7 @@ export default function SettingsPage() {
             <input
               type={showShopeeSecret ? 'text' : 'password'}
               className='input'
-              style={{ width: '280px' }}
+              style={{ flex: 1, maxWidth: '400px' }}
               placeholder='xxxxxxxxxxxxxxxx'
               value={shopeeSecret}
               onChange={(e) => setShopeeSecret(e.target.value)}
@@ -401,27 +399,42 @@ export default function SettingsPage() {
         }}
       >
         <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px' }}>
-          📝 File .env của bạn
+          📝 Giải thích các biến trong .env
         </h3>
-        <pre
-          style={{
-            fontSize: '12px',
-            color: 'var(--text-secondary)',
-            background: 'var(--bg-primary)',
-            padding: '16px',
-            borderRadius: '10px',
-            overflow: 'auto',
-            lineHeight: '1.8',
-          }}
-        >
-          {`DATABASE_URL="postgresql://affiliate_user:affiliate_pass_2024@localhost:8020/affiliate_db"
-GEMINI_API_KEY="your-key-here"          # 👈 Cần điền
-GEMINI_MODEL="gemini-1.5-flash"
-SHOPEE_APP_ID=""                        # Optional
-SHOPEE_SECRET_KEY=""                    # Optional
-NEXTAUTH_SECRET="change-in-production"
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px' }}>
+          <pre
+            style={{
+              fontSize: '11px',
+              color: 'var(--text-secondary)',
+              background: 'var(--bg-primary)',
+              padding: '16px',
+              borderRadius: '10px',
+              overflow: 'auto',
+              lineHeight: '1.6',
+            }}
+          >
+            {`DATABASE_URL="..." # Link kết nối dữ liệu (Mặc định: PostgreSQL/Docker)
+GEMINI_API_KEY="..." # Lấy tại ai.google.dev (Bắt buộc để chạy AI)
+GEMINI_MODEL="..."   # Loại model (Ví dụ: gemini-2.5-flash)
+SHOPEE_APP_ID="..."  # ID ứng dụng Shopee (Nếu có)
+SHOPEE_SECRET_KEY="..." # Mã bí mật Shopee
+NEXTAUTH_SECRET="..." # Chuỗi bảo mật (Dùng cho Login)
 NEXTAUTH_URL="http://localhost:3000"`}
-        </pre>
+          </pre>
+          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+            <p>
+              💡 <b>Mẹo:</b> Bạn chỉ cần quan tâm nhất đến <code>GEMINI_API_KEY</code>.
+            </p>
+            <p style={{ marginTop: '8px' }}>
+              🔒 <b>Lưu ý:</b> Đừng bao giờ chia sẻ file .env của bạn cho người lạ vì nó chứa mật
+              khẩu truy cập AI và Dữ liệu của bạn.
+            </p>
+            <p style={{ marginTop: '8px' }}>
+              🔄 <b>Cập nhật:</b> Bây giờ hệ thống sẽ ưu tiên dùng Key bạn nhập ở bảng phía trên
+              (Lưu vào Database) thay vì đọc từ file .env.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -8,6 +8,7 @@ export default function ProductCmsPage() {
   const [products, setProducts] = useState<DbProduct[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<DbProduct | null>(null);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
+  const [isAddModalOpen, setAddModalOpen] = useState(false);
   const [isViewModalOpen, setViewModalOpen] = useState(false);
   const [toast, setToast] = useState<{ msg: string; type: 'success' | 'error' } | null>(null);
 
@@ -16,6 +17,19 @@ export default function ProductCmsPage() {
   const [editPrice, setEditPrice] = useState(0);
   const [editDiscountPrice, setEditDiscountPrice] = useState(0);
   const [editCommission, setEditCommission] = useState(0);
+  
+  // Add form state
+  const [addForm, setAddForm] = useState({
+    name: '',
+    originalPrice: 0,
+    discountedPrice: 0,
+    commissionRate: 0,
+    category: 'Gia dụng',
+    imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80',
+    description: '',
+    shopeeItemId: '',
+    shopName: 'My Store',
+  });
 
   useEffect(() => {
     if (initialProducts.length > 0) setProducts(initialProducts);
@@ -35,6 +49,21 @@ export default function ProductCmsPage() {
         showToast('Đã xóa thành công');
       } else {
         showToast('Lỗi khi xóa', 'error');
+      }
+    } catch {
+      showToast('Lỗi mạng', 'error');
+    }
+  };
+
+  const handleDeleteAll = async () => {
+    if (!confirm('CẢNH BÁO: Bạn có chắc chắn muốn XÓA TẤT CẢ sản phẩm trong Database? Hành động này không thể hoàn tác.')) return;
+    try {
+      const res = await fetch('/api/products', { method: 'DELETE' });
+      if (res.ok) {
+        setProducts([]);
+        showToast('Đã xóa tất cả sản phẩm thành công');
+      } else {
+        showToast('Lỗi khi xóa tất cả', 'error');
       }
     } catch {
       showToast('Lỗi mạng', 'error');
@@ -79,12 +108,48 @@ export default function ProductCmsPage() {
     }
   };
 
+  const handleAddProduct = async () => {
+    if (!addForm.name) return showToast('Tên sản phẩm không được trống', 'error');
+    try {
+      const res = await fetch('/api/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(addForm),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        setProducts([json.data, ...products]);
+        showToast('Đã thêm sản phẩm mới');
+        setAddModalOpen(false);
+        setAddForm({
+          name: '',
+          originalPrice: 0,
+          discountedPrice: 0,
+          commissionRate: 0,
+          category: 'Gia dụng',
+          imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80',
+          description: '',
+          shopeeItemId: (Math.random() * 1000000).toFixed(0),
+          shopName: 'My Store',
+        });
+      } else {
+        showToast('Thêm thất bại', 'error');
+      }
+    } catch {
+      showToast('Lỗi mạng', 'error');
+    }
+  };
+
   return (
     <>
       <div className="page-header">
         <div>
           <h1 className="page-title">📦 Quản Trị Sản Phẩm (CMS)</h1>
           <p className="page-subtitle">Danh sách tất cả sản phẩm đang lưu trong Database</p>
+        </div>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button className="btn btn-secondary" onClick={handleDeleteAll}>🗑️ Xóa hết</button>
+          <button className="btn btn-primary" onClick={() => setAddModalOpen(true)}>➕ Thêm sản phẩm</button>
         </div>
       </div>
 
@@ -130,7 +195,50 @@ export default function ProductCmsPage() {
         </table>
       </div>
 
-      {/* Edit Modal */}
+      {/* Add Modal */}
+      {isAddModalOpen && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
+          <div className="card" style={{ width: '500px', padding: '24px', maxHeight: '90vh', overflowY: 'auto' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '20px' }}>➕ Thêm sản phẩm mới</h3>
+            <div className="form-group">
+              <label className="label">Tên Sản Phẩm <span style={{ color: 'var(--red)' }}>*</span></label>
+              <input type="text" className="input" placeholder="Ví dụ: Máy lọc không khí Xiaomi" value={addForm.name} onChange={e => setAddForm({ ...addForm, name: e.target.value })} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div className="form-group">
+                <label className="label">Giá Gốc (VND)</label>
+                <input type="number" className="input" value={addForm.originalPrice} onChange={e => setAddForm({ ...addForm, originalPrice: Number(e.target.value) })} />
+              </div>
+              <div className="form-group">
+                <label className="label">Giá Khuyến Mãi (VND)</label>
+                <input type="number" className="input" value={addForm.discountedPrice} onChange={e => setAddForm({ ...addForm, discountedPrice: Number(e.target.value) })} />
+              </div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div className="form-group">
+                <label className="label">Hoa Hồng (%)</label>
+                <input type="number" className="input" value={addForm.commissionRate} onChange={e => setAddForm({ ...addForm, commissionRate: Number(e.target.value) })} />
+              </div>
+              <div className="form-group">
+                <label className="label">Danh mục</label>
+                <input type="text" className="input" value={addForm.category} onChange={e => setAddForm({ ...addForm, category: e.target.value })} />
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="label">Hình ảnh URL</label>
+              <input type="text" className="input" value={addForm.imageUrl} onChange={e => setAddForm({ ...addForm, imageUrl: e.target.value })} />
+            </div>
+            <div className="form-group">
+              <label className="label">Mô tả sản phẩm</label>
+              <textarea className="input" rows={3} style={{ height: 'auto' }} value={addForm.description} onChange={e => setAddForm({ ...addForm, description: e.target.value })} />
+            </div>
+            <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
+              <button className="btn btn-ghost" style={{ flex: 1 }} onClick={() => setAddModalOpen(false)}>Hủy</button>
+              <button className="btn btn-primary" style={{ flex: 1 }} onClick={handleAddProduct}>🚀 Tạo sản phẩm</button>
+            </div>
+          </div>
+        </div>
+      )}
       {isEditModalOpen && selectedProduct && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
           <div className="card" style={{ width: '400px', padding: '24px' }}>

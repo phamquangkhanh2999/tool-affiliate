@@ -1,4 +1,4 @@
-import { gemini } from "@/lib/gemini";
+import { getGeminiModel } from "@/lib/gemini";
 
 // ─── STEP 3: Hook + Script Generator ─────────────────────────
 // 5 hooks ≤10 từ + 5 TikTok scripts 30s + video production guide
@@ -89,7 +89,8 @@ Yêu cầu:
 - Link affiliate đặt tự nhiên vào bio hoặc CTA
 - Chỉ trả về JSON, không giải thích`;
 
-  const result = await gemini.generateContent(prompt);
+  const model = await getGeminiModel();
+  const result = await model.generateContent(prompt);
   const text = result.response.text().trim();
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("Gemini không trả về JSON hợp lệ");
@@ -133,7 +134,8 @@ Trả về JSON:
 - Hashtag không có dấu #, trả về text thuần
 - Chỉ trả về JSON`;
 
-  const result = await gemini.generateContent(prompt);
+  const model = await getGeminiModel();
+  const result = await model.generateContent(prompt);
   const text = result.response.text().trim();
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("Gemini không trả về JSON hợp lệ");
@@ -235,7 +237,8 @@ Yêu cầu:
 - Giờ đăng thực tế theo giờ vàng VN
 - Chỉ trả về JSON`;
 
-  const result = await gemini.generateContent(prompt);
+  const model = await getGeminiModel();
+  const result = await model.generateContent(prompt);
   const text = result.response.text().trim();
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("Gemini không trả về JSON hợp lệ");
@@ -323,7 +326,8 @@ Trả về JSON:
 
 Phân tích dựa trên số liệu thực, không chung chung. Chỉ trả về JSON.`;
 
-  const result = await gemini.generateContent(prompt);
+  const model = await getGeminiModel();
+  const result = await model.generateContent(prompt);
   const text = result.response.text().trim();
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("Gemini không trả về JSON hợp lệ");

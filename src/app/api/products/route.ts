@@ -140,3 +140,28 @@ export async function POST(req: NextRequest) {
     return errorResponse("Lỗi khi lưu sản phẩm", 500);
   }
 }
+
+/**
+ * @swagger
+ * /api/products:
+ *   delete:
+ *     tags:
+ *       - Products Database
+ *     summary: Xóa tất cả sản phẩm
+ *     description: Xóa toàn bộ sản phẩm của người dùng hiện tại
+ *     responses:
+ *       200:
+ *         description: Đã xóa thành công
+ */
+export async function DELETE(req: NextRequest) {
+  try {
+    const userId = "demo-user"; // TODO: get from session
+    const { count } = await prisma.product.deleteMany({
+      where: { userId },
+    });
+    return successResponse({ deletedCount: count });
+  } catch (err) {
+    console.error("[DELETE /api/products]", err);
+    return errorResponse("Lỗi khi xóa tất cả sản phẩm", 500);
+  }
+}

@@ -1,4 +1,4 @@
-import { prisma } from "./prisma";
+import { prisma } from './prisma';
 
 export interface AppSettings {
   geminiApiKey: string | null;
@@ -10,17 +10,20 @@ export interface AppSettings {
 /**
  * Lấy cấu hình từ Database, nếu không có thì fallback sang .env
  */
-export async function getAppSettings(userId: string = "demo-user"): Promise<AppSettings> {
+export async function getAppSettings(userId: string = 'demo-user'): Promise<AppSettings> {
   const apiKeys = await prisma.apiKey.findMany({
     where: { userId },
   });
 
-  const gemini = apiKeys.find((k) => k.platform === "gemini");
-  const shopee = apiKeys.find((k) => k.platform === "shopee");
+  const gemini = apiKeys.find((k) => k.platform === 'gemini');
+  console.log('[LOG] ~ getAppSettings ~ gemini:', gemini);
+  const shopee = apiKeys.find((k) => k.platform === 'shopee');
+
+  const safeModel = gemini?.appId || process.env.GEMINI_MODEL || 'gemini-1.5-flash';
 
   return {
     geminiApiKey: gemini?.secretKey || process.env.GEMINI_API_KEY || null,
-    geminiModel: gemini?.appId || process.env.GEMINI_MODEL || "gemini-1.5-flash",
+    geminiModel: safeModel,
     shopeeAppId: shopee?.appId || process.env.SHOPEE_APP_ID || null,
     shopeeSecretKey: shopee?.secretKey || process.env.SHOPEE_SECRET_KEY || null,
   };
@@ -32,7 +35,7 @@ export async function getAppSettings(userId: string = "demo-user"): Promise<AppS
 export async function updateAppSetting(
   platform: string,
   data: { appId?: string; secretKey?: string },
-  userId: string = "demo-user"
+  userId: string = 'demo-user',
 ) {
   return prisma.apiKey.upsert({
     where: {
