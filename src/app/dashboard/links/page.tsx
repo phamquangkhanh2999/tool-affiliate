@@ -3,210 +3,134 @@
 import { useState, useEffect } from 'react';
 
 interface AffiliateLink {
-  id: string;
-  trackingCode: string;
-  shortUrl: string;
-  originalUrl: string;
-  clicks: number;
-  conversions: number;
-  revenue: number;
-  createdAt: string;
-  product: { name: string; imageUrl: string | null; category: string | null } | null;
+  productName: string;
+  affiliateLink: string;
+  lastUsed: string;
 }
 
-function formatVND(n: number) {
-  return new Intl.NumberFormat('vi-VN').format(n) + 'đ';
-}
-
-export default function LinksPage() {
+export default function AffiliateLinksPage() {
   const [links, setLinks] = useState<AffiliateLink[]>([]);
   const [loading, setLoading] = useState(true);
-  const [copied, setCopied] = useState<string | null>(null);
   const [search, setSearch] = useState('');
+  const [copied, setCopied] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchLinks();
-  }, []);
-
-  async function fetchLinks() {
-    setLoading(true);
+  const fetchLinks = async () => {
     try {
-      const res = await fetch('/api/affiliate/generate?limit=50');
-      const json = await res.json();
-      if (json.success) setLinks(json.data);
-    } catch {
-      // Use empty
-    } finally {
-      setLoading(false);
-    }
-  }
+      const res = await fetch('/api/links');
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success) setLinks(json.data);
+      }
+    } catch (err) {} finally { setLoading(false); }
+  };
 
-  function copyLink(url: string, id: string) {
-    navigator.clipboard.writeText(url || '');
-    setCopied(id);
+  useEffect(() => { fetchLinks(); }, []);
+
+  const handleCopy = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(text);
     setTimeout(() => setCopied(null), 2000);
-  }
+  };
 
-  const filtered = links.filter(l =>
-    !search ||
-    l.product?.name?.toLowerCase().includes(search.toLowerCase()) ||
-    l.trackingCode.includes(search)
+  const filteredLinks = links.filter(link => 
+    link.productName.toLowerCase().includes(search.toLowerCase()) ||
+    link.affiliateLink.toLowerCase().includes(search.toLowerCase())
   );
 
-  const totalClicks = links.reduce((s, l) => s + l.clicks, 0);
-  const totalRevenue = links.reduce((s, l) => s + l.revenue, 0);
-  const totalConversions = links.reduce((s, l) => s + l.conversions, 0);
-
   return (
-    <>
-      <div className="page-header">
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '16px' }}>
+      <header style={{ 
+        marginBottom: '40px', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        gap: '20px',
+        marginTop: '16px'
+      }}>
         <div>
-          <h1 className="page-title">🔗 Affiliate Links</h1>
-          <p className="page-subtitle">Quản lý tất cả link affiliate và theo dõi hiệu suất</p>
+          <h1 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: '900', color: '#f8fafc', marginBottom: '8px' }}>
+            🔗 Kho Affiliate Links
+          </h1>
+          <p style={{ color: '#94a3b8' }}>Tự động tổng hợp từ lịch sử tạo bài viết chuyên gia</p>
         </div>
-      </div>
-
-      {/* Summary stats */}
-      <div className="stats-grid" style={{ marginBottom: '20px' }}>
-        {[
-          { icon: '🔗', label: 'Tổng link', value: links.length, color: 'orange' },
-          { icon: '👆', label: 'Tổng clicks', value: totalClicks.toLocaleString('vi-VN'), color: 'blue' },
-          { icon: '🛒', label: 'Đơn thành công', value: totalConversions, color: 'green' },
-          { icon: '💰', label: 'Doanh thu', value: formatVND(totalRevenue), color: 'purple' },
-        ].map((s) => (
-          <div key={s.label} className="stat-card">
-            <div className={`stat-icon ${s.color}`}>{s.icon}</div>
-            <div className="stat-value" style={{ fontSize: '22px' }}>{s.value}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Search + Table */}
-      <div className="table-wrapper">
-        <div style={{ padding: '16px', borderBottom: '1px solid var(--border)', display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <div className="input-group" style={{ maxWidth: '320px' }}>
-            <span className="input-icon">🔍</span>
-            <input
-              type="text"
-              className="input"
-              placeholder="Tìm theo sản phẩm hoặc tracking code..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
-          </div>
-          <span className="badge badge-orange">{filtered.length} links</span>
+        
+        <div style={{ position: 'relative', width: '100%', maxWidth: '400px' }}>
+          <input 
+            type="text" 
+            placeholder="Tìm sản phẩm hoặc link..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{ 
+              width: '100%', 
+              padding: '14px 20px', 
+              borderRadius: '16px', 
+              background: '#1e293b', 
+              border: '1px solid #334155', 
+              color: 'white',
+              fontSize: '15px'
+            }}
+          />
         </div>
+      </header>
 
-        {loading ? (
-          <div style={{ padding: '60px', textAlign: 'center' }}>
-            <div className="loading-spinner" style={{ margin: '0 auto' }} />
-          </div>
-        ) : filtered.length === 0 ? (
-          <div className="empty-state">
-            <div className="empty-state-icon">🔗</div>
-            <div className="empty-state-title">Chưa có affiliate link</div>
-            <div className="empty-state-text">Vào trang Sản phẩm, chọn sản phẩm rồi nhấn Lưu để tạo link</div>
-          </div>
-        ) : (
-          <table className="table">
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '100px', color: '#64748b' }}>Đang tải...</div>
+      ) : filteredLinks.length > 0 ? (
+        <div style={{ 
+          background: 'rgba(30, 41, 59, 0.5)', 
+          borderRadius: '24px', 
+          overflowX: 'auto', 
+          border: '1px solid #334155',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+        }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
             <thead>
-              <tr>
-                <th>Sản phẩm</th>
-                <th>Short Link</th>
-                <th>Clicks</th>
-                <th>Đơn hàng</th>
-                <th>Doanh thu</th>
-                <th>CR%</th>
-                <th>Ngày tạo</th>
-                <th>Hành động</th>
+              <tr style={{ background: '#0f172a', color: '#64748b', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <th style={{ padding: '20px' }}>Sản phẩm</th>
+                <th style={{ padding: '20px' }}>Affiliate Link</th>
+                <th style={{ padding: '20px' }}>Ngày tạo</th>
+                <th style={{ padding: '20px', textAlign: 'right' }}>Hành động</th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((link) => {
-                const cr = link.clicks > 0 ? ((link.conversions / link.clicks) * 100).toFixed(1) : '0';
-                return (
-                  <tr key={link.id}>
-                    <td>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <div style={{
-                          width: '36px', height: '36px', borderRadius: '8px',
-                          background: 'var(--bg-secondary)', border: '1px solid var(--border)',
-                          overflow: 'hidden', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'
-                        }}>
-                          {link.product?.imageUrl
-                            ? <img src={link.product.imageUrl} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="" />
-                            : '🛍️'
-                          }
-                        </div>
-                        <div>
-                          <div style={{ fontSize: '13px', fontWeight: '600', maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                            {link.product?.name || 'Sản phẩm không tên'}
-                          </div>
-                          {link.product?.category && (
-                            <span className="badge badge-gray" style={{ marginTop: '2px' }}>{link.product.category}</span>
-                          )}
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <code style={{
-                        fontSize: '12px', color: 'var(--orange)',
-                        background: 'var(--orange-glow)', padding: '3px 8px', borderRadius: '6px'
-                      }}>
-                        {link.shortUrl || `shope.ee/${link.trackingCode.slice(0, 8)}`}
-                      </code>
-                    </td>
-                    <td>
-                      <span style={{ fontWeight: '600' }}>{link.clicks.toLocaleString('vi-VN')}</span>
-                    </td>
-                    <td>
-                      <span style={{ color: 'var(--green)', fontWeight: '600' }}>{link.conversions}</span>
-                    </td>
-                    <td>
-                      <span style={{ color: 'var(--orange)', fontWeight: '700' }}>
-                        {formatVND(link.revenue)}
-                      </span>
-                    </td>
-                    <td>
-                      <span className={`badge ${parseFloat(cr) >= 5 ? 'badge-green' : parseFloat(cr) >= 2 ? 'badge-yellow' : 'badge-red'}`}>
-                        {cr}%
-                      </span>
-                    </td>
-                    <td style={{ color: 'var(--text-muted)', fontSize: '12px' }}>
-                      {new Date(link.createdAt).toLocaleDateString('vi-VN')}
-                    </td>
-                    <td>
-                      <div style={{ display: 'flex', gap: '6px' }}>
-                        <button
-                          className="btn btn-sm btn-secondary"
-                          onClick={() => copyLink(link.shortUrl || link.originalUrl, link.id)}
-                        >
-                          {copied === link.id ? '✅' : '📋'}
-                        </button>
-                        <a
-                          href={link.originalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-sm btn-ghost"
-                        >
-                          🔗
-                        </a>
-                        <a
-                          href={`/dashboard/content?affiliateLink=${encodeURIComponent(link.shortUrl || link.originalUrl)}&productName=${encodeURIComponent(link.product?.name || '')}`}
-                          className="btn btn-sm btn-primary"
-                        >
-                          🤖
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
+              {filteredLinks.map((link, idx) => (
+                <tr key={idx} style={{ borderBottom: '1px solid #1e293b' }}>
+                  <td style={{ padding: '20px', color: '#f1f5f9', fontWeight: '600' }}>{link.productName}</td>
+                  <td style={{ padding: '20px' }}>
+                    <div style={{ color: '#3b82f6', fontFamily: 'monospace', fontSize: '13px', maxWidth: '250px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {link.affiliateLink}
+                    </div>
+                  </td>
+                  <td style={{ padding: '20px', color: '#64748b', fontSize: '13px' }}>
+                    {new Date(link.lastUsed).toLocaleDateString('vi-VN')}
+                  </td>
+                  <td style={{ padding: '20px', textAlign: 'right' }}>
+                    <button 
+                      onClick={() => handleCopy(link.affiliateLink)}
+                      style={{ 
+                        padding: '10px 20px', 
+                        borderRadius: '12px', 
+                        background: copied === link.affiliateLink ? '#10b981' : '#334155', 
+                        color: 'white', 
+                        border: 'none', 
+                        cursor: 'pointer', 
+                        fontSize: '13px',
+                        fontWeight: '600',
+                        transition: 'all 0.2s'
+                      }}
+                    >
+                      {copied === link.affiliateLink ? '✅ Đã Copy' : '📋 Copy'}
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
-        )}
-      </div>
-    </>
+        </div>
+      ) : (
+        <div style={{ textAlign: 'center', padding: '80px', background: 'rgba(30, 41, 59, 0.5)', borderRadius: '32px', border: '2px dashed #334155', color: '#64748b' }}>
+          Không tìm thấy liên kết nào phù hợp.
+        </div>
+      )}
+    </div>
   );
 }

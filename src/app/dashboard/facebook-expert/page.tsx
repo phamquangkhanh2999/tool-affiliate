@@ -1,438 +1,144 @@
 'use client';
 
-import { useDbProducts } from '@/hooks/useProducts';
-import { useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState } from 'react';
+import { useState } from 'react';
+import { ExpertFacebookPostResult } from '@/lib/gemini';
 
-// Interface matching the Gemini result
-interface ExpertResult {
-  hooks: string[];
-  shortVersion: string;
-  longVersion: string;
-}
-
-function FacebookExpertStudio() {
-  const searchParams = useSearchParams();
-  const { products: dbProducts } = useDbProducts();
-
-  const [selectedId, setSelectedId] = useState(searchParams.get('productId') || '');
+export default function FacebookExpertPage() {
   const [productName, setProductName] = useState('');
   const [affiliateLink, setAffiliateLink] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
-
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<ExpertResult | null>(null);
-  const [copiedId, setCopiedId] = useState<string | null>(null);
-
-  // Auto-fill form if product is selected via URL or dropdown
-  const selectProduct = (id: string) => {
-    setSelectedId(id);
-    const p = dbProducts.find((p) => p.id === id || p.shopeeItemId === id);
-    if (p) {
-      setProductName(p.name);
-      // Generate a mock or real affiliate link if possible, here we leave it for user
-    }
-  };
-
-  useEffect(() => {
-    if (selectedId && dbProducts.length > 0) {
-      selectProduct(selectedId);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dbProducts, selectedId]);
+  const [result, setResult] = useState<ExpertFacebookPostResult | null>(null);
+  const [copied, setCopied] = useState<string | null>(null);
 
   const handleGenerate = async () => {
-    if (!productName.trim() || !affiliateLink.trim()) {
-      alert('Vui lòng điền tên sản phẩm và link affiliate');
-      return;
-    }
-
+    if (!productName || !affiliateLink) return;
     setLoading(true);
-    setResult(null);
-
     try {
       const res = await fetch('/api/content/expert', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          productName,
-          affiliateLink,
-          additionalInfo,
-          productId: selectedId || undefined,
-        }),
+        body: JSON.stringify({ productName, affiliateLink, additionalInfo }),
       });
-
-      const json = await res.json();
-      if (json.success) {
-        setResult(json.data);
-      } else {
-        alert('Lỗi: ' + json.error);
-      }
-    } catch (err) {
-      alert('Không thể kết nối đến máy chủ AI. Vui lòng kiểm tra lại kết nối mạng.');
-    } finally {
-      setLoading(false);
-    }
+      const data = await res.json();
+      if (data.success) setResult(data.data);
+    } catch (err) {} finally { setLoading(false); }
   };
 
-  const copyToClipboard = (text: string, id: string) => {
+  const handleCopy = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 2000);
+    setCopied(id);
+    setTimeout(() => setCopied(null), 2000);
   };
 
   return (
-    <div className='animate-in' style={{ animation: 'slideUp 0.4s ease' }}>
-      <div className='page-header'>
-        <div>
-          <h1 className='page-title' style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '32px' }}>🚀</span> Chuyên gia Facebook Content
-          </h1>
-          <p className='page-subtitle'>
-            Sáng tạo nội dung bán hàng đẳng cấp từ AI chuyên gia dành riêng cho thị trường Việt Nam
-          </p>
+    <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
+      <header style={{ marginBottom: '50px' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '6px 16px', borderRadius: '100px', background: 'rgba(34, 211, 238, 0.05)', border: '1px solid rgba(34, 211, 238, 0.1)', marginBottom: '20px' }}>
+           <span style={{ fontSize: '10px', fontWeight: '900', color: '#22d3ee', letterSpacing: '0.1em' }}>STUDIO MODE ACTIVE</span>
         </div>
-      </div>
+        <h1 style={{ fontSize: '56px', fontWeight: '900', color: '#fff', letterSpacing: '-0.04em' }}>Content <span style={{ color: '#22d3ee' }}>Forge.</span></h1>
+        <p style={{ color: '#64748b', fontSize: '18px', fontWeight: '500' }}>Hệ thống rèn đúc nội dung Facebook Expert tối ưu chuyển đổi.</p>
+      </header>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(300px, 350px) 1fr',
-          gap: '24px',
-          alignItems: 'start',
-        }}
-      >
-        {/* Left Form */}
-        <div className='card-glass' style={{ position: 'sticky', top: '24px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-            <div
-              style={{
-                width: '3px',
-                height: '20px',
-                background: 'var(--orange)',
-                borderRadius: '2px',
-              }}
-            ></div>
-            <h2 style={{ fontSize: '16px', fontWeight: '700', color: 'var(--text-primary)' }}>
-              Thiết lập bài đăng
-            </h2>
-          </div>
-
-          <div className='form-group'>
-            <label className='label'>Chọn sản phẩm (từ kho lưu trữ)</label>
-            <select
-              className='input select'
-              value={selectedId}
-              onChange={(e) => selectProduct(e.target.value)}
-            >
-              <option value=''>-- Tự nhập thủ công --</option>
-              {dbProducts.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name.slice(0, 45)}...
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className='form-group'>
-            <label className='label'>Tên sản phẩm *</label>
-            <input
-              className='input'
-              placeholder='VD: Kem chống nắng Anessa Gold...'
-              value={productName}
-              onChange={(e) => setProductName(e.target.value)}
-            />
-          </div>
-
-          <div className='form-group'>
-            <label className='label'>Link Affiliate *</label>
-            <input
-              className='input'
-              placeholder='https://shope.ee/...'
-              value={affiliateLink}
-              onChange={(e) => setAffiliateLink(e.target.value)}
-            />
-          </div>
-
-          <div className='form-group'>
-            <label className='label'>Thông tin bổ sung (Ưu đãi, quà tặng...)</label>
-            <textarea
-              className='input'
-              style={{ minHeight: '100px', resize: 'vertical', lineHeight: '1.5' }}
-              placeholder='VD: Giảm ngay 50k cho đơn từ 200k, tặng kèm túi tote...'
-              value={additionalInfo}
-              onChange={(e) => setAdditionalInfo(e.target.value)}
-            />
-          </div>
-
-          <button
-            className='btn btn-primary'
-            style={{
-              width: '100%',
-              padding: '14px',
-              marginTop: '10px',
-              justifyContent: 'center',
-              fontSize: '15px',
-            }}
-            disabled={loading}
-            onClick={handleGenerate}
-          >
-            {loading ? (
-              <>
-                <div
-                  className='loading-spinner'
-                  style={{ width: '18px', height: '18px', borderWidth: '2px' }}
-                />
-                <span>AI đang suy nghĩ...</span>
-              </>
-            ) : (
-              <>✨ Tạo bài đăng chuyên gia</>
-            )}
-          </button>
-        </div>
-
-        {/* Right Results */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {loading && (
-            <div
-              className='card'
-              style={{ textAlign: 'center', padding: '100px 20px', background: 'var(--bg-card)' }}
-            >
-              <div
-                className='loading-spinner'
-                style={{ margin: '0 auto 24px', width: '48px', height: '48px' }}
-              />
-              <h3 style={{ fontSize: '20px', marginBottom: '10px', color: 'var(--text-primary)' }}>
-                🚀 Đang khởi tạo kịch bản chuyên gia...
-              </h3>
-              <p
-                style={{
-                  color: 'var(--text-secondary)',
-                  fontSize: '14px',
-                  maxWidth: '400px',
-                  margin: '0 auto',
-                }}
-              >
-                Hệ thống đang phân tích tâm lý khách hàng và tối ưu hóa các điểm chạm (touch points)
-                để mang lại tỉ lệ chuyển đổi cao nhất.
-              </p>
+      <div style={{ display: 'grid', gridTemplateColumns: '450px 1fr', gap: '40px', alignItems: 'start' }}>
+        
+        {/* Control Panel */}
+        <aside className="glass-panel" style={{ padding: '40px', borderRadius: '32px', position: 'sticky', top: '40px' }}>
+          <h3 style={{ fontSize: '16px', fontWeight: '800', color: '#fff', marginBottom: '30px', letterSpacing: '0.05em' }}>CONTROL PANEL</h3>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+            <div className="input-group">
+               <label style={{ display: 'block', fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '10px', letterSpacing: '0.1em' }}>PRODUCT IDENTITY</label>
+               <input 
+                 type="text" 
+                 placeholder="Tên sản phẩm..."
+                 value={productName}
+                 onChange={(e) => setProductName(e.target.value)}
+                 style={{ width: '100%', padding: '16px', borderRadius: '12px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)', color: '#fff', fontSize: '14px', outline: 'none' }}
+               />
             </div>
-          )}
 
-          {!loading && !result && (
-            <div
-              className='empty-state'
-              style={{
-                background: 'var(--bg-card)',
-                borderRadius: '20px',
-                border: '2px dashed var(--border)',
-                padding: '120px 40px',
-              }}
-            >
-              <div className='empty-state-icon' style={{ fontSize: '64px', marginBottom: '24px' }}>
-                📘
-              </div>
-              <div className='empty-state-title' style={{ fontSize: '22px' }}>
-                Bạn cần viết bài đăng Facebook?
-              </div>
-              <div className='empty-state-text' style={{ fontSize: '15px' }}>
-                Hệ thống chuyên gia AI sẽ tạo ra 3 phương án tiêu đề viral, 1 bài đăng ngắn và 1 bài
-                đăng storytelling dài giúp bạn nổ đơn chỉ trong vài giây.
-              </div>
+            <div className="input-group">
+               <label style={{ display: 'block', fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '10px', letterSpacing: '0.1em' }}>AFFILIATE LINK</label>
+               <input 
+                 type="text" 
+                 placeholder="Dán link tại đây..."
+                 value={affiliateLink}
+                 onChange={(e) => setAffiliateLink(e.target.value)}
+                 style={{ width: '100%', padding: '16px', borderRadius: '12px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)', color: '#fff', fontSize: '14px', outline: 'none' }}
+               />
             </div>
-          )}
 
-          {result && (
-            <div
-              className='animate-in-up'
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '24px',
-                animation: 'slideUp 0.5s ease',
-              }}
+            <div className="input-group">
+               <label style={{ display: 'block', fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '10px', letterSpacing: '0.1em' }}>ADDITIONAL PARAMETERS</label>
+               <textarea 
+                 rows={5}
+                 placeholder="Mô tả, giá, ưu đãi..."
+                 value={additionalInfo}
+                 onChange={(e) => setAdditionalInfo(e.target.value)}
+                 style={{ width: '100%', padding: '16px', borderRadius: '12px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)', color: '#fff', fontSize: '14px', outline: 'none', resize: 'none' }}
+               />
+            </div>
+
+            <button 
+              className="btn-tech"
+              onClick={handleGenerate}
+              disabled={loading || !productName || !affiliateLink}
+              style={{ width: '100%', padding: '18px', marginTop: '10px', opacity: loading ? 0.5 : 1 }}
             >
-              {/* Hooks Section */}
-              <div
-                className='card'
-                style={{ borderLeft: '4px solid var(--purple)', background: 'var(--bg-card)' }}
-              >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginBottom: '20px',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>🪝</span>
-                    <h3 style={{ fontSize: '16px', fontWeight: '700' }}>
-                      Danh sách 3 Hooks Viral (Dùng để thay đổi tiêu đề)
-                    </h3>
+              {loading ? 'GENERATING...' : 'EXECUTE FORGE ⚡'}
+            </button>
+          </div>
+        </aside>
+
+        {/* Output Zone */}
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+          {result ? (
+            <>
+              {/* Facebook Mockup */}
+              <div className="glass-panel" style={{ background: '#fff', borderRadius: '24px', color: '#1c1e21', overflow: 'hidden', maxWidth: '650px' }}>
+                <div style={{ padding: '15px 20px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid #f0f2f5' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #1877F2, #00C6FF)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>E</div>
+                  <div>
+                    <div style={{ fontWeight: '700', fontSize: '15px' }}>Expert Reviewer</div>
+                    <div style={{ fontSize: '12px', color: '#65676b' }}>AI Engine • Now 🌐</div>
                   </div>
-                  <span className='badge badge-purple' style={{ padding: '4px 12px' }}>
-                    High Curiosity
-                  </span>
                 </div>
+                <div style={{ padding: '20px', fontSize: '15px', lineHeight: '1.5', whiteSpace: 'pre-wrap', color: '#050505' }}>
+                  {result.longVersion}
+                </div>
+                <div style={{ padding: '15px 20px', borderTop: '1px solid #f0f2f5', background: '#f9fafb' }}>
+                   <button 
+                     onClick={() => handleCopy(result.longVersion, 'post')}
+                     style={{ width: '100%', padding: '12px', borderRadius: '10px', background: copied === 'post' ? '#10b981' : '#1877F2', color: '#fff', border: 'none', fontWeight: '700', cursor: 'pointer' }}
+                   >
+                     {copied === 'post' ? 'COPIED TO CLIPBOARD ✅' : 'COPY MAIN CONTENT 📋'}
+                   </button>
+                </div>
+              </div>
 
+              {/* Seeding Block */}
+              <div className="glass-panel" style={{ padding: '30px', borderRadius: '24px' }}>
+                <h4 style={{ color: '#22d3ee', fontSize: '14px', fontWeight: '800', marginBottom: '20px', letterSpacing: '0.1em' }}>SEEDING SCRIPTS</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {result.hooks.map((hook, idx) => (
-                    <div
-                      key={idx}
-                      className='content-card'
-                      style={{
-                        background: 'rgba(0,0,0,0.2)',
-                        border: '1px solid var(--border)',
-                        position: 'relative',
-                        padding: '16px 50px 16px 16px',
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontSize: '15px',
-                          fontWeight: '600',
-                          color: 'var(--text-primary)',
-                          lineHeight: '1.5',
-                        }}
-                      >
-                        {hook}
-                      </div>
-                      <button
-                        className='btn btn-sm btn-secondary btn-icon'
-                        style={{
-                          position: 'absolute',
-                          right: '12px',
-                          top: '50%',
-                          transform: 'translateY(-50%)',
-                        }}
-                        title='Copy tiêu đề'
-                        onClick={() => copyToClipboard(hook, `hook-${idx}`)}
-                      >
-                        {copiedId === `hook-${idx}` ? '✅' : '📋'}
-                      </button>
-                    </div>
-                  ))}
+                   {result.commentSeedings.map((comment, i) => (
+                     <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(0,0,0,0.2)', padding: '15px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.03)' }}>
+                        <span style={{ fontSize: '13px', color: '#94a3b8' }}>{comment}</span>
+                        <button onClick={() => handleCopy(comment, `c-${i}`)} style={{ background: 'none', border: 'none', color: copied === `c-${i}` ? '#10b981' : '#22d3ee', cursor: 'pointer' }}>{copied === `c-${i}` ? '✅' : '📋'}</button>
+                     </div>
+                   ))}
                 </div>
               </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '24px' }}>
-                {/* Short Post */}
-                <div
-                  className='card'
-                  style={{
-                    borderLeft: '4px solid var(--blue)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      marginBottom: '20px',
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span style={{ fontSize: '18px' }}>📱</span>
-                      <h3 style={{ fontSize: '15px', fontWeight: '700' }}>Phiên bản ngắn gọn</h3>
-                    </div>
-                    <button
-                      className='btn btn-sm btn-secondary'
-                      onClick={() => copyToClipboard(result.shortVersion, 'short')}
-                    >
-                      {copiedId === 'short' ? '✅ Đã copy' : '📋 Copy'}
-                    </button>
-                  </div>
-                  <div
-                    className='content-text'
-                    style={{
-                      fontSize: '13.5px',
-                      padding: '16px',
-                      background: 'rgba(0,0,0,0.15)',
-                      borderRadius: '12px',
-                      border: '1px solid var(--border)',
-                      flex: 1,
-                    }}
-                  >
-                    {result.shortVersion}
-                  </div>
-                </div>
-
-                {/* Long Post */}
-                <div
-                  className='card'
-                  style={{
-                    borderLeft: '4px solid var(--orange)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      marginBottom: '20px',
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span style={{ fontSize: '18px' }}>📝</span>
-                      <h3 style={{ fontSize: '15px', fontWeight: '700' }}>
-                        Bản Storytelling (Dài)
-                      </h3>
-                    </div>
-                    <button
-                      className='btn btn-sm btn-primary'
-                      onClick={() => copyToClipboard(result.longVersion, 'long')}
-                    >
-                      {copiedId === 'long' ? '✅ Đã copy' : '✨ Copy bài viết'}
-                    </button>
-                  </div>
-                  <div
-                    className='content-text'
-                    style={{
-                      fontSize: '14.5px',
-                      padding: '20px',
-                      background: 'rgba(0,0,0,0.15)',
-                      borderRadius: '12px',
-                      border: '1px solid var(--border)',
-                      flex: 1,
-                    }}
-                  >
-                    {result.longVersion}
-                  </div>
-                </div>
-              </div>
+            </>
+          ) : (
+            <div style={{ height: '500px', borderRadius: '40px', border: '2px dashed rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: '#475569' }}>
+               <div style={{ fontSize: '80px', marginBottom: '20px', opacity: 0.2 }}>⚡</div>
+               <h3 style={{ color: '#94a3b8', fontSize: '20px', marginBottom: '10px' }}>Dòng chảy dữ liệu đang trống</h3>
+               <p style={{ maxWidth: '400px', fontSize: '14px' }}>Cấu hình tham số bên trái và nhấn EXECUTE để bắt đầu quá trình rèn đúc nội dung AI.</p>
             </div>
           )}
-        </div>
+        </main>
       </div>
-
-      <style jsx>{`
-        @keyframes slideUp {
-          from {
-            transform: translateY(20px);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-        .animate-in-up {
-          animation: slideUp 0.5s ease;
-        }
-      `}</style>
     </div>
-  );
-}
-
-export default function FacebookExpertPage() {
-  return (
-    <Suspense fallback={<div className='loading-spinner' />}>
-      <FacebookExpertStudio />
-    </Suspense>
   );
 }

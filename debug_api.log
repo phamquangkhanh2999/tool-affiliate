@@ -1,0 +1,1290 @@
+
+--- [DEBUG CALL Gemini] ---
+Timestamp: 2026-04-23T07:14:37.188Z
+URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCv6EpnY3NTGAF6Lb_w6-CNFpTRL_042pQ
+Payload: {
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "[FB EXPERT] Master Affiliate VN.\nRule: 1.Focus Pain/Desire. 2.Vietnamese tu nhien, no-AI style. 3.UX de doc. 4.Strong CTA.\n\nInput:\n- Product: iphone 15\n- Link: https://myaccount.google.com\n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"string (<100 words)\",\n  \"longVersion\": \"string (Storytelling Hook-Pain-Solution-Benefit-CTA, 200-300 words)\"\n}\nReturn ONLY JSON."
+        }
+      ]
+    }
+  ]
+}
+---------------------------
+
+Response Status: 403
+Response Data: {
+  "error": {
+    "code": 403,
+    "message": "Your project has been denied access. Please contact support.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+===========================
+
+--- [DEBUG CALL Gemini] ---
+Timestamp: 2026-04-23T07:20:36.859Z
+URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCv6EpnY3NTGAF6Lb_w6-CNFpTRL_042pQ
+Payload: {
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "[FB EXPERT] Master Affiliate VN.\nRule: 1.Focus Pain/Desire. 2.Vietnamese tu nhien, no-AI style. 3.UX de doc. 4.Strong CTA.\n\nInput:\n- Product: iphone 15\n- Link: https://myaccount.google.com\n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"string (<100 words)\",\n  \"longVersion\": \"string (Storytelling Hook-Pain-Solution-Benefit-CTA, 200-300 words)\"\n}\nReturn ONLY JSON."
+        }
+      ]
+    }
+  ]
+}
+---------------------------
+
+Response Status: 403
+Response Data: {
+  "error": {
+    "code": 403,
+    "message": "Your project has been denied access. Please contact support.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+===========================
+
+--- [DEBUG CALL Gemini] ---
+Timestamp: 2026-04-23T07:22:08.517Z
+URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCv6EpnY3NTGAF6Lb_w6-CNFpTRL_042pQ
+Payload: {
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "[FB EXPERT] Master Affiliate VN.\nRule: 1.Focus Pain/Desire. 2.Vietnamese tu nhien, no-AI style. 3.UX de doc. 4.Strong CTA.\n\nInput:\n- Product: iphone 15 \n- Link: https://myaccount.google.co\n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"string (<100 words)\",\n  \"longVersion\": \"string (Storytelling Hook-Pain-Solution-Benefit-CTA, 200-300 words)\"\n}\nReturn ONLY JSON."
+        }
+      ]
+    }
+  ]
+}
+---------------------------
+
+Response Status: 403
+Response Data: {
+  "error": {
+    "code": 403,
+    "message": "Your project has been denied access. Please contact support.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+===========================
+
+--- [DEBUG CALL Gemini] ---
+Timestamp: 2026-04-23T07:23:39.316Z
+URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCv6EpnY3NTGAF6Lb_w6-CNFpTRL_042pQ
+Payload: {
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "[FB EXPERT] Master Affiliate VN.\nRule: 1.Focus Pain/Desire. 2.Vietnamese tu nhien, no-AI style. 3.UX de doc. 4.Strong CTA.\n\nInput:\n- Product: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943\n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"string (<100 words)\",\n  \"longVersion\": \"string (Storytelling Hook-Pain-Solution-Benefit-CTA, 200-300 words)\"\n}\nReturn ONLY JSON."
+        }
+      ]
+    }
+  ]
+}
+---------------------------
+
+Response Status: 403
+Response Data: {
+  "error": {
+    "code": 403,
+    "message": "Your project has been denied access. Please contact support.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+===========================
+
+--- [DEBUG CALL Gemini] ---
+Timestamp: 2026-04-23T07:24:44.996Z
+URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyA9s1iPzfxaJrzZ2hqKPlKBePWu4fM8as0
+Payload: {
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "[FB EXPERT] Master Affiliate VN.\nRule: 1.Focus Pain/Desire. 2.Vietnamese tu nhien, no-AI style. 3.UX de doc. 4.Strong CTA.\n\nInput:\n- Product: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943\n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"string (<100 words)\",\n  \"longVersion\": \"string (Storytelling Hook-Pain-Solution-Benefit-CTA, 200-300 words)\"\n}\nReturn ONLY JSON."
+        }
+      ]
+    }
+  ]
+}
+---------------------------
+
+Response Status: 200
+Response Data: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"hooks\": [\n    \"Da xỉn màu, sần sùi LÂU NĂM? ĐÂY là 'cứu tinh' giúp bạn lột xác!\",\n    \"Sốc! Sữa rửa mặt gì mà da sáng rạng rỡ chỉ sau 1 TUẦN?\",\n    \"ĐỪNG CHỈ RỬA MẶT! Rửa xong phải SÁNG, MỊN như da em bé mới đúng!\"\n  ],\n  \"shortVersion\": \"Bạn đang vật lộn với làn da xỉn màu, thô ráp, thiếu sức sống? Đừng lo, Sữa Rửa Mặt L'Oreal Glycolic Bright chính là 'ngôi sao' bạn đang tìm kiếm! Với sức mạnh của AHA (Glycolic Acid) và Niacinamide, em này không chỉ làm sạch sâu mà còn giúp da sáng bật tông, mịn màng trông thấy chỉ sau thời gian ngắn. Cảm nhận sự khác biệt ngay từ lần đầu sử dụng. Da sạch, sáng, rạng rỡ không còn là mơ ước! Nhấn vào đây để sở hữu làn da mơ ước ngay hôm nay: [link]\",\n  \"longVersion\": \"Bạn có bao giờ thức dậy mỗi sáng và cảm thấy chán nản khi nhìn vào làn da xỉn màu, thiếu sức sống trong gương? Cảm giác da sần sùi, không đều màu khiến bạn mất tự tin, ngại giao tiếp và phải 'ngụy trang' bằng lớp trang điểm dày cộm?\\n\\nBạn đã thử đủ loại sữa rửa mặt, từ bình dân đến cao cấp, nhưng làn da vẫn cứ 'lì lợm' không chịu sáng lên? Mụn ẩn li ti, lỗ chân lông to tướng, và vẻ ngoài lúc nào cũng trông mệt mỏi, kém tươi tắn... đó có phải là nỗi ám ảnh hàng ngày của bạn?\\n\\nĐừng để những vấn đề đó cản trở bạn tỏa sáng nữa! Đã đến lúc bạn cần một 'trợ thủ' đắc lực, có khả năng 'đánh thức' làn da từ sâu bên trong: **Sữa Rửa Mặt L'Oreal Paris Glycolic Bright Glowing Daily**.\\n\\nĐây không chỉ là sữa rửa mặt thông thường. Đây là 'bí kíp' làm sạch sâu, loại bỏ lớp tế bào chết gây xỉn màu, và mang lại vẻ rạng rỡ không ngờ. Với sự kết hợp đỉnh cao của **Glycolic Acid (AHA)** – 'ngôi sao' tẩy tế bào chết hóa học giúp loại bỏ lớp sừng già cỗi, bít tắc lỗ chân lông – và **Niacinamide** – thành phần vàng giúp làm sáng da, đều màu, giảm thâm sạm, em này sẽ mang lại cho bạn một làn da lột xác hoàn toàn.\\n\\nBạn sẽ cảm nhận ngay làn da sạch thoáng, mịn màng hơn chỉ sau vài lần sử dụng. Dần dần, những vết xỉn màu biến mất, da bật tông tươi sáng, lỗ chân lông se khít và bề mặt da trở nên láng mịn như da em bé. Tự tin khoe mặt mộc, không ngại bất kỳ góc độ nào!\\n\\nĐừng chần chừ nữa! Đã đến lúc nói lời tạm biệt với làn da xỉn màu và chào đón vẻ rạng rỡ, tươi mới của chính bạn. **Nhấn ngay vào link bên dưới để đặt mua và bắt đầu hành trình 'lột xác' làn da ngay hôm nay!** Số lượng có hạn, đừng bỏ lỡ cơ hội sở hữu làn da mơ ước với giá ưu đãi:\\n👉 **[https://shopee.vn/lorealparis_officialstore/13560559943](https://shopee.vn/lorealparis_officialstore/13560559943)**\"\n}\n```"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 199,
+    "candidatesTokenCount": 836,
+    "totalTokenCount": 3180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 199
+      }
+    ],
+    "thoughtsTokenCount": 2145
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "Bcnpad6HArD32roPkLbToA8"
+}
+===========================
+
+[2026-04-23T07:42:40.079Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate VN.\nRule: \n1. Focus Pain/Desire. \n2. Vietnamese tu nhien, no-AI style.\n3. UX de doc: Xuống dòng nhiều, phân đoạn rõ ràng.\n4. Strong CTA.\n5. NO MARKDOWN: Tuyệt đối KHÔNG dùng các ký hiệu Markdown như **, __, #, [text](url). \n6. LINKS: Link Shopee phải để ở dạng văn bản thô (ví dụ: Link mua tại đây: https://...) để Facebook tự nhận diện.\n7. Emojis: Dùng emoji sinh động để làm nổi bật các ý chính thay cho dấu sao.\n\nInput:\n- Product: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Context: N/A\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 viral titles\"],\n  \"shortVersion\": \"Văn bản thuần túy, không Markdown\",\n  \"longVersion\": \"Văn bản chuyên gia, xuống dòng đẹp, không Markdown\"\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T07:43:01.449Z] [RESPONSE]
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"hooks\": [\n    \"NGƯNG NGAY! Nếu bạn chưa biết bí quyết giúp da sáng bừng chỉ sau 1 tuần! 😱\",\n    \"Mặt xỉn màu, nhìn kém tươi? Sữa rửa mặt này là CỨU TINH cho bạn! ✨\",\n    \"Ai muốn da LẤP LÁNH, CĂNG BÓNG như idol không? 👉 Bật mí ngay!\"\n  ],\n  \"shortVersion\": \"Da xỉn màu, thiếu sức sống làm bạn mất tự tin? 😔\\n\\nĐừng lo! L'Oreal Glycolic Bright Cleanser chính là \\\"người hùng\\\" bạn đang tìm! Với Glycolic Acid và Niacinamide, em này giúp:\\n\\n🌟 Sạch sâu lỗ chân lông\\n✨ Da sáng bừng rạng rỡ\\n💖 Đều màu và mịn màng hơn\\n\\nDùng xong da mềm mại, không hề khô căng đâu nhé! Mua ngay để da đẹp đón Tết! 🛍️\\n\\nLink mua tại đây:\\nhttps://shopee.vn/lorealparis_officialstore/13560559943\",\n  \"longVersion\": \"Ối giời ơi! Có ai đang chán nản vì da mặt cứ XỈN MÀU, nhìn lúc nào cũng thiếu sức sống không? 😩\\n\\nMỗi sáng thức dậy nhìn vào gương thấy da không đều màu, lỗ chân lông cứ to đùng, rồi cảm giác rửa mặt xong vẫn không sạch thoáng ấy! Đúng là muốn \\\"đội quần\\\" luôn! 😫\\n\\nTui biết mà! Ai cũng muốn có làn da SÁNG BỪNG, RẠNG RỠ để tự tin makeup hay thậm chí là \\\"mặt mộc\\\" cũng xinh đúng không? 🥰\\n\\nĐừng để nỗi lo da xấu cứ đeo bám nữa! Tui có ngay một \\\"bí kíp\\\" mà tui đã dùng và thấy hiệu quả rõ rệt muốn chia sẻ với cả nhà đây: Chính là EM SỮA RỬA MẶT L'Oréal Paris Glycolic Bright Glowing Daily Cleanser này nè! 💖\\n\\nNghe tên là biết \\\"thần thánh\\\" cỡ nào rồi đúng không? Để tui bật mí tại sao em nó lại \\\"đỉnh của chóp\\\" nha:\\n\\n🧪 Sức mạnh từ Glycolic Acid (AHA): Em này giúp tẩy tế bào chết nhẹ nhàng, loại bỏ lớp da chết xỉn màu, từ đó da sẽ sáng lên trông thấy và đều màu hơn. Cứ như có một lớp \\\"sáng bừng\\\" từ bên trong vậy đó! ✨\\n\\n💧 Niacinamide \\\"cộng hưởng\\\": Không chỉ làm sáng, Niacinamide còn giúp se khít lỗ chân lông đáng kể, làm dịu da và củng cố hàng rào bảo vệ da. Da không chỉ sáng mà còn khỏe nữa chứ! 💪\\n\\n💦 Làm sạch sâu \\\"chuẩn chỉnh\\\": Mấy bà yên tâm là em này làm sạch cực kỳ hiệu quả, cuốn trôi mọi bụi bẩn, bã nhờn nhưng KHÔNG HỀ GÂY KHÔ CĂNG da một chút nào đâu. Rửa xong da mềm mướt, cảm giác thở phào nhẹ nhõm luôn! 🌬️\\n\\n👉 Kết quả là gì? Là làn da của mấy bà sẽ ĐƯỢC ĐÁNH THỨC, SÁNG BỪNG TỪ GỐC, TRÔNG CĂNG BÓNG VÀ TRÀN ĐẦY NĂNG LƯỢNG MỖI NGÀY! Ai nhìn cũng phải trầm trồ hỏi bí quyết cho coi! 😎\\n\\nĐừng chần chừ nữa! Đầu tư cho làn da là đầu tư cho chính mình đó các nàng ơi! Bấm vào link dưới đây để rinh ngay em Sữa rửa mặt L'Oréal Paris Glycolic Bright Cleanser về để da đẹp chuẩn \\\"phát sáng\\\" ngay nhé! 🛍️✨\\n\\nLink mua hàng chính hãng, giá tốt kèm nhiều ưu đãi trên Shopee:\\nhttps://shopee.vn/lorealparis_officialstore/13560559943\\n\\nNhanh tay kẻo hết sale nha! Mấy bà sẽ không hối hận đâu! ❤️\"\n}\n```"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 290,
+    "candidatesTokenCount": 958,
+    "totalTokenCount": 3119,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 290
+      }
+    ],
+    "thoughtsTokenCount": 1871
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "OM3paa_JBeCevr0PlpiekQ8"
+}
+========================================
+
+[2026-04-23T07:49:51.568Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài (Ví dụ: #ShopeeHaul #ReviewCoTam #TenSanPham...).\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\"\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T07:49:57.011Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T07:50:03.204Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài (Ví dụ: #ShopeeHaul #ReviewCoTam #TenSanPham...).\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\"\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T07:50:24.097Z] [RESPONSE]
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"hooks\": [\n    \"Bạn có biết 90% các vấn đề về da như sạm, mụn ẩn... đều bắt nguồn từ việc RỬA MẶT SAI cách?\",\n    \"Đừng bao giờ đánh giá thấp sức mạnh của một tuýp sữa rửa mặt CHẤT LƯỢNG! Nó có thể thay đổi cả làn da bạn đó!\",\n    \"Thề luôn, nếu bạn đang thấy da mình cứ sạm sạm, xỉn xỉn dù đã skincare đủ bước, thì bài này sinh ra là dành cho bạn!\"\n  ],\n  \"shortVersion\": \"Bạn có biết 90% các vấn đề về da như sạm, mụn ẩn... đều bắt nguồn từ việc RỬA MẶT SAI cách? 😱\\n\\nThề luôn, nếu rửa mặt không chuẩn, thì skincare tiền triệu cũng vô nghĩa! Da cứ xỉn, mụn ẩn, lỗ chân lông to là do đó chứ đâu! 🤦‍♀️\\n\\nĐừng lo! Tui có chân ái Sữa rửa mặt L'Oreal Paris Glycolic Bright [Glycolic+Niacinamide] muốn share nè! ✨\\n\\n💖 Em này làm sạch sâu mà không khô da, giúp da sáng bật tông, mờ thâm siêu đỉnh.\\n💖 Dùng xong da sạch bong, căng mướt, tự tin khoe mặt mộc không cần filter luôn! Mê chữ ê kéo dài!\\n\\n📢 Đừng bỏ lỡ DEAL HỜI có hạn trên Shopee! Bấm link rinh ngay kẻo hết quà nha mấy bà ơi! 💸🎁\\n👉 Chốt đơn liền tay: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #SuaRuaMatAHA #DaSangMin #ShopeeSale #MustHave #ReviewSkincare #AHA #GlowySkin\",\n  \"longVersion\": \"Bạn có biết 90% các vấn đề về da như sạm, mụn ẩn... đều bắt nguồn từ việc RỬA MẶT SAI cách? 😱 Thật luôn đó!\\n\\nTui nói thật chứ, dù mấy bà có dùng bao nhiêu loại serum, kem dưỡng đắt đỏ cỡ nào, mà bước làm sạch KHÔNG ĐÚNG thì coi như \\\"đổ sông đổ biển\\\" hết trơn! 😭\\n\\nCứ nghĩ mà xem:\\n🤦‍♀️ Da cứ xỉn xỉn, không đều màu, nhìn phát biết ngay thiếu sức sống.\\n🤦‍♀️ Lỗ chân lông thì rõ to, mụn ẩn, mụn cám cứ thi nhau mọc.\\n🤦‍♀️ Đã vậy còn cảm giác da cứ nhờn nhờn, nặng nặng dù đã rửa mặt rồi. Mệt mỏi kinh khủng!\\n\\nĐừng lo, hôm nay tui có cái \\\"bảo bối\\\" này muốn chia sẻ để cứu rỗi làn da chị em mình đây: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily! ✨\\n\\nTin tui đi, em này là chân ái của những nàng mê da sáng, da khỏe đó! Vì sao ư?\\n\\n💖 Em nó chứa AHA (Glycolic Acid) và Niacinamide, nhưng được hãng \\\"pha chế\\\" siêu đỉnh, đảm bảo làm sạch sâu tận gốc mà da vẫn mềm mịn, không hề khô căng.\\n💖 Cảm giác sau khi rửa mặt? Da SẠCH BÓNG, mướt mịn, nhẹ tênh như vừa được detox vậy đó!\\n💖 Dùng một thời gian, mấy bà sẽ thấy da bật tông rõ rệt, sáng khỏe từ bên trong, mấy vết thâm cũng mờ dần đi đáng kể luôn. Mê chữ ê kéo dài!\\n💖 Lỗ chân lông được thu nhỏ, mụn ẩn cũng giảm hẳn. Mấy bà sẽ tự tin khoe mặt mộc mà không cần filter nhiều nữa đâu.\\n\\nNói chung, đây là một bước đầu tư CỰC KỲ ĐÁNG GIÁ cho làn da của bạn. Đừng để routine skincare của mình thiếu đi một \\\"chiến binh\\\" mạnh mẽ như em này nha! 💪\\n\\n📢 DEAL HỜI CÓ HẠN ĐỘC QUYỀN TẠI SHOPEE! BẤM NGAY LINK DƯỚI ĐỂ RINH EM NÓ VỀ NÀNG ƠI! Giá đang siêu tốt, có khi còn kèm quà tặng đó! 💸🎁\\n👉 Nhanh tay chốt đơn: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #SuaRuaMatAHA #SkincareRoutine #DaSangMin #GlowySkin #ReviewSkincare #MyPhamChinhHang #DealHot #ShopeeSale #MustHave #LamDep #KhongSoXau #GocReview #AHA\"\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 578,
+    "candidatesTokenCount": 1105,
+    "totalTokenCount": 4331,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 578
+      }
+    ],
+    "thoughtsTokenCount": 2648
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "887pabbZEtvE1e8P0tDjkA0"
+}
+========================================
+
+[2026-04-23T07:58:01.751Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T07:58:27.970Z] [RESPONSE]
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"hooks\": [\n    \"MẤY BẠN CÓ TỪNG NGHĨ, CHỈ CẦN SỮA RỬA MẶT THÔI MÀ CŨNG ĐỔI ĐỜI LÀN DA ĐƯỢC KHÔNG?\",\n    \"Thề luôn, có bao giờ bạn nhìn vào gương mà thấy da mình XỊN MÀU, LỖ CHÂN LÔNG TO đùng làm mất tự tin không?\",\n    \"80% chị em Việt Nam đang 'nghiện' sữa rửa mặt nhưng vẫn mãi GIAM MÌNH trong làn da XỈN MÀU. Bạn có thuộc số đó?\"\n  ],\n  \"shortVersion\": \"Thề luôn, có bao giờ bạn nhìn vào gương mà thấy da mình XỊN MÀU, LỖ CHÂN LÔNG TO đùng làm mất tự tin không?\\n\\nTui biết mà, cảm giác đó khó chịu cực. Mất tiền makeup che hoài cũng mệt! 😩\\n\\nNHƯNG MÀ, CÓ LỐI THOÁT RỒI! Tui mới tìm được \\\"chân ái\\\" Sữa Rửa Mặt L'Oreal Paris Glycolic Bright này, xài xong là MÊ CHỮ Ê KÉO DÀI!\\n\\n✨ Em nó làm sạch sâu NHƯNG KHÔNG HỀ KHÔ CĂNG một chút nào. Da sạch kin kít nhưng vẫn mềm mịn, thích cực.\\n💖 Đặc biệt là thành phần Glycolic Acid (AHA) và Niacinamide đỉnh cao, giúp da SÁNG BỪNG sức sống, đều màu, mờ thâm.\\n🔥 Mà cái cảm giác tự tin khi mặt mộc cũng đẹp á, nó phê gì đâu! Tiết kiệm khối thời gian makeup buổi sáng luôn.\\n\\nTui thề, ai chưa thử là phí nửa đời người đó!\\nĐang có DEAL CỰC SỐC trên Shopee, NHẤN VÀO ĐÂY RINH NGAY KẺO LỠ nha cả nhà! 👇👇\\nhttps://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #SuaRuaMat #AHA #Niacinamide #DaSangDep #DealHot\",\n  \"longVersion\": \"MẤY BẠN CÓ TỪNG NGHĨ, CHỈ CẦN SỮA RỬA MẶT THÔI MÀ CŨNG ĐỔI ĐỜI LÀN DA ĐƯỢC KHÔNG? 🤔\\n\\nTui biết mà, cảm giác sáng ngủ dậy nhìn vào gương thấy da cứ ủ rũ, sạm sạm nó khó chịu kinh khủng. 😖\\nLỗ chân lông thì cứ to đùng, mụn ẩn li ti xuất hiện hoài, make-up cũng khó ăn nữa.\\nRồi còn phải tốn thêm bao nhiêu tiền mua kem nền, phấn phủ dày cộp để che đi mấy khuyết điểm đó. Mệt mỏi! 😩\\n\\nNHƯNG MÀ, MẤY BẠN ƠI, CÓ LỐI THOÁT RỒI! 😱\\nTui mới tìm được \\\"chân ái\\\" Sữa Rửa Mặt L'Oreal Paris Glycolic Bright này, xài xong là MÊ CHỮ Ê KÉO DÀI!\\n\\n✨ Em nó làm sạch sâu NHƯNG KHÔNG HỀ KHÔ CĂNG một chút nào. Da sạch kin kít nhưng vẫn mềm mịn, thích cực.\\n💖 Đặc biệt là thành phần Glycolic Acid (AHA) và Niacinamide đỉnh cao, giúp da SÁNG BỪNG sức sống.\\n💯 Dùng đều đặn mỗi ngày, da trông đều màu hơn, mấy vết thâm mờ hẳn, cảm giác da cứ \\\"phát sáng\\\" từ bên trong ấy.\\n🔥 Mà cái cảm giác tự tin khi mặt mộc cũng đẹp á, nó phê gì đâu! Tiết kiệm khối thời gian makeup buổi sáng luôn.\\n\\nTui thề, ai chưa thử là phí nửa đời người đó!\\nĐang có DEAL CỰC SỐC trên Shopee, NHẤN VÀO ĐÂY RINH NGAY KẺO LỠ nha cả nhà! 👇👇\\nMua liền tay, da đẹp ngay tắp lự, không cần chờ đợi!\\nLink hốt deal: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #SuaRuaMat #AHA #Niacinamide #DaSangDep #ChamSocDa #DeepCleansing #GlowingSkin #DealHot #SkincareVN\",\n  \"commentSeedings\": [\n    \"Trời ơi dùng em này xong mê xỉu luôn á! Da tui sáng lên hẳn, đỡ sạm màu rõ rệt luôn mấy bà ơi. Đỉnh lắm! https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Công nhận, rửa mặt xong da sạch mà không hề khô căng tí nào. Hộp thứ 2 rồi nè. Mua ở đây có sale nè: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Mình dùng khoảng 2 tuần là thấy da đều màu hơn, mấy vết thâm cũng mờ dần. Recommend mạnh nha! Link mua chính hãng: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Xài em này xong bỏ hẳn mấy loại SRM khác luôn. Đúng là chân ái của da xỉn màu. Link này có deal tốt nè: https://shopee.vn/lorealparis_officialstore/13560559943\"\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 648,
+    "candidatesTokenCount": 1316,
+    "totalTokenCount": 3968,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 648
+      }
+    ],
+    "thoughtsTokenCount": 2004
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "0dDpafjkMfn72roP6-e08Q4"
+}
+========================================
+
+[2026-04-23T08:22:03.211Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:22:06.565Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:22:09.272Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:22:19.551Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:22:33.663Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:22:35.650Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:22:42.304Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:22:58.359Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:23:14.872Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:23:20.528Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:26:24.363Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:26:26.434Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[2026-04-23T08:26:31.573Z] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+========================================
+
+[2026-04-23T08:26:35.740Z] [RESPONSE]
+{
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+========================================
+
+[15:29:53 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "promptLength": 1813,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[15:29:56 23/4/2026] [ERROR]
+{
+  "status": 503,
+  "statusText": "Service Unavailable",
+  "data": {
+    "error": {
+      "code": 503,
+      "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "status": "UNAVAILABLE"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:29:56 23/4/2026] [ERROR]
+{
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "stack": "Error: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\n    at callGeminiApi (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:252:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateExpertFacebookPost (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:347:21)\n    at async POST (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:420:28)\n    at async AppRouteRouteModule.do (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:40115)\n    at async AppRouteRouteModule.handle (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:47321)\n    at async responseGenerator (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16466:38)\n    at async AppRouteRouteModule.handleResponse (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:227216)\n    at async handleResponse (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16529:32)\n    at async Module.handler (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16583:13)\n    at async DevServer.renderToResponseWithComponentsImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1454:9)\n    at async DevServer.renderPageComponent (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1506:24)\n    at async DevServer.renderToResponseImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1556:32)\n    at async DevServer.pipeImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1043:25)\n    at async NextNodeServer.handleCatchallRenderRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\next-server.js:338:17)\n    at async DevServer.handleRequestImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:934:17)\n    at async D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:394:20\n    at async Span.traceAsyncFn (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\trace\\trace.js:164:20)\n    at async DevServer.handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:390:24)\n    at async invokeRender (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:266:21)\n    at async handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:465:24)\n    at async requestHandlerImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:514:13)\n    at async Server.requestListener (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\start-server.js:225:13)"
+}
+--------------------------------------------------
+
+[15:35:05 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-2.0-flash-exp",
+  "promptLength": 1776,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://vercel.com/\n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[15:35:05 23/4/2026] [ERROR]
+{
+  "status": 404,
+  "statusText": "Not Found",
+  "data": {
+    "error": {
+      "code": 404,
+      "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+      "status": "NOT_FOUND"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:35:05 23/4/2026] [ERROR]
+{
+  "message": "models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+  "stack": "Error: models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n    at callGeminiApi (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:252:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateExpertFacebookPost (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:347:21)\n    at async POST (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:420:28)\n    at async AppRouteRouteModule.do (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:40115)\n    at async AppRouteRouteModule.handle (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:47321)\n    at async responseGenerator (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16466:38)\n    at async AppRouteRouteModule.handleResponse (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:227216)\n    at async handleResponse (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16529:32)\n    at async Module.handler (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16583:13)\n    at async DevServer.renderToResponseWithComponentsImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1454:9)\n    at async DevServer.renderPageComponent (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1506:24)\n    at async DevServer.renderToResponseImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1556:32)\n    at async DevServer.pipeImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1043:25)\n    at async NextNodeServer.handleCatchallRenderRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\next-server.js:338:17)\n    at async DevServer.handleRequestImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:934:17)\n    at async D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:394:20\n    at async Span.traceAsyncFn (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\trace\\trace.js:164:20)\n    at async DevServer.handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:390:24)\n    at async invokeRender (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:266:21)\n    at async handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:465:24)\n    at async requestHandlerImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:514:13)\n    at async Server.requestListener (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\start-server.js:225:13)"
+}
+--------------------------------------------------
+
+[15:35:29 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "promptLength": 1776,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://vercel.com/\n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[15:35:43 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Da xỉn màu như bánh mật mà đòi bôi serum triệu bạc? Quên đi!\",\n    \"Tin tui đi, đây là con sữa rửa mặt đỉnh nóc kịch trần cho team da sạm.\",\n    \"Bỏ ngay mấy loại sữa rửa mặt vô thưởng vô phạt đi, phí tiền lắm chị em ơi!\"\n  ],\n  \"shortVersion\": \"Da sạm, thâm mụn mà bỏ qua em L'Oreal Glycolic Bright này là quá dở luôn! 🌚\\n\\nCombo AHA + Niacinamide giúp da sạch sâu, sáng bừng chỉ sau 1 nốt nhạc.\\n\\nRửa xong da mướt mườn mượt, sáng khỏe cực kỳ mà không hề khô căng tí nào.\\n\\nDeal hời số lượng có hạn, bấm link chốt đơn ngay: https://vercel.com/ ⚡\\n\\n#LOrealParis #GlycolicBright #SuaRuaMat #SkinCare #LamDep #SaleGiaSoc\",\n  \"longVersion\": \"Dùng đủ thứ serum đắt tiền mà da vẫn sạm như đít nồi? 🌚\\n\\nVấn đề là lớp da chết quá dày, dưỡng chất có thấm được đâu mà đòi đẹp hả trời!\\n\\nDẹp ngay mấy cái sữa rửa mặt vô thưởng vô phạt đi, dùng thử em L'Oreal Glycolic Bright này đi rồi biết thế nào là phê.\\n\\nThề luôn, tui cực kết cái combo Glycolic Acid (AHA) và Niacinamide trong em này.\\n\\n💎 AHA giúp bóc tách tế bào chết già cỗi, làm sạch sâu từng lỗ chân lông.\\n\\n💎 Niacinamide thì giúp làm mờ thâm, sáng da và se khít lỗ chân lông cực đỉnh.\\n\\nCảm giác rửa xong da nó mướt mịn, sáng bừng lên hẳn mà không hề có chuyện khô rát đâu nha.\\n\\nDùng tầm 1 tuần là thấy mấy vết thâm mụn mờ đi rõ rệt, da trông có sức sống hơn hẳn.\\n\\nTiết kiệm được khối tiền đi spa mà da vẫn chuẩn glass skin thì tội gì không thử.\\n\\nHiện tại đang có deal giảm giá cực sâu kèm quà tặng độc quyền cho ai nhanh tay.\\n\\nChốt đơn ngay tại đây kẻo hết là tiếc hùi hụi: https://vercel.com/ 🏃‍♀️💨\\n\\n#LOrealParis #GlycolicBright #SuaRuaMat #TrangDa #SkinCare #BeautyTips #SaleKhung #GlassSkin #AHA #Niacinamide\",\n  \"commentSeedings\": [\n    \"Thề là em này dùng đỉnh vãi, da tui sáng hẳn sau 2 tuần. Link cho bà nào cần nhé: https://vercel.com/\",\n    \"Shop giao nhanh, đóng gói kỹ, sài bao phê luôn mng ơi. Mua ở đây nè https://vercel.com/\",\n    \"Sữa rửa mặt chân ái của tui đây rồi, dùng xong da mướt mịn thích lắm. Link săn sale đây https://vercel.com/\",\n    \"Đã nhận hàng, chuẩn chính hãng nha, săn được deal hời quá trời luôn https://vercel.com/\"\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 628,
+      "candidatesTokenCount": 724,
+      "totalTokenCount": 2709,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 1357
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "p9npaYqVA7aA2roPwaLU6As"
+  }
+}
+--------------------------------------------------
+
+[15:39:31 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-1.5-flash",
+  "promptLength": 1776,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://vercel.com/\n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[15:39:31 23/4/2026] [ERROR]
+{
+  "status": 404,
+  "statusText": "Not Found",
+  "data": {
+    "error": {
+      "code": 404,
+      "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+      "status": "NOT_FOUND"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:39:31 23/4/2026] [ERROR]
+{
+  "message": "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+  "stack": "Error: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n    at callGeminiApi (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:252:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateExpertFacebookPost (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:347:21)\n    at async POST (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:420:28)\n    at async AppRouteRouteModule.do (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:40115)\n    at async AppRouteRouteModule.handle (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:47321)\n    at async responseGenerator (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16466:38)\n    at async AppRouteRouteModule.handleResponse (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:227216)\n    at async handleResponse (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16529:32)\n    at async Module.handler (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16583:13)\n    at async DevServer.renderToResponseWithComponentsImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1454:9)\n    at async DevServer.renderPageComponent (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1506:24)\n    at async DevServer.renderToResponseImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1556:32)\n    at async DevServer.pipeImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1043:25)\n    at async NextNodeServer.handleCatchallRenderRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\next-server.js:338:17)\n    at async DevServer.handleRequestImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:934:17)\n    at async D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:394:20\n    at async Span.traceAsyncFn (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\trace\\trace.js:164:20)\n    at async DevServer.handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:390:24)\n    at async invokeRender (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:266:21)\n    at async handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:465:24)\n    at async requestHandlerImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:514:13)\n    at async Server.requestListener (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\start-server.js:225:13)"
+}
+--------------------------------------------------
+
+[15:40:04 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "promptLength": 1776,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy (Câu hỏi xoáy, con số gây sốc, hoặc khẳng định ngược đời).\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS): Tại sao họ cần cái này? Cuộc sống họ đang tệ thế nào nếu thiếu nó?\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES): Đừng liệt kê thông số, hãy nói về việc nó giúp họ đẹp hơn, sướng hơn, tiết kiệm thời gian thế nào.\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường (ví dụ: \"thề luôn\", \"đỉnh vãi\", \"mê chữ ê kéo dài\"). Tránh từ ngữ trang trọng kiểu robot.\n5. CẤU TRÚC DỄ ĐỌC: Mỗi đoạn không quá 3 dòng. Xuống dòng liên tục. Dùng Emojis làm bullet points.\n6. CTA THÔI THÚC: Gắn link affiliate khéo léo kèm lý do phải bấm ngay (Giảm giá có hạn, quà tặng độc quyền).\n7. HASHTAGS: Thêm 5-10 hashtags trending và liên quan ở cuối bài.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn (mỗi câu 1 dòng) đóng vai khách hàng đã mua để tăng tương tác và rải link. Link phải ở dạng thô.\n\nInput:\n- Tên sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link mua: https://vercel.com/\n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2 kèm link\", \"Bình luận 3...\", \"Bình luận 4...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[15:40:32 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"80% phụ nữ không biết rằng da sạm màu là do dùng sai sữa rửa mặt! 😱\",\n    \"Bỏ ngay mấy loại sữa rửa mặt vô thưởng vô phạt đi, dùng em này da mới sáng nổi! ✨\",\n    \"Da đen nhẻm, thâm mụn mà không biết đến bộ đôi Glycolic + Niacinamide thì phí cả thanh xuân. 😭\"\n  ],\n  \"shortVersion\": \"Da sạm như vỏ vải mà cứ ngỡ do số phận? 😤\\n\\nThử ngay L'Oreal Paris Glycolic Bright, đảm bảo mê chữ ê kéo dài! \\n\\nLàm sạch sâu, mờ thâm, sáng da nhờ bộ đôi AHA và Niacinamide đỉnh cao. ✨\\n\\nRửa xong da mướt rượt, không hề khô căng đâu nhé.\\n\\nChốt ngay kẻo hết sale: https://vercel.com/ \\n\\n#LOrealParis #GlycolicBright #SangDa #Skincare #ReviewLamDep\",\n  \"longVersion\": \"Ủa, sao chăm da kỹ mà mặt vẫn cứ tối sầm lại vậy các bà? 🤔\\n\\nSự thật là bụi bẩn với tế bào chết nó bám lỳ lắm, sữa rửa mặt thường không xi nhê đâu.\\n\\nTôi mới khai quật được em L'Oreal Paris Glycolic Bright này, thề là đỉnh vãi! 🔥\\n\\nTrong này có Glycolic Acid (AHA) giúp tẩy da chết nhẹ nhàng mỗi ngày.\\n\\nLại thêm Niacinamide giúp dưỡng sáng và se lỗ chân lông cực tốt. ✨\\n\\nMỗi lần rửa xong cảm giác da nhẹ bẫng, sạch sâu mà lại còn Glowy nữa chứ.\\n\\nDùng khoảng 2 tuần là thấy mấy vết thâm mụn bay màu dần luôn.\\n\\nTiết kiệm được khối tiền đi spa mà da vẫn đẹp chuẩn xịn. 💖\\n\\nĐặc biệt là em nó tạo bọt siêu mịn, rửa đến đâu sướng đến đấy. \\n\\nTranh thủ đang có deal hời + quà tặng thì chốt ngay đi kẻo hết.\\n\\nLink săn sale chính hãng cho chị em: https://vercel.com/ \\n\\n#LOrealParis #GlycolicBright #AHA #Niacinamide #SkincareRoutine #SangDaMoiNgay #BeautyTips #ShopeeCheck #AffiliateVN\",\n  \"commentSeedings\": [\n    \"Em này dùng phê thật, da sáng hẳn lên sau 1 tuần ý. https://vercel.com/\",\n    \"Vừa chốt 2 tuýp xong, giá ở đây đang rẻ hơn mấy shop khác nè. https://vercel.com/\",\n    \"Ship nhanh dã man, dùng không bị khô da, 10 điểm không có nhưng. https://vercel.com/\",\n    \"Ai còn phân vân thì múc luôn đi, tui dùng đến tuýp thứ 3 rồi vẫn mê. https://vercel.com/\"\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 628,
+      "candidatesTokenCount": 678,
+      "totalTokenCount": 3024,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 1718
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "yNrpaaiLCKqc0-kPxISCiQI"
+  }
+}
+--------------------------------------------------
+
+[15:49:05 23/4/2026] [REQUEST]
+{
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-2.5-flash",
+  "promptLength": 1219,
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://vercel.com/.\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://vercel.com/.\n\nInput:\n- Sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://vercel.com/\n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:49:09 23/4/2026] [ERROR]
+{
+  "status": 503,
+  "statusText": "Service Unavailable",
+  "data": {
+    "error": {
+      "code": 503,
+      "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "status": "UNAVAILABLE"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:49:09 23/4/2026] [ERROR]
+{
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "stack": "Error: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\n    at callGeminiApi (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:223:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateExpertFacebookPost (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:283:24)\n    at async POST (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__02vcp72._.js:367:28)\n    at async AppRouteRouteModule.do (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:40115)\n    at async AppRouteRouteModule.handle (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:47321)\n    at async responseGenerator (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16466:38)\n    at async AppRouteRouteModule.handleResponse (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:227216)\n    at async handleResponse (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16529:32)\n    at async Module.handler (D:\\web_dev\\tool-affiliate\\.next\\dev\\server\\chunks\\[root-of-the-server]__0m6x-2c._.js:16583:13)\n    at async DevServer.renderToResponseWithComponentsImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1454:9)\n    at async DevServer.renderPageComponent (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1506:24)\n    at async DevServer.renderToResponseImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1556:32)\n    at async DevServer.pipeImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:1043:25)\n    at async NextNodeServer.handleCatchallRenderRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\next-server.js:338:17)\n    at async DevServer.handleRequestImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\base-server.js:934:17)\n    at async D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:394:20\n    at async Span.traceAsyncFn (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\trace\\trace.js:164:20)\n    at async DevServer.handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:390:24)\n    at async invokeRender (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:266:21)\n    at async handleRequest (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:465:24)\n    at async requestHandlerImpl (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\router-server.js:514:13)\n    at async Server.requestListener (D:\\web_dev\\tool-affiliate\\node_modules\\.pnpm\\next@16.2.3_@babel+core@7.2_4ef84c59e56e8ef93b8ffec4ca050059\\node_modules\\next\\dist\\server\\lib\\start-server.js:225:13)"
+}
+--------------------------------------------------
+
+[15:51:45 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nInput:\n- Sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:52:00 23/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[15:52:03 23/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nInput:\n- Sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:52:09 23/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[15:55:08 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nInput:\n- Sản phẩm: Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n- Link: https://shopee.vn/lorealparis_officialstore/13560559943 \n- Ghi chú: N/A\n\nYÊU CẦU ĐỊNH DẠNG:\n- KHÔNG dùng Markdown (**).\n- Chỉ dùng văn bản thuần + Emoji.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:55:18 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Da xỉn màu, thâm sạm bấy lâu nay cứ tưởng là do nắng, ai dè là do chọn sai sữa rửa mặt!\",\n    \"Cảnh báo: Đừng tốn tiền mua serum đắt đỏ nếu da chưa được làm sạch sâu bằng siêu phẩm này!\",\n    \"Bí kíp để có làn da phát sáng chuẩn 'glass skin' mà không cần đi spa tốn kém đây rồi!\"\n  ],\n  \"shortVersion\": \"Da xỉn màu, lỗ chân lông to bơi hết vào đây! 🌊\\n\\nNếu bà đang tìm một loại sữa rửa mặt vừa sạch sâu vừa giúp da trắng sáng thì em L'Oreal Glycolic (AHA) Bright này chính là chân ái. Với sự kết hợp đỉnh cao của AHA và Niacinamide, em nó giúp tẩy tế bào chết nhẹ nhàng, mờ thâm và làm đều màu da rõ rệt sau vài tuần sử dụng.\\n\\nKết cấu bọt mịn, rửa xong da mướt mượt chứ không hề bị khô căng tí nào luôn. Tiện tay hốt ngay kẻo hết deal hời nhé!\\n\\n🛒 Mua ngay tại đây: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LOrealParis #GlycolicBright #SkincareVN #TrangSangDa #ShopeeCheck #GlowSkin #AHA #Niacinamide\",\n  \"longVersion\": \"Rửa mặt thôi mà cũng đòi sáng da? Nghe thì vô lý nhưng em L'Oreal Glycolic (AHA) Bright này làm được thật nha các bác ơi! ✨\\n\\nNhiều bà cứ thắc mắc tại sao dưỡng da mãi không trắng, dùng serum xịn mà da vẫn cứ sạm. Lý do là vì lớp tế bào chết cứng đầu vẫn còn bám trụ, ngăn cản dưỡng chất thẩm thấu đó. \\n\\nTại sao em sữa rửa mặt này lại hot đến thế? \\n✅ Thành phần chứa Glycolic Acid (AHA): Giúp loại bỏ tế bào chết bề mặt, giúp da mịn màng và thông thoáng lỗ chân lông.\\n✅ Niacinamide: Thành phần vàng trong làng mờ thâm, dưỡng sáng và làm đều màu da.\\n✅ Làm sạch sâu: Loại bỏ bụi bẩn, bã nhờn nhưng vẫn giữ được độ ẩm tự nhiên, không gây cảm giác khô rít sau khi rửa.\\n\\nCảm giác sau khi dùng là da nhẹ tênh, nhìn gương thấy da sáng bừng lên hẳn một tông. Bà nào đang tự ti vì vết thâm mụn hay da không đều màu thì phải thử ngay em này đi, cam đoan không thất vọng đâu!\\n\\n👉 Chốt đơn chính hãng để nhận ưu đãi: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LOrealParis #GlycolicBright #Suaruamat #LamSaug #Motham #AHA #Niacinamide #SkincareRoutine #ShopeeAffiliate #BeautyTips\",\n  \"commentSeedings\": [\n    \"Em này dùng thích lắm mọi người ơi, bọt mịn mà rửa xong da mướt xỉu luôn. Link mua chuẩn đây nè: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Tui dùng hết 2 tuýp rồi, da sáng hơn hẳn mấy nốt thâm mụn cũng mờ đi nhanh hơn đó. Nên mua nha: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Giao hàng nhanh, đóng gói cẩn thận. L'Oreal thì quá uy tín rồi, săn được giá sale hời quá trời: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Da nhạy cảm dùng vẫn thấy êm nha, sạch sâu mà không bị kích ứng gì hết. 10 điểm! https://shopee.vn/lorealparis_officialstore/13560559943\"\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 515,
+      "candidatesTokenCount": 930,
+      "totalTokenCount": 2105,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 515
+        }
+      ],
+      "thoughtsTokenCount": 660
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "Pt7pabaOH4Oi2roP7fresA8"
+  }
+}
+--------------------------------------------------
+
+[15:57:08 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Bạn là TikToker affiliate chuyên nghiệp VN... [TRUNCATED FOR LOGGING]\nSản phẩm: ádsad | Sale: -0% | Hoa hồng: 0%\nTạo 5 hooks và 5 scripts video 30s. Trả về JSON schema theo yêu cầu."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:57:09 23/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[15:57:12 23/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Bạn là TikToker affiliate chuyên nghiệp VN... [TRUNCATED FOR LOGGING]\nSản phẩm: ádsad | Sale: -0% | Hoa hồng: 0%\nTạo 5 hooks và 5 scripts video 30s. Trả về JSON schema theo yêu cầu."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:57:24 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "[\n  {\n    \"hook\": \"Đừng mua ádsad nếu bạn không muốn bị mọi người hỏi địa chỉ mua liên tục!\",\n    \"script\": \"(0-5s) Quay cận cảnh sản phẩm ádsad cực nghệ. Đừng mua ádsad nếu bạn không muốn bị hỏi địa chỉ mua liên tục! (5-15s) Nhìn cái form dáng này đi, mặc lên là chỉ có chuẩn không cần chỉnh. Dù hiện tại không có sale nhưng tin mình đi, chất lượng này quá xứng đáng với giá tiền. (15-25s) Mình đã test thử giặt máy và mặc đi làm cả ngày, vẫn giữ form cực tốt. (25-30s) Link mua mình để ngay giỏ hàng góc trái, vào chốt ngay kẻo hết size!\"\n  },\n  {\n    \"hook\": \"Review thật lòng ádsad: Không sale, không hoa hồng nhưng vẫn phải lên clip vì quá đẹp!\",\n    \"script\": \"(0-5s) Cầm sản phẩm ádsad trên tay. Review thật lòng ádsad: Không sale, không hoa hồng nhưng vẫn phải lên clip vì quá đẹp! (5-15s) Mọi người nhìn kỹ đường kim mũi chỉ nè, chắc chắn cực kỳ. Đây là món đồ mình tâm đắc nhất tháng này dù mua đúng giá gốc. (15-25s) Phối với quần jean hay chân váy đều cực phẩm, cân mọi phong cách từ đi học đến đi chơi. (25-30s) Đầu tư cho bản thân là khoản đầu tư hời nhất, bấm vào giỏ hàng ngay nha!\"\n  },\n  {\n    \"hook\": \"Sự thật về siêu phẩm ádsad đang làm mưa làm gió, có đáng như lời đồn?\",\n    \"script\": \"(0-5s) Show hiệu ứng biến hình với ádsad. Sự thật về siêu phẩm ádsad đang làm mưa làm gió, có đáng như lời đồn? (5-15s) Ban đầu mình cũng phân vân vì giá không giảm, nhưng cầm trên tay mới thấy 'đáng đồng tiền bát gạo'. (15-25s) Chất vải sờ cực mướt, mặc mùa này thì bao mát và tôn da. (25-30s) Mấy bà đừng đợi sale làm gì, mã này hiếm khi giảm lắm, múc ngay thôi!\"\n  },\n  {\n    \"hook\": \"Bỏ qua ádsad là bạn đã bỏ lỡ trend hot nhất năm nay rồi đó!\",\n    \"script\": \"(0-5s) Nhạc trend sôi động, khoe outfit với ádsad. Bỏ qua ádsad là bạn đã bỏ lỡ trend hot nhất năm nay rồi đó! (5-15s) Ai bảo không sale là không mua? Với ádsad thì chất lượng đã vượt xa cái giá rồi. (15-25s) Nhìn mình mix đồ này, chỉ cần 1 chiếc ádsad là nâng tầm cả set đồ luôn. (25-30s) Nhanh tay bấm vào link bio hoặc giỏ hàng bên dưới để sở hữu ngay em nó nhé!\"\n  },\n  {\n    \"hook\": \"Cận cảnh chất liệu của ádsad - Món đồ 'must-have' trong tủ đồ của bạn.\",\n    \"script\": \"(0-5s) Quay macro chất liệu vải ádsad. Cận cảnh chất liệu của ádsad - Món đồ 'must-have' trong tủ đồ của bạn. (5-15s) Nhiều bạn hỏi mình sao lại chọn ádsad dù không có ưu đãi? Câu trả lời nằm ở độ bền và sự tinh tế này đây. (15-25s) Mặc lên người cảm giác rất tự tin, che khuyết điểm cực tốt cho mấy nàng chưa tự tin về vóc dáng. (25-30s) Số lượng còn rất ít, chốt đơn ngay để kịp diện cuối tuần này nha!\"\n  }\n]",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 63,
+      "candidatesTokenCount": 865,
+      "totalTokenCount": 1869,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 63
+        }
+      ],
+      "thoughtsTokenCount": 941
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "vN7paYONHYaF2roPyO20qQ8"
+  }
+}
+--------------------------------------------------
+
+[15:58:41 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=HIDDEN_KEY",
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Phân tích danh sách sản phẩm sau và trích xuất thông tin:\nSữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\n\nYêu cầu: Trả về một mảng các đối tượng sản phẩm.\nTrả về định dạng JSON: { \"products\": [{ \"name\": \"\", \"price\": 0, \"description\": \"\" }] }"
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:58:44 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"products\": [\n    {\n      \"name\": \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\",\n      \"price\": 0,\n      \"description\": \"Sữa rửa mặt giúp làm sạch sâu và sáng da với thành phần Glycolic (AHA) và Niacinamide, dung tích 100ml.\"\n    }\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 100,
+      "candidatesTokenCount": 113,
+      "totalTokenCount": 716,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 100
+        }
+      ],
+      "thoughtsTokenCount": 503
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "DN_paeG_G7Hv0-kPjt6m0As"
+  }
+}
+--------------------------------------------------
+
+[16:06:54 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[16:07:10 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Sáng ngủ dậy soi gương thấy mặt tối sầm như 'tiền đồ chị Dậu' thì vào đây tui chỉ cách cứu vớt gấp!\",\n    \"Bỏ túi ngay 'vũ khí' cứu vãn làn da sạm màu chỉ sau 1 lần rửa, tin được không?\",\n    \"Đừng đổ tiền triệu vào serum nếu sữa rửa mặt bạn dùng vẫn chưa 'đủ trình' để làm sạch sâu và sáng da.\"\n  ],\n  \"shortVersion\": \"Da sạm, thâm mụn mà bỏ qua em này là dở rồi chị em ơi! 😱\\n\\nEm Sữa rửa mặt L'Oreal Glycolic Bright này đúng kiểu 'nhỏ mà có võ'. Kết hợp AHA + Niacinamide nên rửa xong da mịn mướt, sáng bật tông rõ rệt mà không hề bị khô căng khó chịu. Da sạch sâu từng lỗ chân lông, bái biệt luôn đám tế bào chết đáng ghét!\\n\\n👉 Chốt ngay kẻo hết deal hời: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LOrealParis #GlycolicBright #SkincareRoutine #SuaRuaMat #LamSangDa #ShopeeCheck\",\n  \"longVersion\": \"SỰ THẬT LÀ: Dù bạn có đắp serum đắt tiền đến đâu mà bước làm sạch không chuẩn thì cũng bằng thừa! ❌\\n\\nMùa này khói bụi, dầu thừa bám chặt, bảo sao da lúc nào cũng xám xịt, thâm mụn thì lâu hết mà bôi gì cũng không thấm. Đừng để làn da kêu cứu nữa!\\n\\n✨ Giải pháp 'vàng' cho team thích da sáng khỏe đây: Sữa rửa mặt L'Oreal Paris Glycolic (AHA) Bright Glowing Daily.\\n\\nTại sao em nó lại 'thần thánh' như vậy?\\n✅ Công nghệ AHA (Glycolic Acid): Giúp lấy đi lớp tế bào chết cằn cỗi trên bề mặt, làm đều màu da nhanh chóng.\\n✅ Niacinamide: 'Khắc tinh' của thâm nám, giúp se khít lỗ chân lông và làm da trắng sáng tự nhiên.\\n✅ Bọt mịn siêu nhỏ: Len lỏi sâu, làm sạch triệt để mà vẫn giữ được độ ẩm mịn, sờ vào là 'mướt mườn mượt'.\\n\\nDùng xong da trông rạng rỡ hẳn lên, sẵn sàng để hấp thụ các bước dưỡng tiếp theo một cách hoàn hảo nhất. Đừng đợi da xấu mới lo, chăm ngay từ bước rửa mặt nhé!\\n\\n🔥 Săn ngay tại Store chính hãng để nhận ưu đãi: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LOrealParis #GlycolicBright #AHA #Niacinamide #SkincareVietNam #GlowSkin #ShopeeAffiliate #TrangDa #ShopeeHaul\",\n  \"commentSeedings\": [\n    \"Dùng em này xong nghiện luôn, da sáng hẳn ra mà không bị khô. Link sale chính hãng cho bà nào cần nhé: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Đỉnh thực sự, nhất là mấy bà hay thức khuya da bị sạm ấy. Múc ngay không phí: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Tui cũng đang dùng tuýp thứ 2 rồi, kết cấu bọt mịn thích lắm. Chốt đơn ở đây nè: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Ship nhanh cực, hàng chính hãng nên yên tâm dùng. Link đây nhé: https://shopee.vn/lorealparis_officialstore/13560559943\"\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 397,
+      "candidatesTokenCount": 895,
+      "totalTokenCount": 2127,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 397
+        }
+      ],
+      "thoughtsTokenCount": 835
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "BuHpaanuE7iV1e8PvpeEkQE"
+  }
+}
+--------------------------------------------------
+
+[16:33:37 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Say \"Hello System Test\""
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[16:33:39 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "Hello System Test",
+              "thoughtSignature": "EusBCugBAQw51scksxqhWzQryxIEbOsx4H47ecM9fOYCs3U4aOlDoaRowNadW8WdYK43HpklKntoPBOAX1NjRlMlASF8tveyL03qKQ2UL2hMl3K/WEzjbOnKerbXoL7wmRk0nHiI9U9uj0TYAzRYFNpZEeLUtz1MAT+4nDDPkULdgW5vFYmQIbFGlAyjD5HKxUDvf940Om9e/RFH+wk0PSKySms6dsF4KFNp10rPkmQHwvQUFPDr1XTMSNaP7Ojv9VlnHAhAKQ6yEb/y7nwlUVzeHaB71M2YjeiaaXI98slTdPepautg1X455qZmMw=="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 6,
+      "candidatesTokenCount": 3,
+      "totalTokenCount": 50,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 6
+        }
+      ],
+      "thoughtsTokenCount": 41
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "Oufpad_QNMa12roP76DMWQ"
+  }
+}
+--------------------------------------------------
+
+[16:34:39 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml  \" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[16:34:55 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Đừng để công sức skincare đổ sông đổ biển chỉ vì chọn sai sữa rửa mặt! 🛑\",\n    \"Bỏ ngay sữa rửa mặt cũ nếu bạn muốn da sáng bật tông chỉ sau 1 tuần! ✨\",\n    \"Da sạm màu, mụn cám bám dai dẳng dù rửa mặt ngày 2 lần? Đây là 'cứu tinh' cho bạn!\"\n  ],\n  \"shortVersion\": \"Rửa mặt thôi mà da cũng \\\"phát sáng\\\" được sao? ✨\\n\\nNhiều bà than với tui là dùng kem dưỡng xịn mà da vẫn xỉn màu, mụn ẩn li ti. Lý do là lớp sừng già chưa được dọn dẹp kỹ đó! \\n\\nSữa rửa mặt L'Oreal Glycolic Bright là chân ái với bộ đôi \\\"vàng\\\" Glycolic Acid (AHA) + Niacinamide:\\n✅ Sạch sâu đến từng lỗ chân lông mà không hề khô căng.\\n✅ Đánh bay lớp da chết sần sùi, giúp da sáng mịn tự nhiên.\\n✅ Mờ thâm mụn rõ rệt sau vài tuần.\\n\\n👉 Chốt đơn ngay tại Shopee Mall để nhận ưu đãi cực hời: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #AHA #Niacinamide #SkincareVN #ShopeeSale #SuaRuaMat #DaSangMin\",\n  \"longVersion\": \"Đừng để công sức skincare \\\"đổ sông đổ biển\\\" chỉ vì chọn sai sữa rửa mặt! 🛑\\n\\nCác bà có bao giờ thắc mắc tại sao dùng đủ loại serum đắt tiền mà da vẫn cứ sạm, lỗ chân lông to và mụn cám thì cứ \\\"đóng quân\\\" không? Bí mật nằm ở bước làm sạch. Nếu không loại bỏ được lớp tế bào chết cứng đầu, dưỡng chất chẳng bao giờ thấm nổi vào da.\\n\\nSiêu phẩm L'Oreal Glycolic Bright (AHA) chính là chìa khóa để da các bà lột xác:\\n\\n✨ Làm sạch sâu: Công nghệ bọt mịn giúp lấy đi bụi bẩn, bã nhờn mà không gây rát da.\\n✨ Tẩy tế bào chết nhẹ nhàng: Glycolic Acid giúp dọn sạch lớp da sừng, trả lại bề mặt da mịn màng, căng bóng.\\n✨ Dưỡng sáng từ bước đầu: Niacinamide hỗ trợ làm đều màu da, mờ thâm cực đỉnh.\\n\\nCảm giác sau khi rửa xong là da cực mướt, cảm nhận được độ thoáng sạch mà vẫn giữ được độ ẩm tự nhiên. Dùng em này xong bôi serum là thấm ngay tắp lự!\\n\\n🛒 Mua hàng chính hãng, tránh hàng giả tại đây nè: https://shopee.vn/lorealparis_officialstore/13560559943\\n\\n#LorealParis #GlycolicBright #SuaRuaMatLoreal #ReviewLamDep #SkincareRoutine #ShopeeAffiliate #TrắngDa #AHA #Niacinamide #LorealVietnam\",\n  \"commentSeedings\": [\n    \"Dùng em này xong da mịn mướt lắm, không bị khô da tí nào luôn. Link chính hãng cho bà nào cần nhé: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Chân ái của da xỉn màu đây rồi, tui dùng hết 2 tuýp rồi thấy da sáng hẳn. Săn sale ngay: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Giao hàng nhanh, bọc cẩn thận, mùi thơm nhẹ thích cực. Link mua ở đây nè mọi người: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Mới dùng 1 tuần mà mụn cám ở mũi giảm hẳn, ưng quá trời ưng! https://shopee.vn/lorealparis_officialstore/13560559943\"\n  ]\n}",
+              "thoughtSignature": "EqAXCp0XAQw51sd/vH6SaU5mUVsgdaMqY1H6uR7/9Iiw0QutWrLQxPQvXkitVzO0i3+MfSyCKNv8iVywEQPk6lokvd7ji5D+nCt92yHoHWuotKMqcWSIo88mYoUgaXwnAMZIC/F+doHaCgU2MArM3sN6rssvUP4mgIXw5VNHfsXscqgHRcXPPrHnUe34a18Oi1tFmdM++N73EBaMr/qO592MWvBYOIs6mbQ1rAAZOW4hjlqk3bPHh6rNamhHYjoJ8ufN3Hi7OPbgkFKxmKXpyx3YVyoxC9z4ZN02YXZLOO/t9xX8fQEVO4MRc+nQN5QwMKtoFTKYe7mU2XEPJ1lvJnle7WLeI/NXmBOB+E1odHlEJTPqV5qAs4CkpbrGGGI1DYfz+MkRJFtO/Vzmg4bo18z7vUschI7KUUvHfCdWHWALf6kXxx9SfRZ6f/YiruCc/DU/3HeHlqozpKhXNacWpO0VG6jkIl5cuV3kHn5up6SpRjs+3ZStILUdv/0+DzbRkcsz5ehNH+T5BATig2jU4OfDy28/3+qWhpxYwLABWFOtX3Xp5ax6oO/54u065LVHLrKg0r+sh80oGnSW5m+ETpn6DmMNlUWkmz6hUGQPSoww7fDxfdTjTl67wkMOSoYRfqOciugVaxCxfcruGvZ/08wNhTpQmxzzBQApMGi9+9sDbv1vd3gz4iN6DlCLhtbxiEqMkyGuwa7PooO6gIQRPhdOYR5NyLDXuwcZqzM0wDshCb/oTlqS2fkiMa4om5kDwPUbogEVhek3hhMJ60oE10bUb3fUSnkvYesdvxEXcRtaqvFSv0q+8WtGjn0pZGkgrToeF81sBF84kZzO/lewKhquj3S+GA/YRvkykiEUbAzpwSSwK3aptF0rFJGDLaOMr03fsML0w07567XnMQDm4jRk6W0sKZbeMgst3eqyxN2/j+nhkhByDK0BsoiGDeE6eglSJMZ1YtYpN7skMJzWjhjqwD8fgRov2s2IhXGS/nRxLija7weBqGVYrdy282HNajBWh60ALJez3dMXw5m7XR6f2bp2xkyuWyzkYbm/XS+yTJliaYPn3kSPsHl7UexDYqabMk5q50FofHQnc9qoakdBPdcoO680SlrzbJRY31Azyg5Fw9PGNHtiHTobi9u4AnRU1bpgx/haSGuoL2aQgPfpgWo98EWZ9yVhMB8hm+pEiHgjCDpfNCrGh46YvNA6MAfW/SWzPJxNnxH00XTSjRzRaRt74834r8TRgmIUo4amjFVmPLFhh6hdtcTftgIbSCVruicrvBcZT5n9SOUrZu8Oiw5ThiO5AtPyVYBNoDnRTb1IbBkAXJlEi4a07N3CiXppJRh6h+KdIQiDgOUpT59Il07mIfKrAvUDXxgJfC9vhyFkzxvrf76AGzjeZQ7EIV3yky6/VsvOpo1ywWA+QcalsvTk9SyfvwSw9RugipiUb0vF8zo09hiCrapgzpbRJF7/8xwQH0R2zPCLHv42nGcLDF6xgJ3ag5sO6GipFPvg4lc9nIJpklGjCDh4rxwjOvZrJCr6eHgdxNUJs1Y9QVIbVvdVfYJxCWQeYyTM3b4Bfg8kClBt5rCtOVby8nc/BS8bd58zT6HhkW5+ze7jiCFFbFKxwfn39spQq2Kk8J3JUpxCROg3jV04Gx2/oo3tyhAvDJzXcZUoc6ke7NeeF0jiZiFgdNEt8JS3H6qKwaVti0ri5BtIoueYPCVMQ17yu5R4yCUPsBm0t4cOW/q8ayDNM7LjuIoYBXgoClp+VN+8xL9Scqp4jm622Bh7dnh4rZt2u4Nxq7KxdIHtwyTNTo66kE5PssUegMyzyZQ9AD2gDCY/uISlDyR2twd4StJGPbzP9XFCJP43RuKzdtvFPvCk41sQ4bDpRt3/pr9VhCub6TltcGd7h3kI+N3WwPZe4UPdaGgHPCAndp5BIzSXLUp8IMDJg0HTvZkkPdTccnNnzM4bkyFubmLR4r04JfAZb9pl2hkURTOcdyHlZ19TSCqqsK5NKw/htWFubgjJKDdIif1Cl5fs3c8wMYbBK2e3sM4iiT/JACanwHBAKk0GYplTL4DOgKciAZCea2hV8VUwO+iP2sru/1dA6yns3oaCtcxEtWdcozVcuIfJ8/F20K2m/2CCfYVarj7OSloZpzAJnPg3NIZKu1Z4xgZZRrQ/f3hLsf4z80UZlRH/r3fOwt7TcUgPWWmmGEo74AjUWSUUwxKZLNZOr7Wde9Dw7bykoIadDFVaMPVtnKQW67fj2Os3ys0t4JaggtBmHjsdIfyVjvYSOXuU2qXFtgP2KXF3w/mDXC16lwSTMVck9+KjH64FPfVVG5BcYFjOOwljh6cWiwMI4yvE+tw32hV0zQT7rbX7hTLcfJ6dVwQ5NI8fbaQ6NSE2sezK0CKQoQ4qd8JjkQlE4p0PB4wt64WDLhrucjMn5C5a4dP0PZv93DeB5X0SgXjUqOfKORj9qAyZHY9SVgwBlCTcPiD6KA6liuzQ56Iom5I6tprPnsEG1RUUS+UKRjnYPQ3lQH4VyTFFy3ipRi9HeUknMnvtjfBiuCgfiLV33PFunK0/52szeoyRlB4Mwx+U9OJu0qJDNC695c3I6wwxsqIkoVqAkfGbq+Cn5S44trhKSGp3NX1dfi/VZkJNvk6EvSIPR3si9UlITNxoWTQNAJ4nWlSV2+VUb9xZALzLZaUiTPqaLz6CptQUhYWfiGBr8ROqUHc/UdxbZZRIjG2WCdwHs72P0sq1x074gp3JPxuet6aWguJzSCK2iYhY8nOATcOYpSdEN9k4v+IuySJ4qUiP38+mOnHDnEtDlwcKiP6ZbpQdIpj28xfIytp4iOyxC4s8LTlxoI0CKO3OXOve3xoPRvqW1xxkh2Mk+sH9gd6cXfC3/11QKovT8awwpTw4/yNlEtEx1zLy0qr98V7G2pxCYRLRjrkzktrCSzv0Lod+xlFHw2v49E/ABZwXKxaUNOOIKAMQ2DA/sqnGTWQsbTuT3T76ZOXTeCKq5IIY/laZWBNpoRghj+p63j38Gef1l478bw32oJzjJhdigcBauJ/mY7T46ZJvnFBfrzuPNGx5Qg2BR8ejs0reJLJQxEokMPb6/nx2dnw9mBWtsh4vh1YS1GyuUKq2wl3Fp0FL2rFfP6j7daXrdM8moe9HCNiO7emH+surVCtpycmAwszy41OfQSsGmf3KMoQULym6ct/Hp2noHeG0HLWAcU5cl1KY8ke1rrglJiJshNR/aS3kCgHf7l2IsCnzhfNTlE936aljNOfwOIVIV8r36x1w/2Z0VxV5t8oc9zRaWXwAXILyhgRzRzZH+VEYE5z+4zdLXvwWT7guJKaf2qRTHm3JNVlNkUReqy4ME8tXyCgg1SmDOTV8wkwwoG5hs8Mml9q2oT7u0Y8jVd5v9MLMXlIIMXdlgEfnLSD4nGFOVMV+qe+M+Qia2RqRzOxVkPlATXnv69UV2dsYmJ+sIlwEYv+Nz8BduUOHB1OmYSoobV2xusFIRGlup8Xx+7fr5tJW1GpGR+M/JjDMlcWObK1ked0KTAp7E81YzKliB8f7Fxy8vda1VFqGke/N9UQpl/rwpP6mIFvVPK3UEKFccPPOPHNEQeUhxx7Bli1BW8FPmzEl2ovHPw15waChs6iMRgYEuDBelMUIXAm1/Lzyov5dQqI4gS1rf+oUiZ9zSjt4KEN1DMMPXBawjHgPDPC95UvbskrnQyjTAK78s7fiUootrDdGKQH0qRcboQUKPbIgOpBieeIJ+SUcdOqyW9MvfWpXJyUrJOR+8xRHBS3//+Fv3lsX/VhvluCxOMCjMT6asJn2ByzMswEMeNOTwVQd/TZOH8QfvQJHEUrzWs18zfPzss7tidGKLpfkek1nRnYaS7UIOXVhmrNCPkgfpe1iVRmlqulwus/D6CQLAxeEv86dYEd4fVHN5IUJAVy0u4gD1I7R7RbsyEhkm6rTPvXkhifzAJTL"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 398,
+      "candidatesTokenCount": 952,
+      "totalTokenCount": 2181,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 398
+        }
+      ],
+      "thoughtsTokenCount": 831
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "h-fpabnwC92A2roPubSbuAw"
+  }
+}
+--------------------------------------------------
+
+[16:37:10 23/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Sữa rửa mặt làm sạch sâu và sáng da L'Oreal Paris Glycolic (AHA) Bright Glowing Daily [Glycolic+ Niacinamide] 100ml \" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/lorealparis_officialstore/13560559943 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[16:37:21 23/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Đừng để làn da 'xám xịt' làm bạn già đi chục tuổi mỗi khi nhìn vào gương!\",\n    \"Bí mật đằng sau làn da căng bóng như filter mà không cần dùng app chính là đây.\",\n    \"Rửa mặt thôi mà da cũng sáng bừng được? Tin tôi đi, đây là 'chân ái' mới của bạn!\"\n  ],\n  \"shortVersion\": \"Da sạm, thâm mụn, rửa mặt xong vẫn thấy bí bách? 😩 Đổi ngay qua em L'Oreal Glycolic Bright này đi chị em ơi! Với bộ đôi AHA & Niacinamide, em này không chỉ sạch sâu mà còn giúp da sáng bừng, mờ thâm rõ rệt. Bọt mịn, thơm nhẹ, rửa xong da mướt mườn mượt chứ không hề khô căng. Săn ngay tại đây để nhận ưu đãi: https://shopee.vn/lorealparis_officialstore/13560559943 \\n#LorealParis #GlycolicBright #Skincare #SángDa #AffiliateMarketing #ShopeeVN\",\n  \"longVersion\": \"Mặt cứ tối thui, trang điểm bao nhiêu cũng không thấy 'phấn khởi'? 😭 \\n\\nNhiều bà cứ mải mê mua serum đắt tiền mà quên mất bước quan trọng nhất là LÀM SẠCH. Bụi bẩn tích tụ, tế bào chết bám lì thì dưỡng chất nào thấm nổi! Đó là lý do vì sao dùng đủ thứ mà da vẫn không đẹp lên được.\\n\\nSiêu phẩm Sữa rửa mặt L'Oreal Glycolic (AHA) Bright chính là vị cứu tinh:\\n✨ Glycolic Acid (AHA): Nhẹ nhàng lấy đi lớp da chết, giúp bề mặt da mịn màng và đều màu hơn.\\n✨ Niacinamide: 'Thần dược' giúp thu nhỏ lỗ chân lông và hỗ trợ mờ thâm mụn đỉnh cao.\\n\\nCảm nhận cá nhân: Bọt siêu mịn, len lỏi sâu vào lỗ chân lông. Rửa xong cảm giác da nhẹ bẫng, sáng rạng rỡ mà vẫn giữ được độ ẩm tự nhiên, không hề có cảm giác 'sạch bong kin kít' gây hại da đâu nha. Da nhạy cảm vẫn dùng cực êm!\\n\\n👉 Đừng để da xấu ngăn cản sự tự tin của bạn. Múc ngay tại Shopee Mall để đảm bảo chính hãng và nhận deal hời nhất: https://shopee.vn/lorealparis_officialstore/13560559943 \\n\\n#LorealParis #GlycolicBright #CleanBeauty #ReviewSkincare #SkinBrightening #MờThâm #ShopeeHaul #LàmĐẹp\",\n  \"commentSeedings\": [\n    \"Đã dùng và xác nhận da sáng hơn thật sự nha mọi người, link mình mua đây: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Shop giao nhanh, hàng chính hãng nên yên tâm lắm. Link cho bà nào cần: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Mùi thơm sang xịn mịn, rửa xong da mướt cực kỳ. Chốt đơn thôi chị em: https://shopee.vn/lorealparis_officialstore/13560559943\",\n    \"Ưu đãi hời quá, tui vừa mới hốt thêm 2 tuýp để dành vì sợ hết hàng: https://shopee.vn/lorealparis_officialstore/13560559943\"\n  ]\n}",
+              "thoughtSignature": "EooeCoceAQw51sfw2YocWA6hkdI0gwsBi5JDnUxguGdLYnNFgY+Pi6hZ9Kvswq4+SbnukuvWSn8d7SemTtU6w/+vXixPXT2kO0qJ3Szkf+bmFjG+eA4E4Nj4WooFFAqeGGxnoGxSacwjP1LvkAkTT+4//rx8caXHN146v0hn+DiZTyKC56rckc4ZaghN3aYSwaNo3JchROHb6hiVtmV3oHSPOKfLlKrcp7mQmd8Cm9eu7hwh9rqWE00In4kVeC5j9cR//wZph4cmQhtaT1RYpdze6Qo7EFq1LaamVjSpV2X0fF5kWztquVFCUvBDvmFnizqKtDUODOBjJB7mU37ceqs9wg7Vsw0fHrmHKp6vODWSGmC++zFeOw2CGjMa74E7GAYtw8OYfvJKs/ql53QbBtntTXStRBS2ruBYpsIp6eR6Qb021DIgWPkcrS23IagVRRvMsFs88wQiu/QtFr3yAbRcc23WLf32K9aStenuULtCLAmxc2df09GEdlwon9+DNn+7luNgzA7tbKHkWqSpQfMkabLR/Zgoaywan61G4nzEhZu8elz5LzYiuxMFY1D6vY/0pVZ12N8vRZFnvITf6UJbKul8qHfCabZX0ob8T6ea8U2nWOA+b0t5/C7pRgdV9uGmx08Nv2suu6rKzCS4AYMxbvxYwXCpgqdOrmKy9TnqgwSm4nQzIMnyXXRrpnu0nkMMnQld8QApXrft/6niHdX2XkG5C1WaNxtfSjIE5KawQaldJ+Lxxnvpljt79pZD6bDxCAi5cmRKwJUyUOyQN8OZexvnQ9M3GPAvyK3l4xcmKKbLgV6QjONzUBzVTPQz5+wB5QR1tdd31s2ZGtF6+VkR04yQjs8hpI2giXyGmz9FQ9CbskhwThQ7Lx665dquMD+pJpanxRZZRCMyqyx4ULle7IMq1B4sQ1TJNHIy0dFskj8cgE8o8I78UoTXe2FSWaVRmCt7qKL5s7ORud0e7K1z0NAR6NnD/Gy6VUjop3on51VLdCebtAP0MyE6kH9+HJRFyKwrAriY27hcv75UTHI0gIgoUXyErN0cFCpIE0YM0S6WAW3l4HgPz60e014/QPFDeJsiwqScFUYJtGh5Oi+YzSIt+WH1K/xl//X15iB4uxPfNTsChhNQPks5DvPTBtYmqRayqcANhJwOAQn1/rMRJ1qlH29J2SsNWR7LTAZIPhsi2uZ8KfxXaA/VU9OCXfKFI1l4zf9Oswpgvfm3OW2A5+hW2qSgziww05xBhib7kqiZQosrNivrLCo9xYavnylfz+fWIXosI/a5dVvBJOIjH7AJJrH8XxhnnUJIKku84bYoKeKmJHONbycbSEZmn6cey3kxyFrEO9qjPca+pw/2dVzv/Bms+2glD4Cv2SQtCBbsEPcb+t5JAXTAT8qQWABF23XVRMQY41rofZLCovLWznblFavjQBJCOuO7uG6zgWnI9WQsA9oyLJWtnxtCZEKFWPy7Vm2IuXRmegVO+s34jvCbvUXT1F5AORXNxFldaz/YArXGVq1Iwo5amKMsCmy4f+vvFA7frOdZNe1uReUOonK/MN1cZ80IVrk7UpAKTrs7eJoUX/aP1VsYEdLcNOCNMbGjLed6a10AWSzIHd9L1ElMju77pRiahqGvNFydsufaQzVvxDinFDvpqaidJ0RIXGsCWHAJZe1wNA1U28kF3vWHtAkyVoXQ4bW4i0RSUjzCQ9tFkYeV+3kb8cs2vgwyxtLd41YqVddxKlfQEg+GQqf4ZRyrGQXYMPkcDCJoAELUkg9oJLJjp4DJd46hdRQgpHkzCI0SBgpOHdLhrC+L2TjTi0eW07g/sxWx2LPIUoC/gCjWqsMeXEOwQUGk4J5PEiI5Eii9WKqYF1Yd0bBLNot00R9Cribox2xQG+qBkO5LPlMJxTysymBYxltGovyo+iOiPSBAWgHhB+S//WmVJlJQyK8n2HvSwjG0mmua6sNXc+s7Hm7dxK5ggbAQ1tFfoBm9lmtVeN4N9ONdsdv1l7h8e4N4BHGkr/S9jBLD/gO9gpun+onqZpBBPNJLS4xdHzjbcag+7jn/uoKI17kmhL6wU/iKLOkHJxZQmd9jqI17+zZEtHZBpKMZdzeRZ4/Pgg5E1sdLO3JVdxTQYq4E+jk5j+cGAFX8hNfpVCHuc8CPbFfUbaDMvQqbvJ6JECRsNY2H/YILU7VYnQfCpZFcVQq8CwPosGCwIU+D/tZ6fsb8nSERKr+1ZY5X4hmc99i6fSz1Jx4J/fphuNe6nDPEIBeZmaZ+x8ld8SUwqG1eljP9xkQxNknhqDYckh4gSzbdOHxSlVAk9hYMhNghtBIyJWDEsLWWjoUpT+Mo4qp14H/Ci5gB2MuzmBIK0RoQfNJVTNMaYmjtFNniAGgORnjO+6FgwlfC0XMwmMxATvzw4GNeaMxJMBXX8G/MRcbh00WkxWvc4DVTstvsE/Gs/1lSp0Jdyaocv0cIZDsUj1Ep7qqXLVt+ZQ2VwWx4LbVj6jdTSKETJRZi9t32tBKw/1EESv1R79i7amRL7RsrSoL9dyqW81yrFLFOUWDklMdz4i1AEtB9KEK3HT7Q8DWgxQJC7y3/KFJ6ZX1e0l2WRD8EcNw59Iu+q2oxlLCyym0+efKh1D8MmN/FXseiDECFkE77pj1GUetaWOpS3tN4dYfaX+ODHZGI/Sh8pEBqr53UhNj4sKB4HjvmOOIFkkc6V/g1njM1UGNHaAH6TvTJjHyHKEHuABUNeFaB2PXQmcOd8huVgePMgTdDsNwHH+rwp4xb1GjD/8FpxT4+DTjvX5R9jBnFQg3kyEYZ7Y/Z7b7EmgfHnDq6W77EeaL2elI+HACeqx15zKePGqcsRzNnI0jrnGs0orJ8nzgMsp1L7kh0hyoMvlpR8CRW2AURnchyE+kGtmg4xhHZeLVz7JDF2GkP9Y16LgImRzHpZ5OmXKQRSk151at2+8cXL4qaUhHVgULvyanBNvTf8AeT4kTdD/RSLUc42S/QOsRP2276sPSnL0xf/CNiOUXsM/ek4AYac93MFLoi/jCkklES6iRKP8r64QwVk5mi4PZaEXUzjF4mv8TVpQ9QFEKwMzuZoWs62J572XWtQOArr0TyAVVSoGrgR87Sf/KnU5CslwINnbp+zIM5lZvIqbVx8IKb684ZwSddEd0NHGToYOLlLTdTaB6SFD49xmUlDrD6IeGS8y1kw5RMTv25jG1Isj308emljvIKVDqmISNNvKSRR0T4lEIWMAH0wVfKB1uQViiUQ8N1COG7myLHmFlSE3XQjpq9aNUUADtmFo5+162rGbJMyuxeUK/PP8Lk8jBCvlZS/RqAyT0Bqj/SQP9kwpi1Qvhai6npEckQ8IQ0OEa/boWi/jCL6GVHf+xqS2GCGIfOEN8DvchIqG1wOfZ7gJQ1/2Ip6NG60f5K9eGA+oGnJfDMY8jDvwwakIEq1TrUJEmTjNHNiZAYrS0xFFftXkK11y9e5JfqPbOtb5Y1BpmOgIgHZ4N7hdZMyRwML/chO/EWet0pkXdr/Rv/VffZ9hGOROQSm33YFI6Dggd4CG8UOR/J7FBoIC+6O6+zCGR1IqU59twj+gfL2ITRA7oA9WOcpLtTu/eL5Yn7zHH+gYlgmzfEJz97E7gdSqU++b7DFu+UgynlQBlBVTA6QSf/3e/Oebp9n82/YLryrYXqMY9djdorMLjBsUO9bmzQ4J34wIVYhL0V0hNP+YTKQ7C4CIaouYvifyAdEQhiKV1iw3+2nhT5nwpwA2U0L0uV1NWeKmuIdkcSrKU7VPobWfMUruyN9LivqTblne1qaOISi5EXh3IOkFK/Sy9A/y2lVEqUmWdwkYQupXw1b1Abd03MNSCUSJNhIonJYozJ2qYv87yyFc9t5ZmTOcSA18l37c+gencC3nWZ53+RQ0JyGEyshCmOkL4r0ZKGfNj/2pMyEnOFYthXyGMbLL60Y/bI0NfuctmtujfKtztKdnvOcLUNkQTY00gpq9E8S4uhMLzY1x39GVWl2ctIakGOYGp4IqYFjsAozLLeFR51tCRX37fSu9wgKpMTwpPPn9gy91FiWf1TjEWovtMBjqlQ88UzBXYnq7heQqq8KhDnwtEBMNGPmsXFy+Tofl7Dau42Pe7CwwTohoei/uE/rcC16c2lSjDpGBHJagI4ID50X3ORX8T/PK4rWJ/t7qQKm0L19rCYU3+eiP7QXX4mD1+icEg1OzwJQBxVuTuSV9z0Pd1H+7V2R990eqckIS+A9xgDbf+lvYXH3OOjDnZVPYCKXYb/8coa4gdJ927QVnVU7qxrNMzokFYAdyIBR9531EPDBQkgSafuf5hr0nPlpDyNiq95bAhfG02nRrJN6PhTcuoEG63bOdehEk9qUVggBzkIcSfasAGrrmh9x9W7PPOWLnzFhcnqL/dFuGcAUjh0yf0iV7hvX5+W4fVTpx10kHTwpy62LPCzL1kwNw9whc+XCGTjlNZotKBWJTMhQuXqPlAja1QooLcuZOI49uaGQPsVJXt41ru5zcpJe+tzW028/PzIkoEh1tPwCgt8WJdIbUyt8/RM7Bip9gZs3RAS7kocVKLudVPTTg3NStoNobnH/zX04XZzrwvvfjN6xY2bUKHFQuWgp8Xa1360D2RxggduYESjxG0gNcNEDu4lChVHKXpIqUH0QkjF79AdkQtkTjA93+2e9NemZOkgewSItlO7Y19ciPYg+sON/ni5B1A/QSI43QsTmc5pNfwHPkwGtUWb7XAoLRvZc+Pf/sTeIgvlcq8FvAvVQqqrQXfYQNsQkqDrotHYWUBW29bebrjCoKH7pcTztty/t93rVONtqAtN+Z5LF2sooXiKdpspDfnjIfQ+kq1313cVNTyOaw7gGBhFX/jvxfmiLAOJNJTApWrh2iaBztDQdWLESUHjDLdHBSLtTpgXytmo4mj8onX6QXE7uii9MjpChLGr1Ccx95TwvVvrHiBUhFweT0hR/fTxRxw9Eo0MRSIpDsZZ6yjoy1RbeS20OjmzAK51jlWqGAavX4WTr/dGLku5ygyRu6Qc2VEr8apEUYdk5qbOvopI9oDZwMgjzA8fwwcOS1OLDvLs5aSna7K3EGnOdn9bAw5Wvw7y7tQENka4AYw4s0RmgUxhsp1FsTMKOg=="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 397,
+      "candidatesTokenCount": 836,
+      "totalTokenCount": 2310,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 397
+        }
+      ],
+      "thoughtsTokenCount": 1077
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "Gejpaa2_G_io1e8P28ThiAE"
+  }
+}
+--------------------------------------------------

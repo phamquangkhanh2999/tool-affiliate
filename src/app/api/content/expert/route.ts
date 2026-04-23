@@ -1,81 +1,102 @@
-import { NextRequest } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { generateExpertFacebookPost } from "@/lib/gemini";
-import { successResponse, errorResponse } from "@/lib/api-response";
-import { z } from "zod";
+import { NextRequest } from 'next/server';
+import { prisma } from '@/lib/prisma';
+import { successResponse, errorResponse } from '@/lib/api-response';
+import { generateExpertFacebookPost } from '@/lib/gemini';
 
-const ExpertSchema = z.object({
-  productId: z.string().optional(),
-  productName: z.string().min(1),
-  affiliateLink: z.string().min(1), // Không ép kiểu URL vì có thể là link nội bộ
-  additionalInfo: z.string().optional(),
-});
-
-/**
- * @swagger
- * /api/content/expert:
- *   post:
- *     tags:
- *       - AI Engine
- *     summary: Tạo bài đăng Facebook phong cách chuyên gia
- *     description: Trả về 3 biến thể hook, 1 bản ngắn (<100 từ) và 1 bản dài (200-300 từ).
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               productName:
- *                 type: string
- *               affiliateLink:
- *                 type: string
- *               additionalInfo:
- *                 type: string
- *     responses:
- *       201:
- *         description: Tạo nội dung thành công
- */
-export async function POST(req: NextRequest) {
+export async function GET(req: NextRequest) {
   try {
-    const body = await req.json();
-    const parsed = ExpertSchema.safeParse(body);
-
-    if (!parsed.success) {
-      return errorResponse(parsed.error.issues[0].message);
-    }
-
-    const { productId, productName, affiliateLink, additionalInfo } = parsed.data;
-    const userId = "demo-user"; // TODO: get from session
-
-    const result = await generateExpertFacebookPost(
-      productName,
-      affiliateLink,
-      additionalInfo
-    );
-
-    // Lưu vào DB
-    // Vì bảng GeneratedContent.content là kiểu String, ta sẽ lưu JSON stringify
-    const saved = await prisma.generatedContent.create({
-      data: {
-        userId,
-        productId,
-        contentType: "CAPTION",
-        platform: "facebook",
-        tone: "engaging",
-        prompt: `EXPERT_FACEBOOK: ${productName}`,
-        content: JSON.stringify(result),
-        hashtags: [],
-      },
+    const userId = 'demo-user';
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: {
+        id: userId,
+        email: 'demo@example.com',
+        name: 'Demo User'
+      }
     });
 
-    return successResponse({
-      id: saved.id,
-      ...result
-    }, undefined, 201);
+    const history = await prisma.generatedContent.findMany({
+      where: { userId, platform: 'facebook' },
+      orderBy: { createdAt: 'desc' },
+      take: 50
+    });
+    return successResponse(history);
   } catch (err) {
-    console.error("[POST /api/content/expert]", err);
-    const message = err instanceof Error ? err.message : "Lỗi AI Expert generation";
-    return errorResponse(message, 500);
+    return errorResponse('Lỗi lấy lịch sử', 500);
+  }
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const { productName, affiliateLink, additionalInfo } = await req.json();
+
+    if (!productName || !affiliateLink) {
+      return errorResponse('Thiếu thông tin sản phẩm hoặc link affiliate', 400);
+    }
+
+    // Đảm bảo userId tồn tại trong Database (Upsert để không lỗi nếu đã có)
+    const userId = 'demo-user'; 
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: {
+        id: userId,
+        email: 'demo@example.com',
+        name: 'Demo User'
+      }
+    });
+
+    let currentPrompt = '';
+    try {
+      // 1. Gọi AI tạo nội dung
+      const result = await generateExpertFacebookPost(
+        productName,
+        affiliateLink,
+        additionalInfo
+      );
+      
+      currentPrompt = result.prompt || '';
+
+      // 2. Lưu vào Database (Bọc trong try-catch để không làm chết quy trình nếu DB lỗi)
+      let savedId = null;
+      try {
+        const saved = await prisma.generatedContent.create({
+          data: {
+            userId,
+            contentType: 'CAPTION',
+            platform: 'facebook',
+            tone: 'expert',
+            prompt: currentPrompt,
+            content: result.longVersion || result.shortVersion,
+            hashtags: [],
+            metadata: {
+              hooks: result.hooks,
+              shortVersion: result.shortVersion,
+              longVersion: result.longVersion,
+              commentSeedings: result.commentSeedings,
+              productName,
+              affiliateLink
+            } as any
+          }
+        });
+        savedId = saved.id;
+      } catch (dbErr) {
+        console.error('!!! [DATABASE SAVE ERROR]:', dbErr);
+        // Không return lỗi ở đây, để người dùng vẫn thấy kết quả AI
+      }
+
+      return successResponse({
+        id: savedId,
+        ...result,
+        dbStatus: savedId ? 'success' : 'error'
+      });
+    } catch (aiErr) {
+      console.error('!!! [AI ERROR]:', aiErr);
+      return errorResponse(`Lỗi AI: ${aiErr instanceof Error ? aiErr.message : String(aiErr)}`, 500);
+    }
+  } catch (err) {
+    console.error('!!! [SERVER ERROR]:', err);
+    return errorResponse('Lỗi máy chủ hệ thống', 500);
   }
 }

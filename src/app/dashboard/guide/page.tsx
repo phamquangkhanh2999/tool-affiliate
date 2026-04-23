@@ -1,370 +1,51 @@
+'use client';
+
 export default function GuidePage() {
   return (
-    <>
-      <div className='page-header'>
-        <div>
-          <h1 className='page-title'>📚 Hướng Dẫn Sử Dụng & Quy Trình 10-Step AI</h1>
-          <p className='page-subtitle'>Cẩm nang vận hành Shopee Affiliate AI SaaS</p>
-        </div>
-      </div>
+    <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px', color: '#f1f5f9' }}>
+      <header style={{ marginBottom: '48px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '40px', fontWeight: '900', color: '#fff', marginBottom: '16px' }}>
+          📘 Hướng dẫn sử dụng FB Expert Studio
+        </h1>
+        <p style={{ color: '#94a3b8', fontSize: '18px' }}>Quy trình 3 bước để tạo nội dung Affiliate nghìn đơn</p>
+      </header>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        {/* Mục Đích Sử Dụng */}
-        <div className='card'>
-          <h2
-            style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              marginBottom: '16px',
-              color: 'var(--primary)',
-            }}
-          >
-            🎯 Mục Đích Của Phần Mềm Này Là Gì?
-          </h2>
-          <p style={{ lineHeight: '1.6', color: 'var(--text-secondary)' }}>
-            Hệ thống <b>Shopee Affiliate AI SaaS</b> ra đời nhằm giải quyết nỗi đau của Affiliate
-            Creator:{' '}
-            <i>
-              Bí ý tưởng, không biết phân tích sản phẩm, và tốn quá nhiều thời gian viết góc quay
-              (kịch bản).
-            </i>
-            Phần mềm này đóng vai trò như một <b>Đội ngũ Marketing ảo</b>, giúp bạn tìm ra tử huyệt
-            cảm xúc của người mua và tự động sinh ra hàng trăm nội dung bám sát tâm lý học để tối đa
-            tỷ lệ chuyển đổi.
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+        {/* Step 1 */}
+        <section style={{ background: '#1e293b', padding: '32px', borderRadius: '24px', border: '1px solid #334155' }}>
+          <h2 style={{ color: '#3b82f6', marginBottom: '16px' }}>1. Tạo nội dung chuyên gia</h2>
+          <p style={{ lineHeight: '1.6', color: '#cbd5e1' }}>
+            Vào mục <b>Chuyên gia Facebook</b>, nhập tên sản phẩm và dán link Affiliate của bạn (Shopee, Lazada, TikTok...). 
+            Thêm một vài thông tin bổ sung nếu cần để AI hiểu sâu về sản phẩm hơn. Bấm "Tạo nội dung" và đợi 10-15s.
+          </p>
+        </section>
+
+        {/* Step 2 */}
+        <section style={{ background: '#1e293b', padding: '32px', borderRadius: '24px', border: '1px solid #334155' }}>
+          <h2 style={{ color: '#c084fc', marginBottom: '16px' }}>2. Quản lý & Tối ưu bài viết</h2>
+          <p style={{ lineHeight: '1.6', color: '#cbd5e1' }}>
+            Hệ thống sẽ trả về 2 phiên bản (Ngắn & Dài), cùng danh sách Hooks và Seeding. 
+            Bạn có thể xem lại tất cả bài đã tạo trong mục <b>Quản lý bài viết FB</b>. Mọi dữ liệu đã được lưu trữ an toàn.
+          </p>
+        </section>
+
+        {/* Step 3 */}
+        <section style={{ background: '#1e293b', padding: '32px', borderRadius: '24px', border: '1px solid #334155' }}>
+          <h2 style={{ color: '#10b981', marginBottom: '16px' }}>3. Khai thác Kho Affiliate Links</h2>
+          <p style={{ lineHeight: '1.6', color: '#cbd5e1' }}>
+            Tất cả các link bạn từng dùng sẽ được tổng hợp tại mục <b>Affiliate Links</b>. 
+            Tại đây, bạn có thể nhanh chóng tìm lại link của sản phẩm cũ để copy và dán vào các bình luận dạo hoặc chia sẻ nhanh mà không cần tạo lại bài mới.
+          </p>
+        </section>
+
+        {/* Tip */}
+        <div style={{ padding: '24px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '16px', borderLeft: '4px solid #3b82f6' }}>
+          <h4 style={{ color: '#3b82f6', marginBottom: '8px' }}>💡 Mẹo nhỏ:</h4>
+          <p style={{ fontSize: '14px', color: '#94a3b8' }}>
+            Sử dụng công cụ <b>Log Hệ Thống (AI)</b> nếu bạn cảm thấy AI đang trả về kết quả không như ý hoặc muốn kiểm tra kỹ thuật.
           </p>
         </div>
-
-        {/* 10 Step Flow */}
-        <div className='card'>
-          <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '24px' }}>
-            🚀 Vòng Lặp Vận Hành 10 Bước (AI Flow)
-          </h2>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-            {/* Cột 1: Research & AI */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--primary)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>1️⃣ Lọc Tiềm Năng Sản Phẩm</span>
-                  <span className='badge badge-purple'>Research</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Vào <b>Tìm Sản Phẩm</b> (lưu về kho) ➜ Sang <b>Phân Tích AI</b>. Máy học sẽ trả về
-                  điểm tiềm năng viral và pain point mua hàng.
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--primary)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>2️⃣ Định Hình Góc Nhìn (Content Angle)</span>
-                  <span className='badge badge-purple'>AI Content</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Tại <b>Chiến Lược Content</b>, AI sẽ xoáy vào Pain point bước 1 để sinh 10 góc làm
-                  video (Shock, Tò Mò, Giải Cứu, v.v).
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--primary)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>3️⃣ Viết Kịch Bản 30 Giây & Hook</span>
-                  <span className='badge badge-purple'>AI Content</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Bê Angle sang <b>Kịch Bản Reels</b>. Tại đây AI cấp 5 mồi câu 3 giây đầu (Hook)
-                  cháy nhất. Và làm sẵn Timeline từng giây khi lên hình.
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--primary)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>4️⃣ Tạo Caption Đi Kèm Mã Tracking</span>
-                  <span className='badge badge-purple'>AI Content</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Qua tab <b>Content & Caption</b>. Hệ thống sinh lời dẫn dụ khách hàng mượt mà có
-                  Call-to-action đính kèm Link Shortener Affiliate nội bộ.
-                </p>
-              </div>
-            </div>
-
-            {/* Cột 2: System & Optimize */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--orange)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>5️⃣ Gom Video Lên Lịch (7-Day Plan)</span>
-                  <span className='badge badge-orange'>System</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Ở mục <b>Lịch Content Tuần</b>, nhét đủ thứ bạn nghĩ ra vào. Thuật toán sẽ chia 2
-                  video/ngày chuẩn chỉ theo nhịp điệu kích sales.
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--green)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>6️⃣ Bắt Mạch Video (Chuẩn Đoán Flop)</span>
-                  <span className='badge badge-green'>Optimize</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Đăng lên mà FLOP? Nhập view vào <b>Tối Ưu Hiệu Suất</b>. AI sẽ đấm thẳng vào sai
-                  lầm của bạn: Do hook chán? Hay do CTA chưa chạm?
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'var(--bg-secondary)',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  borderLeft: '4px solid var(--green)',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <span>7️⃣ Ép Khuôn Viral (Rewrite Script)</span>
-                  <span className='badge badge-green'>Optimize</span>
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px' }}>
-                  Khi nhận ra lỗi, ở bước 6 AI sẽ ngay lập tức viết lại một phiên bản Kịch bản mới
-                  tối tân hơn cởi trói nhược điểm của video cũ.
-                </p>
-              </div>
-
-              <div
-                style={{
-                  background: 'linear-gradient(135deg, rgba(124,58,237,0.1), rgba(255,107,53,0.1))',
-                  padding: '16px',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(124,58,237,0.3)',
-                }}
-              >
-                <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: 'var(--primary)' }}>
-                  ∞ Bước 8, 9, 10: Vạn Vật Hoàn Lưu (Tương Lai)
-                </h3>
-                <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '8px' }}>
-                  Hệ thống đang trang bị Tracking Links nội bộ cùng Database. Trong bản Updates tới,
-                  hệ thống sẽ tự sinh API móc Auto-post lên nền tảng.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Cấu hình .env Section */}
-        <div
-          className='card'
-          style={{ border: '1px solid rgba(255,107,53,0.3)', background: 'rgba(255,107,53,0.02)' }}
-        >
-          <h2
-            style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              marginBottom: '16px',
-              color: 'var(--orange)',
-            }}
-          >
-            ⚙️ Hướng dẫn Cấu hình & Chìa khóa (API Keys)
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-            <div>
-              <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>
-                1. File .env là gì?
-              </h3>
-              <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                Nó là một file văn bản đặc biệt nằm ở thư mục gốc của dự án. Nó chứa các chìa khóa
-                bí mật để app của bạn có thể nói chuyện được với Google (Gemini AI) và Shopee.
-              </p>
-              <ul
-                style={{
-                  paddingLeft: '20px',
-                  fontSize: '12px',
-                  color: 'var(--text-muted)',
-                  marginTop: '8px',
-                }}
-              >
-                <li>
-                  <b>DATABASE_URL:</b> Địa chỉ để app lưu trữ sản phẩm (như ổ cứng).
-                </li>
-                <li>
-                  <b>GEMINI_API_KEY:</b> Chìa khóa để dùng trí tuệ nhân tạo (phải có mới chạy được
-                  AI).
-                </li>
-                <li>
-                  <b>NEXTAUTH_SECRET:</b> Một mã ngẫu nhiên để bảo mật đăng nhập.
-                </li>
-              </ul>
-            </div>
-            <div style={{ background: 'var(--bg-primary)', padding: '16px', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>
-                2. Cách thiết lập nhanh
-              </h3>
-              <div
-                style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px' }}
-              >
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <span style={{ color: 'var(--orange)' }}>Step 1:</span> Copy file{' '}
-                  <code>.env.example</code> thành file <code>.env</code>
-                </div>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <span style={{ color: 'var(--orange)' }}>Step 2:</span> Dán Key Gemini lấy từ{' '}
-                  <a
-                    href='https://aistudio.google.com/app/apikey'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    style={{ color: 'var(--primary)', textDecoration: 'underline' }}
-                  >
-                    AI Studio
-                  </a>{' '}
-                  vào.
-                </div>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <span style={{ color: 'var(--orange)' }}>Step 3:</span> Restart lại Server (nếu
-                  đang chạy) để app nhận Key mới.
-                </div>
-              </div>
-              <p
-                style={{
-                  fontSize: '11px',
-                  color: 'var(--text-muted)',
-                  marginTop: '12px',
-                  fontStyle: 'italic',
-                }}
-              >
-                💡 Hiện tại app đã hỗ trợ sửa Key trực tiếp trong mục <b>Cài đặt</b>, bạn không nhất
-                thiết phải đụng vào file .env nữa nếu app đã chạy!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Mẹo Nhỏ */}
-        <div
-          style={{
-            padding: '20px',
-            background: 'var(--bg-secondary)',
-            borderLeft: '4px solid var(--green)',
-            borderRadius: '12px',
-          }}
-        >
-          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '8px' }}>
-            💡 Lời Khuyên Dành Riêng Cho Bạn
-          </h3>
-          <ul
-            style={{
-              paddingLeft: '20px',
-              fontSize: '14px',
-              color: 'var(--text-muted)',
-              lineHeight: '1.8',
-            }}
-          >
-            <li>
-              <b>Không bỏ bước:</b> Bạn có thể nhảy luôn vào tạo Caption, nhưng nếu đi từ Analysis →
-              Strategy → Script, Gemini sẽ học sâu về Pain Point sản phẩm khiến nội dung sắc bén gấp
-              5 lần.
-            </li>
-            <li>
-              <b>Chủ Động Lưu Database:</b> Máy AI hoạt động dựa trên Database Của Bạn. Dành ra mỗi
-              tối nhặt 20 sản phẩm Hot trên Shopee ấn nút lưu vào hệ thống để AI có nguyên liệu xào
-              nấu nhé.
-            </li>
-            <li>
-              <b>Trình Duyệt:</b> Hãy xài bộ UI Darkmode này trong lúc Stream Content hoặc Mở rộng 2
-              màn hình để quy trình copy-paste diễn ra mượt mà nhất.
-            </li>
-          </ul>
-        </div>
       </div>
-    </>
+    </div>
   );
 }

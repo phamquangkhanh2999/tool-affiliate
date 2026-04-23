@@ -1,156 +1,152 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const SECTIONS = [
   {
-    label: '🔍 Research',
+    label: 'Navigation',
     items: [
-      { href: '/dashboard', icon: '📊', label: 'Dashboard' },
-      { href: '/dashboard/products', icon: '🛍️', label: 'Sản phẩm', badge: 'HOT' },
-      { href: '/dashboard/analyze', icon: '🔬', label: 'Phân tích AI', step: '1' },
-      { href: '/dashboard/strategy', icon: '🧠', label: 'Content Strategy', step: '2' },
+      { href: '/dashboard', icon: '⚡', label: 'Command Center' },
     ],
   },
   {
-    label: '🎬 AI Content',
+    label: 'AI Content Forge',
     items: [
-      { href: '/dashboard/scripts', icon: '🎣', label: 'Hook & Script', step: '3' },
-      { href: '/dashboard/facebook-expert', icon: '🚀', label: 'Chuyên gia Facebook', step: '4' },
-      { href: '/dashboard/content', icon: '📝', label: 'Caption & Hashtag', step: '4' },
-      { href: '/dashboard/planner', icon: '📅', label: '7-Day Planner', step: '5' },
+      { href: '/dashboard/facebook-expert', icon: '🤖', label: 'FB Expert Studio' },
+      { href: '/dashboard/facebook-expert/history', icon: '🏛️', label: 'Content Archive' },
     ],
   },
   {
-    label: '📈 Optimize',
+    label: 'Intelligence & Ops',
     items: [
-      { href: '/dashboard/performance', icon: '📊', label: 'Performance AI', step: '6-7' },
-      { href: '/dashboard/campaigns', icon: '🎯', label: 'Chiến dịch' },
-      { href: '/dashboard/links', icon: '🔗', label: 'Affiliate Links' },
-      { href: '/dashboard/analytics', icon: '📈', label: 'Analytics' },
+      { href: '/dashboard/debug-logs', icon: '📟', label: 'Neural Logs' },
+      { href: '/dashboard/links', icon: '🔗', label: 'Link Repository' },
     ],
   },
   {
-    label: '⚙️ Quản Trị (CMS)',
+    label: 'Resources',
     items: [
-      { href: '/dashboard/cms/products', icon: '📦', label: 'Quản lý Sản phẩm' },
-      { href: '/dashboard/cms/products/import', icon: '🚀', label: 'Nhập hàng AI (Bulk)' },
-      { href: '/dashboard/cms/campaigns', icon: '📉', label: 'Quản lý Chiến dịch' },
+      { href: '/dashboard/guide', icon: '📖', label: 'Blueprint' },
+      { href: '/api-docs', icon: '⚙️', label: 'API System' },
     ],
   },
-];
-
-const settingItems = [
-  { href: '/dashboard/guide', icon: '📖', label: 'Hướng dẫn SD' },
-  { href: '/api-docs', icon: '📝', label: 'API Builder (Swagger)' },
-  { href: '/dashboard/settings', icon: '⚙️', label: 'Cài đặt' },
 ];
 
 export function Sidebar() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 1024;
+      setIsMobile(mobile);
+      setIsOpen(!mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
-    <aside className='sidebar'>
-      <div className='sidebar-header'>
-        <Link href='/dashboard' className='sidebar-logo'>
-          <div className='sidebar-logo-icon'>🛒</div>
-          <div>
-            <div className='sidebar-logo-text'>Affiliate AI</div>
-            <div className='sidebar-logo-sub'>Shopee Automation</div>
+    <>
+      {/* Mobile Header (Floating) */}
+      {isMobile && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, height: '70px', background: 'rgba(2, 6, 23, 0.8)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', zIndex: 100 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+             <Image src="/logo.png" alt="Logo" width={32} height={32} style={{ borderRadius: '8px' }} />
+             <span style={{ fontWeight: '800', fontSize: '16px', letterSpacing: '0.1em' }}>STUDIO</span>
           </div>
-        </Link>
-      </div>
+          <button onClick={() => setIsOpen(!isOpen)} style={{ background: 'none', border: 'none', color: '#fff', fontSize: '24px' }}>{isOpen ? '✕' : '☰'}</button>
+        </div>
+      )}
 
-      <nav className='sidebar-nav'>
-        {SECTIONS.map((section) => (
-          <div key={section.label}>
-            <span className='nav-section-label'>{section.label}</span>
-            {section.items.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-item ${pathname === item.href ? 'active' : ''}`}
-              >
-                <span className='nav-icon'>{item.icon}</span>
-                {item.label}
-                {'step' in item && item.step && (
-                  <span
-                    style={{
-                      marginLeft: 'auto',
-                      fontSize: '9px',
-                      fontWeight: '800',
-                      color: 'var(--orange)',
-                      background: 'var(--orange-glow)',
-                      border: '1px solid rgba(255,107,53,0.3)',
-                      padding: '1px 6px',
-                      borderRadius: '4px',
-                      letterSpacing: '0.3px',
-                    }}
-                  >
-                    S{item.step}
-                  </span>
-                )}
-                {'badge' in item && item.badge && <span className='nav-badge'>{item.badge}</span>}
-              </Link>
-            ))}
-          </div>
-        ))}
-
-        <span className='nav-section-label'>Hệ thống</span>
-        {settingItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`nav-item ${pathname === item.href ? 'active' : ''}`}
-          >
-            <span className='nav-icon'>{item.icon}</span>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-
-      <div className='sidebar-footer'>
-        <div
-          style={{
-            padding: '12px',
-            background: 'var(--orange-glow)',
-            borderRadius: '10px',
-            border: '1px solid rgba(255,107,53,0.2)',
-          }}
-        >
-          <div
-            style={{
-              fontSize: '11px',
-              color: 'var(--text-muted)',
-              marginBottom: '6px',
-              fontWeight: '600',
-            }}
-          >
-            🤖 AI AGENT LOOP
-          </div>
-          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7'].map((s, i) => (
-              <span
-                key={s}
-                style={{
-                  fontSize: '9px',
-                  padding: '2px 5px',
-                  borderRadius: '4px',
-                  background: i < 5 ? 'rgba(16,185,129,0.2)' : 'rgba(255,107,53,0.2)',
-                  color: i < 5 ? 'var(--green)' : 'var(--orange)',
-                  fontWeight: '700',
-                }}
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-          <div style={{ fontSize: '10px', color: 'var(--text-muted)', marginTop: '6px' }}>
-            → Scale đến Step 10
+      <aside
+        style={{
+          width: '280px',
+          background: 'rgba(2, 6, 23, 0.9)',
+          backdropFilter: 'blur(30px)',
+          borderRight: '1px solid rgba(255, 255, 255, 0.03)',
+          height: '100vh',
+          position: 'fixed',
+          left: 0,
+          top: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          zIndex: 95,
+          transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
+          boxShadow: '40px 0 100px rgba(0,0,0,0.5)',
+        }}
+      >
+        {/* Brand Identity */}
+        <div style={{ padding: '50px 30px', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(34, 211, 238, 0.2), transparent)' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'linear-gradient(135deg, #22d3ee, #6366f1)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2px', boxShadow: '0 0 20px rgba(34, 211, 238, 0.3)' }}>
+               <div style={{ background: '#020617', width: '100%', height: '100%', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                  <Image src="/logo.png" alt="Logo" width={40} height={40} />
+               </div>
+            </div>
+            <div>
+              <div style={{ fontSize: '14px', fontWeight: '900', color: '#fff', letterSpacing: '0.15em', fontFamily: 'Space Grotesk' }}>EXPERT</div>
+              <div style={{ fontSize: '10px', color: '#22d3ee', fontWeight: '800', opacity: 0.8 }}>CYBER ENGINE</div>
+            </div>
           </div>
         </div>
-      </div>
-    </aside>
+
+        {/* Neural Nav */}
+        <nav style={{ flex: 1, overflowY: 'auto', padding: '20px 20px' }}>
+          {SECTIONS.map((section, idx) => (
+            <div key={idx} style={{ marginBottom: '40px' }}>
+              <div style={{ fontSize: '10px', fontWeight: '800', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '20px', paddingLeft: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                 <span>{section.label}</span>
+                 <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.03)' }} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {section.items.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '15px',
+                        padding: '12px 15px',
+                        borderRadius: '12px',
+                        textDecoration: 'none',
+                        color: isActive ? '#fff' : '#94a3b8',
+                        background: isActive ? 'rgba(34, 211, 238, 0.05)' : 'transparent',
+                        border: isActive ? '1px solid rgba(34, 211, 238, 0.1)' : '1px solid transparent',
+                        transition: 'all 0.3s ease',
+                      }}
+                    >
+                      <span style={{ fontSize: '18px', filter: isActive ? 'drop-shadow(0 0 8px #22d3ee)' : 'none' }}>{item.icon}</span>
+                      <span style={{ fontSize: '13px', fontWeight: isActive ? '700' : '500', letterSpacing: '0.02em' }}>{item.label}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </nav>
+
+        {/* System Vitals Footer */}
+        <div style={{ padding: '30px' }}>
+          <div style={{ padding: '15px', borderRadius: '15px', border: '1px solid rgba(255,255,255,0.03)', background: 'rgba(255,255,255,0.01)' }}>
+             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 10px #22d3ee' }} />
+                <span style={{ fontSize: '10px', fontWeight: '800', color: '#fff' }}>SYSTEM ONLINE</span>
+             </div>
+             <div style={{ fontSize: '9px', color: '#475569', fontWeight: '600' }}>CO-PILOT ACTIVE V3.0</div>
+          </div>
+        </div>
+      </aside>
+    </>
   );
 }

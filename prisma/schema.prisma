@@ -215,6 +215,7 @@ model GeneratedContent {
   prompt      String      @db.Text
   content     String      @db.Text
   hashtags    String[]    @default([])
+  metadata    Json?       // Lưu trữ Hooks, Seeding, v.v.
   
   isUsed      Boolean     @default(false)
   isFavorite  Boolean     @default(false)
@@ -232,6 +233,7 @@ enum ContentType {
   REVIEW
   HASHTAG
   EMAIL
+  FB_EXPERT
 }
 
 // ============================================================

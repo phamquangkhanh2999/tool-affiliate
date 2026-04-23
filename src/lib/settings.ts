@@ -1,55 +1,28 @@
-import { prisma } from './prisma';
+/**
+ * Hệ thống Cấu hình Tập trung (Strict ENV Only)
+ * Dùng để quản lý các Key và Model thông qua tệp .env
+ */
 
 export interface AppSettings {
   geminiApiKey: string | null;
-  geminiModel: string | null;
+  geminiModel: string;
   shopeeAppId: string | null;
   shopeeSecretKey: string | null;
 }
 
 /**
- * Lấy cấu hình từ Database, nếu không có thì fallback sang .env
+ * Lấy cấu hình trực tiếp từ Environment Variables
  */
-export async function getAppSettings(userId: string = 'demo-user'): Promise<AppSettings> {
-  const apiKeys = await prisma.apiKey.findMany({
-    where: { userId },
-  });
-
-  const gemini = apiKeys.find((k) => k.platform === 'gemini');
-  console.log('[LOG] ~ getAppSettings ~ gemini:', gemini);
-  const shopee = apiKeys.find((k) => k.platform === 'shopee');
-
-  const safeModel = gemini?.appId || process.env.GEMINI_MODEL || 'gemini-1.5-flash';
-
+export async function getAppSettings(): Promise<AppSettings> {
   return {
-    geminiApiKey: gemini?.secretKey || process.env.GEMINI_API_KEY || null,
-    geminiModel: safeModel,
-    shopeeAppId: shopee?.appId || process.env.SHOPEE_APP_ID || null,
-    shopeeSecretKey: shopee?.secretKey || process.env.SHOPEE_SECRET_KEY || null,
+    geminiApiKey: process.env.GEMINI_API_KEY || null,
+    geminiModel: process.env.GEMINI_MODEL || 'gemini-3-flash-preview',
+    shopeeAppId: process.env.SHOPEE_APP_ID || null,
+    shopeeSecretKey: process.env.SHOPEE_SECRET_KEY || null,
   };
 }
 
 /**
- * Lưu hoặc cập nhật cấu hình vào Database
+ * Lưu ý: Các hàm updateAppSetting đã bị xóa bỏ để đảm bảo tính nhất quán
+ * và bảo mật thông qua file .env hệ thống.
  */
-export async function updateAppSetting(
-  platform: string,
-  data: { appId?: string; secretKey?: string },
-  userId: string = 'demo-user',
-) {
-  return prisma.apiKey.upsert({
-    where: {
-      userId_platform: { userId, platform },
-    },
-    update: {
-      ...data,
-      updatedAt: new Date(),
-    },
-    create: {
-      userId,
-      platform,
-      ...data,
-      isActive: true,
-    },
-  });
-}

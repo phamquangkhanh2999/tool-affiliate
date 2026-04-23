@@ -1,0 +1,16 @@
+{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "What is the price of Dior Lip Glow today?"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "google_search_retrieval": {}
+    }
+  ]
+}
