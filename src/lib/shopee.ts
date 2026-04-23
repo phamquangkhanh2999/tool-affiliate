@@ -1,5 +1,3 @@
-import { MOCK_PRODUCTS } from "@/data/mock-products";
-
 export interface ShopeeProduct {
   itemId: string;
   shopId: string;
@@ -28,18 +26,18 @@ export interface SearchFilters {
 
 // ─── Real Shopee API (khi có credentials) ──────────────────
 
-async function fetchShopeeProducts(filters: SearchFilters): Promise<ShopeeProduct[]> {
+export async function fetchShopeeProducts(filters: SearchFilters): Promise<ShopeeProduct[]> {
   const appId = process.env.SHOPEE_APP_ID;
   const secretKey = process.env.SHOPEE_SECRET_KEY;
 
   if (!appId || !secretKey) {
-    // Fallback to mock data
-    return getMockProducts(filters);
+    // Return empty when no API key
+    return [];
   }
 
   // TODO: Implement Shopee Affiliate API
   // https://affiliate.shopee.vn/open_api/vi/
-  return getMockProducts(filters);
+  return [];
 }
 
 // ─── Generate Affiliate Link ──────────────────────────────
@@ -50,8 +48,8 @@ export function generateAffiliateUrl(
 ): string {
   const appId = process.env.SHOPEE_APP_ID;
   if (!appId) {
-    // Return mock shortened URL for dev
-    return `https://shope.ee/dev-${trackingCode}`;
+    // Return placeholder
+    return `https://shopee.vn/product-url?tracking=${trackingCode}`;
   }
 
   const baseUrl = new URL(productUrl);
@@ -62,53 +60,8 @@ export function generateAffiliateUrl(
   return baseUrl.toString();
 }
 
-// ─── Mock Data for Development ────────────────────────────
+// ─── Placeholder for future use ────────────────────────────
 
-function getMockProducts(filters: SearchFilters): ShopeeProduct[] {
-  let products = [...MOCK_PRODUCTS];
-
-  if (filters.keyword) {
-    const kw = filters.keyword.toLowerCase();
-    products = products.filter(
-      (p) =>
-        p.name.toLowerCase().includes(kw) ||
-        p.category.toLowerCase().includes(kw)
-    );
-  }
-
-  if (filters.category) {
-    products = products.filter((p) =>
-      p.category.toLowerCase().includes(filters.category!.toLowerCase())
-    );
-  }
-
-  if (filters.minCommission) {
-    products = products.filter(
-      (p) => p.commissionRate >= filters.minCommission!
-    );
-  }
-
-  if (filters.maxPrice) {
-    products = products.filter(
-      (p) => p.discountedPrice <= filters.maxPrice!
-    );
-  }
-
-  // Sort
-  if (filters.sortBy === "commission") {
-    products.sort((a, b) => b.commissionRate - a.commissionRate);
-  } else if (filters.sortBy === "sold") {
-    products.sort((a, b) => b.soldCount - a.soldCount);
-  } else if (filters.sortBy === "price") {
-    products.sort((a, b) => a.discountedPrice - b.discountedPrice);
-  } else if (filters.sortBy === "rating") {
-    products.sort((a, b) => b.rating - a.rating);
-  }
-
-  const page = filters.page || 1;
-  const limit = filters.limit || 20;
-  const start = (page - 1) * limit;
-  return products.slice(start, start + limit);
+export function getMockProducts(filters: SearchFilters): ShopeeProduct[] {
+  return [];
 }
-
-export { fetchShopeeProducts, getMockProducts };
