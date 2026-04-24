@@ -249,8 +249,11 @@ model PostSchedule {
   campaign    Campaign?      @relation(fields: [campaignId], references: [id], onDelete: SetNull)
   
   platform    String         // facebook | tiktok | zalo
+  postType    String         @default("FEED") // FEED | REELS
   content     String         @db.Text
   imageUrls   String[]       @default([])
+  
+  metadata    Json?          // Stores pageId, commentSeedings, videoFile (if stored), etc.
   
   scheduledAt DateTime
   status      ScheduleStatus @default(PENDING)

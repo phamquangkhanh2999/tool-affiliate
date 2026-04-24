@@ -8,7 +8,7 @@ export default function GuidePage() {
     <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '20px', color: '#f1f5f9' }}>
       <header style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '6px 16px', borderRadius: '100px', background: 'rgba(34,211,238,0.08)', border: '1px solid rgba(34,211,238,0.15)', marginBottom: '20px' }}>
-          <span style={{ fontSize: '10px', fontWeight: '900', color: '#22d3ee', letterSpacing: '0.1em' }}>TÀI LIỆU HƯỚNG DẪN V4.0</span>
+          <span style={{ fontSize: '10px', fontWeight: '900', color: '#22d3ee', letterSpacing: '0.1em' }}>TÀI LIỆU HƯỚNG DẪN V5.0 - AUTOMATION & INTELLIGENCE</span>
         </div>
         <h1 style={{ fontSize: '40px', fontWeight: '900', color: '#fff', marginBottom: '12px' }}>
           📘 Hướng dẫn sử dụng
@@ -26,10 +26,21 @@ export default function GuidePage() {
         </div>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#1877F2', marginBottom: '16px' }}>1. Tạo nội dung Facebook chuyên gia</h2>
+          <h2 style={{ color: '#22d3ee', marginBottom: '16px' }}>⚡ 1. Quét sản phẩm thông minh (Quick Import)</h2>
           <p style={{ lineHeight: '1.8', color: '#cbd5e1' }}>
-            Vào menu <b>Chuyên gia Facebook</b>, nhập tên sản phẩm và dán link Affiliate của bạn (Shopee, Lazada, TikTok Shop...).
-            Thêm thông tin bổ sung (giá, ưu đãi, mô tả) để AI tạo nội dung chất lượng hơn.<br /><br />
+            Đây là tính năng mới giúp bạn tiết kiệm 90% thời gian nhập liệu. Thay vì gõ tay tên và mô tả sản phẩm, bạn chỉ cần:
+          </p>
+          <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '2', marginTop: '12px' }}>
+            <li>🔗 Dán link sản phẩm từ <b>Shopee, Lazada, TikTok Shop</b>... vào ô <b>QUICK IMPORT</b>.</li>
+            <li>🚀 Nhấn <b>GET</b>. Hệ thống sẽ tự động quét Tên, Giá, Mô tả và Ảnh sản phẩm.</li>
+            <li>🤖 Dữ liệu này sẽ tự động điền vào bảng điều khiển để AI viết bài ngay lập tức.</li>
+          </ul>
+        </section>
+
+        <section style={sectionStyle}>
+          <h2 style={{ color: '#1877F2', marginBottom: '16px' }}>2. Tạo nội dung Facebook chuyên gia</h2>
+          <p style={{ lineHeight: '1.8', color: '#cbd5e1' }}>
+            Vào menu <b>Chuyên gia Facebook</b>, sử dụng tính năng <b>Quick Import</b> hoặc nhập thủ công thông tin sản phẩm.
             Nhấn <b>EXECUTE FORGE ⚡</b> và đợi 10-15 giây. Hệ thống sẽ trả về:
           </p>
           <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '2', marginTop: '12px' }}>
@@ -40,10 +51,25 @@ export default function GuidePage() {
         </section>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#1877F2', marginBottom: '16px' }}>2. Tự động đăng bài lên Facebook</h2>
+          <h2 style={{ color: '#1877F2', marginBottom: '16px' }}>3. Tự động đăng bài & Lên lịch (Scheduling)</h2>
           <p style={{ lineHeight: '1.8', color: '#cbd5e1', marginBottom: '20px' }}>
-            Hệ thống hỗ trợ đăng bài trực tiếp lên Facebook Page và tự động comment seeding. Để sử dụng tính năng này, bạn cần lấy Page Access Token theo hướng dẫn dưới đây.
+            Hệ thống hỗ trợ 3 chế độ xuất bản lên Facebook Page:
           </p>
+
+          <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '2', marginTop: '12px', marginBottom: '20px' }}>
+            <li>🚀 <b>Đăng ngay</b> — Xuất bản bài viết và comment seeding lập tức.</li>
+            <li>🎬 <b>Đăng Reels</b> — Tải video nhị phân lên Page dưới dạng Reels (tỉ lệ 9:16).</li>
+            <li>📅 <b>Lên lịch (Schedule)</b> — Chọn thời gian trong tương lai (giờ vàng) để hệ thống tự đăng.</li>
+          </ul>
+          
+          <div style={{ ...tipStyle, borderLeftColor: '#22d3ee', background: 'rgba(34,211,238,0.08)' }}>
+            <h4 style={{ color: '#22d3ee', marginBottom: '6px' }}>💡 Tính năng Đăng Reels chuyên sâu:</h4>
+            <p style={{ fontSize: '14px', color: '#94a3b8', lineHeight: '1.8' }}>
+              • Hỗ trợ tải video MP4, tối ưu hiển thị trên di động.<br />
+              • Tự động <b>Dải link seeding</b> vào bình luận ngay sau khi Reels được duyệt.<br />
+              • Hệ thống xử lý 3 bước chuẩn Meta Graph API đảm bảo video không bị lỗi.
+            </p>
+          </div>
 
           <div style={{ background: 'rgba(0,0,0,0.15)', borderRadius: '16px', padding: '24px', marginBottom: '20px', border: '1px solid rgba(24,119,242,0.1)' }}>
             <h4 style={{ color: '#1877F2', marginBottom: '16px', fontSize: '15px', fontWeight: '800' }}>🔑 Cách lấy Page Access Token (7 bước)</h4>
@@ -152,7 +178,7 @@ export default function GuidePage() {
         </div>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#6366f1', marginBottom: '16px' }}>5. Tạo link UTM theo dõi hiệu quả</h2>
+          <h2 style={{ color: '#6366f1', marginBottom: '16px' }}>6. Tạo link UTM theo dõi hiệu quả</h2>
           <p style={{ lineHeight: '1.8', color: '#cbd5e1' }}>
             Vào <b>Tạo link UTM</b> → Nhập link affiliate gốc + tên chiến dịch. Chọn 1 trong 2 chế độ:
           </p>

@@ -155,3 +155,87 @@ export async function publishWithSeedings(
     errors: seedResult.errors,
   };
 }
+
+/**
+ * REELS: Step 1 - Initialize Reels Upload Session
+ */
+export async function initReelUpload(
+  pageId: string,
+  accessToken: string
+): Promise<{ video_id: string; upload_url: string }> {
+  const res = await fetch(`${FB_GRAPH_URL}/${pageId}/video_reels`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ upload_phase: 'start', access_token: accessToken }),
+  });
+
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(data.error.message || 'Lỗi khởi tạo Reels');
+  }
+
+  return {
+    video_id: data.video_id,
+    upload_url: data.upload_url
+  };
+}
+
+/**
+ * REELS: Step 2 - Upload Video Binary
+ * @param uploadUrl The URL from step 1
+ * @param accessToken Page access token
+ * @param videoData Buffer or Blob of the video
+ */
+export async function uploadReelVideo(
+  uploadUrl: string,
+  accessToken: string,
+  videoBuffer: Buffer | ArrayBuffer
+): Promise<any> {
+  const res = await fetch(uploadUrl, {
+    method: 'POST',
+    headers: {
+      'Authorization': `OAuth ${accessToken}`,
+      'offset': '0',
+      'file_size': videoBuffer.byteLength.toString(),
+      'Content-Type': 'application/octet-stream'
+    },
+    body: videoBuffer as any,
+  });
+
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(data.error.message || 'Lỗi upload video Reels');
+  }
+
+  return data;
+}
+
+/**
+ * REELS: Step 3 - Finalize Reels Publication
+ */
+export async function finishReelUpload(
+  pageId: string,
+  accessToken: string,
+  videoId: string,
+  description: string = ''
+): Promise<{ id: string }> {
+  const res = await fetch(`${FB_GRAPH_URL}/${pageId}/video_reels`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      upload_phase: 'finish',
+      video_id: videoId,
+      access_token: accessToken,
+      description: description,
+      video_state: 'PUBLISHED'
+    }),
+  });
+
+  const data = await res.json();
+  if (data.error) {
+    throw new Error(data.error.message || 'Lỗi hoàn tất Reels');
+  }
+
+  return data;
+}
+

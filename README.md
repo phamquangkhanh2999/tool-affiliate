@@ -11,7 +11,13 @@
 
 ## ✨ Tính năng nổi bật
 
-### 📘 1. Chuyên gia Facebook (AI Content + Auto-Post)
+### ⚡ 1. Intelligence & Automation (MỚI)
+- **Smart Product Scraper**: Tự động quét thông tin sản phẩm từ Shopee, Lazada, TikTok Shop... qua URL.
+- **📅 Post Scheduling**: Lên lịch đăng bài tự động vào "giờ vàng" cho Facebook Feed.
+- **🎬 Facebook Reels Publishing**: Đăng video Reels trực tiếp kèm auto-seeding bình luận.
+- **🤖 Automation Engine**: Hệ thống xử lý hàng đợi đăng bài tự động qua Cron.
+
+### 📘 2. Chuyên gia Facebook (AI Content + Auto-Post)
 - **Tự động tạo nội dung**: Caption, bài review chuyên sâu, hooks gây tò mò.
 - **🚀 Auto-Post lên Facebook Page**: Đăng bài trực tiếp qua Facebook Graph API.
 - **💬 Auto-Comment Seeding**: Tự động comment 3-5 bình luận mồi (delay 30-120s chống spam).
@@ -39,20 +45,21 @@
 - **Đo lường ROI**: Biết chính xác nguồn click từ nền tảng nào.
 
 ### 📋 5. Mẫu nội dung (Templates)
+### 📋 6. Mẫu nội dung (Templates)
 - **12 template sẵn có**: Review, Flash Sale, Unboxing, Tutorial, So sánh...
 - **Phân loại theo platform**: Lọc Facebook / TikTok / YouTube.
 - **Quick-use**: Nhấn "Dùng Template" để mở Studio tương ứng.
 
-### 📦 6. Tạo hàng loạt (Bulk Generator)
+### 📦 7. Tạo hàng loạt (Bulk Generator)
 - **Tối đa 10 sản phẩm/batch**: Nhập tên + link cho nhiều sản phẩm.
 - **Đa nền tảng**: Chọn Facebook + TikTok + YouTube cùng lúc.
 - **Kết quả tổng hợp**: Xem và copy từng nội dung theo platform.
 
-### 🔗 7. Shopee & Affiliate Management
+### 🔗 8. Shopee & Affiliate Management
 - **Smart Link Transformation**: Chuyển đổi link Shopee sang link Affiliate cá nhân hóa.
 - **Link Repository**: Lưu trữ và quản lý tập trung toàn bộ kho link sản phẩm.
 
-### 📊 8. Dashboard & Analytics
+### 📊 9. Dashboard & Analytics
 - **Bảng điều khiển trực quan**: Giao diện hiện đại với hiệu ứng Glassmorphism.
 - **System Diagnostics**: Kiểm tra trạng thái Database (Neon) và AI Engine thời gian thực.
 - **Quick Access**: Truy cập nhanh tất cả Studios và công cụ.
