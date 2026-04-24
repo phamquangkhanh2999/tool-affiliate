@@ -7,30 +7,43 @@ import Image from 'next/image';
 
 const SECTIONS = [
   {
-    label: 'Navigation',
+    label: 'Điều hướng',
     items: [
-      { href: '/dashboard', icon: '⚡', label: 'Command Center' },
+      { href: '/dashboard', icon: '⚡', label: 'Bảng điều khiển' },
     ],
   },
   {
-    label: 'AI Content Forge',
+    label: 'Xưởng nội dung AI',
     items: [
-      { href: '/dashboard/facebook-expert', icon: '🤖', label: 'FB Expert Studio' },
-      { href: '/dashboard/facebook-expert/history', icon: '🏛️', label: 'Content Archive' },
+      { href: '/dashboard/facebook-expert', icon: '📘', label: 'Chuyên gia Facebook' },
+      { href: '/dashboard/facebook-connect', icon: '🔌', label: 'Kết nối Facebook' },
+      { href: '/dashboard/tiktok-expert', icon: '🎵', label: 'Chuyên gia TikTok' },
+      { href: '/dashboard/youtube-expert', icon: '🎬', label: 'Chuyên gia YouTube' },
     ],
   },
   {
-    label: 'Intelligence & Ops',
+    label: 'Công cụ & Tiện ích',
     items: [
-      { href: '/dashboard/debug-logs', icon: '📟', label: 'Neural Logs' },
-      { href: '/dashboard/links', icon: '🔗', label: 'Link Repository' },
+      { href: '/dashboard/utm-builder', icon: '🔗', label: 'Tạo link UTM' },
+      { href: '/dashboard/templates', icon: '📋', label: 'Mẫu nội dung' },
+      { href: '/dashboard/bulk-generate', icon: '📦', label: 'Tạo hàng loạt' },
     ],
   },
   {
-    label: 'Resources',
+    label: 'Kho lưu trữ',
     items: [
-      { href: '/dashboard/guide', icon: '📖', label: 'Blueprint' },
-      { href: '/api-docs', icon: '⚙️', label: 'API System' },
+      { href: '/dashboard/facebook-expert/history', icon: '🏛️', label: 'Lịch sử Facebook' },
+      { href: '/dashboard/tiktok-expert/history', icon: '🎵', label: 'Lịch sử TikTok' },
+      { href: '/dashboard/youtube-expert/history', icon: '🎬', label: 'Lịch sử YouTube' },
+      { href: '/dashboard/links', icon: '🔗', label: 'Kho Affiliate Links' },
+      { href: '/dashboard/debug-logs', icon: '📟', label: 'Nhật ký hệ thống' },
+    ],
+  },
+  {
+    label: 'Tài nguyên',
+    items: [
+      { href: '/dashboard/guide', icon: '📖', label: 'Hướng dẫn sử dụng' },
+      { href: '/api-docs', icon: '⚙️', label: 'Tài liệu API' },
     ],
   },
 ];
@@ -93,7 +106,7 @@ export function Sidebar() {
             </div>
             <div>
               <div style={{ fontSize: '14px', fontWeight: '900', color: '#fff', letterSpacing: '0.15em', fontFamily: 'Space Grotesk' }}>EXPERT</div>
-              <div style={{ fontSize: '10px', color: '#22d3ee', fontWeight: '800', opacity: 0.8 }}>CYBER ENGINE</div>
+              <div style={{ fontSize: '10px', color: '#22d3ee', fontWeight: '800', opacity: 0.8 }}>MULTI-PLATFORM</div>
             </div>
           </div>
         </div>
@@ -101,23 +114,24 @@ export function Sidebar() {
         {/* Neural Nav */}
         <nav style={{ flex: 1, overflowY: 'auto', padding: '20px 20px' }}>
           {SECTIONS.map((section, idx) => (
-            <div key={idx} style={{ marginBottom: '40px' }}>
-              <div style={{ fontSize: '10px', fontWeight: '800', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '20px', paddingLeft: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div key={idx} style={{ marginBottom: '32px' }}>
+              <div style={{ fontSize: '10px', fontWeight: '800', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '14px', paddingLeft: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                  <span>{section.label}</span>
                  <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.03)' }} />
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                 {section.items.map((item) => {
                   const isActive = pathname === item.href;
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
+                      onClick={() => isMobile && setIsOpen(false)}
                       style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '15px',
-                        padding: '12px 15px',
+                        gap: '12px',
+                        padding: '10px 15px',
                         borderRadius: '12px',
                         textDecoration: 'none',
                         color: isActive ? '#fff' : '#94a3b8',
@@ -126,7 +140,7 @@ export function Sidebar() {
                         transition: 'all 0.3s ease',
                       }}
                     >
-                      <span style={{ fontSize: '18px', filter: isActive ? 'drop-shadow(0 0 8px #22d3ee)' : 'none' }}>{item.icon}</span>
+                      <span style={{ fontSize: '16px', filter: isActive ? 'drop-shadow(0 0 8px #22d3ee)' : 'none' }}>{item.icon}</span>
                       <span style={{ fontSize: '13px', fontWeight: isActive ? '700' : '500', letterSpacing: '0.02em' }}>{item.label}</span>
                     </Link>
                   );
@@ -137,13 +151,13 @@ export function Sidebar() {
         </nav>
 
         {/* System Vitals Footer */}
-        <div style={{ padding: '30px' }}>
+        <div style={{ padding: '20px 30px' }}>
           <div style={{ padding: '15px', borderRadius: '15px', border: '1px solid rgba(255,255,255,0.03)', background: 'rgba(255,255,255,0.01)' }}>
              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
                 <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 10px #22d3ee' }} />
                 <span style={{ fontSize: '10px', fontWeight: '800', color: '#fff' }}>SYSTEM ONLINE</span>
              </div>
-             <div style={{ fontSize: '9px', color: '#475569', fontWeight: '600' }}>CO-PILOT ACTIVE V3.0</div>
+             <div style={{ fontSize: '9px', color: '#475569', fontWeight: '600' }}>MULTI-PLATFORM ENGINE V4.0</div>
           </div>
         </div>
       </aside>

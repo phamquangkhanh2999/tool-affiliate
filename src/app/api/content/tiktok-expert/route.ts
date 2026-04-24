@@ -1,0 +1,84 @@
+import { NextRequest } from 'next/server';
+import { prisma } from '@/lib/prisma';
+import { successResponse, errorResponse } from '@/lib/api-response';
+import { callGeminiApi } from '@/lib/gemini';
+import { getTikTokExpertPrompt } from '@/lib/tiktok-prompts';
+
+export async function GET() {
+  try {
+    const userId = 'demo-user';
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: { id: userId, email: 'demo@example.com', name: 'Demo User' },
+    });
+
+    const history = await prisma.generatedContent.findMany({
+      where: { userId, platform: 'tiktok' },
+      orderBy: { createdAt: 'desc' },
+      take: 50,
+    });
+    return successResponse(history);
+  } catch (err) {
+    return errorResponse('Lỗi lấy lịch sử TikTok', 500);
+  }
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const { productName, affiliateLink, additionalInfo } = await req.json();
+
+    if (!productName || !affiliateLink) {
+      return errorResponse('Thiếu thông tin sản phẩm hoặc link affiliate', 400);
+    }
+
+    const userId = 'demo-user';
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: { id: userId, email: 'demo@example.com', name: 'Demo User' },
+    });
+
+    const prompt = getTikTokExpertPrompt(productName, affiliateLink, additionalInfo);
+
+    try {
+      const resultText = await callGeminiApi(prompt, { json: true });
+      const cleaned = resultText.replace(/```json/g, '').replace(/```/g, '').trim();
+      const result = JSON.parse(cleaned);
+
+      let savedId = null;
+      try {
+        const saved = await prisma.generatedContent.create({
+          data: {
+            userId,
+            contentType: 'TIKTOK_EXPERT',
+            platform: 'tiktok',
+            tone: 'viral',
+            prompt,
+            content: result.script30s || result.caption || '',
+            hashtags: [],
+            metadata: {
+              ...result,
+              productName,
+              affiliateLink,
+            } as any,
+          },
+        });
+        savedId = saved.id;
+      } catch (dbErr) {
+        console.error('[DB SAVE ERROR - TikTok]:', dbErr);
+      }
+
+      return successResponse({
+        id: savedId,
+        ...result,
+        prompt,
+        dbStatus: savedId ? 'success' : 'error',
+      });
+    } catch (aiErr: any) {
+      return errorResponse(`Lỗi AI: ${aiErr.message}`, 500);
+    }
+  } catch (err) {
+    return errorResponse('Lỗi server', 500);
+  }
+}

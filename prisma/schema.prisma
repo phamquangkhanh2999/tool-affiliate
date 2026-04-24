@@ -234,6 +234,8 @@ enum ContentType {
   HASHTAG
   EMAIL
   FB_EXPERT
+  TIKTOK_EXPERT
+  YOUTUBE_EXPERT
 }
 
 // ============================================================
@@ -269,4 +271,51 @@ enum ScheduleStatus {
   POSTED
   FAILED
   CANCELLED
+}
+
+// ============================================================
+// FACEBOOK PAGE CONNECTION
+// ============================================================
+model FacebookPage {
+  id              String    @id @default(cuid())
+  userId          String
+  pageId          String    @unique
+  pageName        String
+  pageAvatar      String?
+  accessToken     String    @db.Text
+  tokenExpiresAt  DateTime?
+  isActive        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  publishLogs     FacebookPublishLog[]
+
+  @@map("facebook_pages")
+}
+
+// ============================================================
+// FACEBOOK PUBLISH LOG
+// ============================================================
+model FacebookPublishLog {
+  id              String        @id @default(cuid())
+  facebookPageId  String
+  facebookPage    FacebookPage  @relation(fields: [facebookPageId], references: [id], onDelete: Cascade)
+  contentId       String?
+  fbPostId        String
+  fbPostUrl       String?
+  commentsPosted  Int           @default(0)
+  status          PublishStatus @default(PENDING)
+  errorLog        String?       @db.Text
+  createdAt       DateTime      @default(now())
+
+  @@map("facebook_publish_logs")
+}
+
+enum PublishStatus {
+  PENDING
+  PUBLISHING
+  POSTED
+  COMMENTING
+  COMPLETED
+  FAILED
 }

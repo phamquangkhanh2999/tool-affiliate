@@ -1288,3 +1288,380 @@ Response Data: {
   }
 }
 --------------------------------------------------
+
+[10:29:50 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[YOUTUBE EXPERT] Master YouTube SEO & Affiliate Content Creator VN.\nNhiệm vụ: Tạo nội dung YouTube chuyên nghiệp cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu CTR, watch time và affiliate conversions.\n\nTHÔNG TIN BỔ SUNG: Không có\nLINK AFFILIATE: Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\n\nCHIẾN THUẬT NỘI DUNG YOUTUBE (MANDATORY):\n1. TITLE SEO: Viết 3-5 tiêu đề tối ưu CTR (click-through rate). Dùng số, Power words, và tạo tò mò. Dưới 60 ký tự.\n2. THUMBNAIL TEXT: Gợi ý 2-3 dòng text ngắn gọn cho thumbnail (max 5-6 từ/dòng).\n3. SCRIPT VIDEO:\n   - HOOK (30 giây đầu): Phải giữ chân viewer ngay lập tức.\n   - BODY: Nội dung chính theo format Problem → Solution → Demo → Benefits.\n   - CTA: Kêu gọi click link affiliate trong description + subscribe.\n4. DESCRIPTION SEO: Bao gồm:\n   - 2-3 dòng tóm tắt hấp dẫn\n   - Link affiliate ở vị trí nổi bật nhất (trước \"Show More\")\n   - Timestamps (00:00 format)\n   - Hashtags\n   - Keywords tự nhiên\n5. TAGS: 15-20 tags liên quan, mix giữa broad + specific keywords.\n6. PINNED COMMENT: Comment ghim ở đầu kèm link affiliate và câu kêu gọi.\n7. COMMUNITY POST: Bài đăng Community tab để promote video.\n\nOutput JSON schema:\n{\n  \"titles\": [\"3-5 tiêu đề tối ưu CTR\"],\n  \"thumbnailTexts\": [\"2-3 dòng text cho thumbnail\"],\n  \"script\": {\n    \"hook\": \"30 giây đầu giữ chân viewer\",\n    \"body\": \"Nội dung chính (Problem → Solution → Demo → Benefits)\",\n    \"cta\": \"Kêu gọi hành động cuối video\"\n  },\n  \"description\": \"Mô tả SEO đầy đủ với link, timestamps, hashtags\",\n  \"tags\": [\"15-20 tags tối ưu SEO\"],\n  \"pinnedComment\": \"Comment ghim kèm link affiliate Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\",\n  \"communityPost\": \"Bài đăng Community tab\"\n}\nReturn ONLY valid JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:29:51 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[10:29:54 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[YOUTUBE EXPERT] Master YouTube SEO & Affiliate Content Creator VN.\nNhiệm vụ: Tạo nội dung YouTube chuyên nghiệp cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu CTR, watch time và affiliate conversions.\n\nTHÔNG TIN BỔ SUNG: Không có\nLINK AFFILIATE: Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\n\nCHIẾN THUẬT NỘI DUNG YOUTUBE (MANDATORY):\n1. TITLE SEO: Viết 3-5 tiêu đề tối ưu CTR (click-through rate). Dùng số, Power words, và tạo tò mò. Dưới 60 ký tự.\n2. THUMBNAIL TEXT: Gợi ý 2-3 dòng text ngắn gọn cho thumbnail (max 5-6 từ/dòng).\n3. SCRIPT VIDEO:\n   - HOOK (30 giây đầu): Phải giữ chân viewer ngay lập tức.\n   - BODY: Nội dung chính theo format Problem → Solution → Demo → Benefits.\n   - CTA: Kêu gọi click link affiliate trong description + subscribe.\n4. DESCRIPTION SEO: Bao gồm:\n   - 2-3 dòng tóm tắt hấp dẫn\n   - Link affiliate ở vị trí nổi bật nhất (trước \"Show More\")\n   - Timestamps (00:00 format)\n   - Hashtags\n   - Keywords tự nhiên\n5. TAGS: 15-20 tags liên quan, mix giữa broad + specific keywords.\n6. PINNED COMMENT: Comment ghim ở đầu kèm link affiliate và câu kêu gọi.\n7. COMMUNITY POST: Bài đăng Community tab để promote video.\n\nOutput JSON schema:\n{\n  \"titles\": [\"3-5 tiêu đề tối ưu CTR\"],\n  \"thumbnailTexts\": [\"2-3 dòng text cho thumbnail\"],\n  \"script\": {\n    \"hook\": \"30 giây đầu giữ chân viewer\",\n    \"body\": \"Nội dung chính (Problem → Solution → Demo → Benefits)\",\n    \"cta\": \"Kêu gọi hành động cuối video\"\n  },\n  \"description\": \"Mô tả SEO đầy đủ với link, timestamps, hashtags\",\n  \"tags\": [\"15-20 tags tối ưu SEO\"],\n  \"pinnedComment\": \"Comment ghim kèm link affiliate Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\",\n  \"communityPost\": \"Bài đăng Community tab\"\n}\nReturn ONLY valid JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:29:54 24/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[10:30:04 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[YOUTUBE EXPERT] Master YouTube SEO & Affiliate Content Creator VN.\nNhiệm vụ: Tạo nội dung YouTube chuyên nghiệp cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu CTR, watch time và affiliate conversions.\n\nTHÔNG TIN BỔ SUNG: Không có\nLINK AFFILIATE: Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\n\nCHIẾN THUẬT NỘI DUNG YOUTUBE (MANDATORY):\n1. TITLE SEO: Viết 3-5 tiêu đề tối ưu CTR (click-through rate). Dùng số, Power words, và tạo tò mò. Dưới 60 ký tự.\n2. THUMBNAIL TEXT: Gợi ý 2-3 dòng text ngắn gọn cho thumbnail (max 5-6 từ/dòng).\n3. SCRIPT VIDEO:\n   - HOOK (30 giây đầu): Phải giữ chân viewer ngay lập tức.\n   - BODY: Nội dung chính theo format Problem → Solution → Demo → Benefits.\n   - CTA: Kêu gọi click link affiliate trong description + subscribe.\n4. DESCRIPTION SEO: Bao gồm:\n   - 2-3 dòng tóm tắt hấp dẫn\n   - Link affiliate ở vị trí nổi bật nhất (trước \"Show More\")\n   - Timestamps (00:00 format)\n   - Hashtags\n   - Keywords tự nhiên\n5. TAGS: 15-20 tags liên quan, mix giữa broad + specific keywords.\n6. PINNED COMMENT: Comment ghim ở đầu kèm link affiliate và câu kêu gọi.\n7. COMMUNITY POST: Bài đăng Community tab để promote video.\n\nOutput JSON schema:\n{\n  \"titles\": [\"3-5 tiêu đề tối ưu CTR\"],\n  \"thumbnailTexts\": [\"2-3 dòng text cho thumbnail\"],\n  \"script\": {\n    \"hook\": \"30 giây đầu giữ chân viewer\",\n    \"body\": \"Nội dung chính (Problem → Solution → Demo → Benefits)\",\n    \"cta\": \"Kêu gọi hành động cuối video\"\n  },\n  \"description\": \"Mô tả SEO đầy đủ với link, timestamps, hashtags\",\n  \"tags\": [\"15-20 tags tối ưu SEO\"],\n  \"pinnedComment\": \"Comment ghim kèm link affiliate Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\",\n  \"communityPost\": \"Bài đăng Community tab\"\n}\nReturn ONLY valid JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:30:05 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[10:30:08 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[YOUTUBE EXPERT] Master YouTube SEO & Affiliate Content Creator VN.\nNhiệm vụ: Tạo nội dung YouTube chuyên nghiệp cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu CTR, watch time và affiliate conversions.\n\nTHÔNG TIN BỔ SUNG: Không có\nLINK AFFILIATE: Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\n\nCHIẾN THUẬT NỘI DUNG YOUTUBE (MANDATORY):\n1. TITLE SEO: Viết 3-5 tiêu đề tối ưu CTR (click-through rate). Dùng số, Power words, và tạo tò mò. Dưới 60 ký tự.\n2. THUMBNAIL TEXT: Gợi ý 2-3 dòng text ngắn gọn cho thumbnail (max 5-6 từ/dòng).\n3. SCRIPT VIDEO:\n   - HOOK (30 giây đầu): Phải giữ chân viewer ngay lập tức.\n   - BODY: Nội dung chính theo format Problem → Solution → Demo → Benefits.\n   - CTA: Kêu gọi click link affiliate trong description + subscribe.\n4. DESCRIPTION SEO: Bao gồm:\n   - 2-3 dòng tóm tắt hấp dẫn\n   - Link affiliate ở vị trí nổi bật nhất (trước \"Show More\")\n   - Timestamps (00:00 format)\n   - Hashtags\n   - Keywords tự nhiên\n5. TAGS: 15-20 tags liên quan, mix giữa broad + specific keywords.\n6. PINNED COMMENT: Comment ghim ở đầu kèm link affiliate và câu kêu gọi.\n7. COMMUNITY POST: Bài đăng Community tab để promote video.\n\nOutput JSON schema:\n{\n  \"titles\": [\"3-5 tiêu đề tối ưu CTR\"],\n  \"thumbnailTexts\": [\"2-3 dòng text cho thumbnail\"],\n  \"script\": {\n    \"hook\": \"30 giây đầu giữ chân viewer\",\n    \"body\": \"Nội dung chính (Problem → Solution → Demo → Benefits)\",\n    \"cta\": \"Kêu gọi hành động cuối video\"\n  },\n  \"description\": \"Mô tả SEO đầy đủ với link, timestamps, hashtags\",\n  \"tags\": [\"15-20 tags tối ưu SEO\"],\n  \"pinnedComment\": \"Comment ghim kèm link affiliate Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\",\n  \"communityPost\": \"Bài đăng Community tab\"\n}\nReturn ONLY valid JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:30:08 24/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[10:30:57 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://developers.facebook.com/apps/.\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://developers.facebook.com/apps/.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:30:57 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[10:31:00 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://developers.facebook.com/apps/.\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://developers.facebook.com/apps/.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:31:01 24/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[10:31:08 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://developers.facebook.com/apps/.\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://developers.facebook.com/apps/.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:31:08 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 47.644624372s.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[10:31:11 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Thùng 30 gói giấy ăn rút Topgia 3 màu cao cấp 4 lớp dày dặn, mềm mịn, thùng 16/36/40/46/10 gói\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://developers.facebook.com/apps/.\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://developers.facebook.com/apps/.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[10:31:11 24/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3-flash\nPlease retry in 44.538087393s.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[14:57:05 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Apple iPad A16 11 inch 2025 Wifi 128GB\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[14:57:05 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[14:57:08 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Apple iPad A16 11 inch 2025 Wifi 128GB\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[14:57:08 24/4/2026] [ERROR]
+{
+  "attempt": 2,
+  "message": "Your API key was reported as leaked. Please use another API key.",
+  "willRetry": false
+}
+--------------------------------------------------
+
+[15:01:05 24/4/2026] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Apple iPad A16 11 inch 2025 Wifi 128GB\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:01:43 24/4/2026] [ERROR]
+{
+  "attempt": 1,
+  "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "willRetry": true
+}
+--------------------------------------------------
+
+[15:01:46 24/4/2026] [REQUEST]
+{
+  "attempt": 2,
+  "model": "gemini-3-flash-preview",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Apple iPad A16 11 inch 2025 Wifi 128GB\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n7. HASHTAGS: 5-10 trending.\n8. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://shopee.vn/apple_flagship_store/28032850215 .\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[15:01:59 24/4/2026] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Đừng vội mua laptop nếu bạn chưa biết đến 'quái vật' iPad A16 2025 này!\",\n    \"99% người dùng đã sai khi nghĩ iPad chỉ để xem phim - Sự thật về bản 2025 sẽ khiến bạn sốc!\",\n    \"Bỏ túi cả văn phòng chỉ với 400g? iPad A16 11 inch 2025 làm được nhiều hơn bạn tưởng.\"\n  ],\n  \"shortVersion\": \"Hết thời ôm cái laptop nặng nề đi cafe rồi mọi người ơi! ☕️💻 Với iPad A16 11 inch 2025, mỏng nhẹ như một cuốn sổ nhưng hiệu năng thì 'out trình'.\\n\\n- Chip A16 cực mạnh: Chỉnh ảnh, edit video 4K vèo vèo không lag.\\n- Pin dùng cả ngày: Làm việc từ sáng đến đêm không lo tìm ổ cắm.\\n- Màn hình 11 inch: Gọn nhẹ, bỏ vừa mọi loại túi xách.\\n\\nChốt ngay tại Apple Flagship Store để nhận ưu đãi (Số lượng có hạn): https://shopee.vn/apple_flagship_store/28032850215\\n\\n#iPad2025 #AppleVN #TechReview #iPadA16 #ShopeeSale #WorkFromAnywhere\",\n  \"longVersion\": \"Cảnh báo: Bạn sẽ 'bỏ rơi' chiếc laptop cũ sau khi chạm vào siêu phẩm này! 😂\\n\\nCó ai giống mình không? Sáng vác cái laptop nặng trịch đi làm, chiều về mỏi nhừ vai. Chưa kể máy yếu, mở vài tab Chrome là quay vòng vòng, stress kinh khủng! 😫\\n\\nNhưng từ lúc đổi sang iPad A16 11 inch 2025 (128GB), cuộc sống 'sang trang' hẳn vì:\\n✨ Mỏng - Nhẹ - Sang: Bỏ gọn vào túi xách, mang đi họp hay ra cafe đều cực chuyên nghiệp.\\n✨ Hiệu năng 'vô đối': Chip A16 xử lý tác vụ đa nhiệm mượt mà, không còn tình trạng đứng máy khi đang dở việc.\\n✨ Màn hình Retina siêu nét: Xem phim hay thiết kế đều cực đã mắt, màu sắc chuẩn xác từng milimet.\\n✨ Lưu trữ 128GB: Thoải mái lưu tài liệu, hình ảnh mà không lo báo bộ nhớ đầy.\\n\\nĐừng để công việc trì trệ chỉ vì thiết bị lỗi thời. Nâng cấp ngay để làm việc thông minh hơn, hưởng thụ nhiều hơn!\\n\\n👉 Mua hàng chính hãng tại đây (Đang có voucher giảm sâu): https://shopee.vn/apple_flagship_store/28032850215\\n\\n---\\n#iPad2025 #AppleStore #TechTips #iPadPro #Productivity #ShopeeVideo #AppleA16 #MuaSamThongMinh #Applevietnam\",\n  \"commentSeedings\": [\n    \"Vừa đặt xong, áp được mã giảm 1 triệu sướng quá. Link cho ai cần nhé: https://shopee.vn/apple_flagship_store/28032850215\",\n    \"Shop này chính hãng Apple nên yên tâm, mình mua mấy đời ở đây rồi, ship siêu nhanh.\",\n    \"Bản 2025 dùng mượt thật sự, nhất là chip A16 render video nhanh hơn hẳn bản cũ.\",\n    \"Màu năm nay đẹp xỉu, ai phân vân thì múc luôn đi không hết sale: https://shopee.vn/apple_flagship_store/28032850215\"\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 378,
+      "candidatesTokenCount": 844,
+      "totalTokenCount": 2449,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 378
+        }
+      ],
+      "thoughtsTokenCount": 1227
+    },
+    "modelVersion": "gemini-3-flash-preview",
+    "responseId": "PyPraZPUDqug2roPsPXIyQI"
+  }
+}
+--------------------------------------------------

@@ -1,93 +1,168 @@
-# 🛒 Shopee Affiliate AI SaaS
+# 🚀 Tool Affiliate - AI Powered Multi-Platform Marketing Suite
 
-Chào mừng bạn đến với **Shopee Affiliate AI SaaS** – Nền tảng tự động hóa và tối ưu hóa chuyển đổi Affiliate Shopee sử dụng sức mạnh thực sự của Trí Tuệ Nhân Tạo (Gemini 1.5).
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
+[![Gemini AI](https://img.shields.io/badge/Gemini%20AI-Neural%20Engine-4285F4?style=for-the-badge&logo=google-gemini)](https://deepmind.google/technologies/gemini/)
 
-Hệ thống được thiết kế theo phễu tự động hóa (AI Agent Loop) 10 Bước chuẩn xác, hỗ trợ Creator từ khâu đánh giá tiềm năng sản phẩm cho đến tối ưu ngược lại khi video ra mắt.
-
----
-
-## 🛠 Bộ Công Nghệ (Tech Stack)
-- **Framework:** Next.js 15 (App Router - React 19)
-- **Database:** PostgreSQL (Khởi tạo qua Docker local) + Prisma ORM
-- **AI Engine:** Google Gemini 1.5 Flash (Sức mạnh suy luận & xử lý 10-Step Logic)
-- **UI/UX:** Dark Theme Premium, Glassmorphism, CSS Modules thuần.
-- **API Standard:** OpenAPI 3.0 với Swagger UI (có sẵn trên trang `http://localhost:3000/api-docs`).
+**Tool Affiliate** là hệ điều hành nội dung AI tối thượng, được thiết kế dành riêng cho Affiliate Marketer. Tự động hóa quy trình sáng tạo nội dung, tự động đăng bài, quản lý link liên kết và tối ưu hóa chiến dịch trên **3 nền tảng chính: Facebook, TikTok, YouTube**.
 
 ---
 
-## 🚀 10 Bước Làm Việc Thực Tế Với Hệ Thống (AI Flow)
+## ✨ Tính năng nổi bật
 
-Hệ thống cung cấp một luồng làm việc tuyến tính, giúp bạn **Sản xuất hàng trăm Affiliate content mỗi ngày với tỷ lệ chuyển đổi cao nhất**:
+### 📘 1. Chuyên gia Facebook (AI Content + Auto-Post)
+- **Tự động tạo nội dung**: Caption, bài review chuyên sâu, hooks gây tò mò.
+- **🚀 Auto-Post lên Facebook Page**: Đăng bài trực tiếp qua Facebook Graph API.
+- **💬 Auto-Comment Seeding**: Tự động comment 3-5 bình luận mồi (delay 30-120s chống spam).
+- **Kết nối Facebook Page**: Quản lý token, kết nối/ngắt kết nối Page.
 
-### 🔍 DÒNG CHẢY 1: TÌM & ĐÁNH GIÁ (RESEARCH)
-**📍 Step 1: Product Analyzer (`/dashboard/analyze`)**
-- Bỏ 1 sản phẩm vào, AI sẽ chấm điểm tiềm năng (Mức độ Viral, Nhu cầu thị trường, Độ cạnh tranh, Khả năng chuyển đổi).
-- AI xác định **Nỗi Đau (Pain Point)** và **Điểm Nổi Bật (USP)** giúp bạn xoáy thẳng vào tử huyệt khách hàng.
+### 🎵 2. Chuyên gia TikTok
+- **Script video 3 phiên bản**: 15 giây, 30 giây, 60 giây.
+- **Hook 3 giây đầu**: 3 câu mở đầu gây chú ý ngay lập tức.
+- **Gợi ý nhạc trending**: Nhạc nền phù hợp cho từng sản phẩm.
+- **Caption + Hashtags**: Tối ưu cho thuật toán TikTok (#fyp #viral).
+- **Comment seeding**: Bình luận kích tương tác.
 
-**📍 Step 2: Content Strategy (`/dashboard/strategy`)**
-- Với sản phẩm đủ điểm chuẩn, AI sẽ đề xuất **10 Angle (Góc máy/Nội dung)** bao gồm: Shock (Gây sốc), Curiosity (Tò mò), Problem-Solution, và Review. 
-- Tìm ra góc "bắt Trend" nhất.
+### 🎬 3. Chuyên gia YouTube
+- **Tiêu đề tối ưu CTR**: 3-5 tiêu đề A/B test.
+- **Thumbnail text**: Gợi ý text ngắn cho ảnh bìa video.
+- **Script video**: Hook 30s → Nội dung chính → CTA.
+- **Description SEO**: Mô tả tối ưu kèm timestamps, link, keywords.
+- **Tags**: 15-20 tags SEO liên quan.
+- **Pinned comment**: Comment ghim kèm link affiliate.
+- **Community post**: Bài đăng Community tab promote video.
 
-### 🎬 DÒNG CHẢY 2: SẢN XUẤT NỘI DUNG (AI CONTENT)
-**📍 Step 3: Hook & Script Generator (`/dashboard/scripts`)**
-- Sinh ra **5 Hooks < 10 từ**, đánh gục sự chú ý của người xem trong 3 giây đầu.
-- Trả về kịch bản 30 giây bóc tách từng giây một: *Dây 0-5 làm gì, hiện text gì, lồng tiếng gì.* (Bao gồm luôn cả **Step 8: Video Gen Guideline** — Ánh sáng, góc máy).
+### 🔗 4. UTM Link Builder
+- **Tạo UTM theo platform**: Facebook, TikTok, YouTube, Zalo, Instagram.
+- **Multi-platform mode**: Tạo UTM cho tất cả nền tảng cùng lúc.
+- **Đo lường ROI**: Biết chính xác nguồn click từ nền tảng nào.
 
-**📍 Step 4: Caption & Hashtag (`/dashboard/content`)**
-- Sinh tự động loạt Caption đa nền tảng (TikTok, FB, Insta) có nhúng Call-to-Action (CTA).
-- Nặn ra 15 Hashtags dẫn đầu xu hướng ngách.
+### 📋 5. Mẫu nội dung (Templates)
+- **12 template sẵn có**: Review, Flash Sale, Unboxing, Tutorial, So sánh...
+- **Phân loại theo platform**: Lọc Facebook / TikTok / YouTube.
+- **Quick-use**: Nhấn "Dùng Template" để mở Studio tương ứng.
 
-**📍 Step 5: 7-Day Content Plan (`/dashboard/planner`)**
-- Nhận lịch ra video nguyên vòng tuần (chia 2 videos/ngày). 
-- Thuật toán lên lịch: Thứ 2-3 dùng để Text-Angle, Thứ 4-5 tập trung khoét sâu, Thứ 6-7 lùa views kéo Sale.
+### 📦 6. Tạo hàng loạt (Bulk Generator)
+- **Tối đa 10 sản phẩm/batch**: Nhập tên + link cho nhiều sản phẩm.
+- **Đa nền tảng**: Chọn Facebook + TikTok + YouTube cùng lúc.
+- **Kết quả tổng hợp**: Xem và copy từng nội dung theo platform.
 
-### 📈 DÒNG CHẢY 3: TỐI ƯU VÀ THEO DÕI (OPTIMIZE)
-**📍 Step 6 + Step 7: Performance & Auto-Optimization (`/dashboard/performance`)**
-- *Tính năng đắt giá nhất*: Video bạn làm ra không có đơn? Nhập Views, Clicks, và Sales vào đây. 
-- AI sẽ **Bắt Mạch** lỗi sai: Lỗi tại Hook? Nội dung quảng cáo lố? Hay CTA sai chỗ?
-- Tự động rút ra **Pattern (Khuôn mẫu)** từ các video lên xu hướng, và tự động **Viết lại Script hoàn hảo hơn** cho lần quay tới.
+### 🔗 7. Shopee & Affiliate Management
+- **Smart Link Transformation**: Chuyển đổi link Shopee sang link Affiliate cá nhân hóa.
+- **Link Repository**: Lưu trữ và quản lý tập trung toàn bộ kho link sản phẩm.
 
-**📍 Step 9: Nền Tảng (Core System)**
-- Trang `/dashboard/links`: Tạo Shopee Custom Link chuẩn và Short Link Tracking tự động.
-- Trang `/dashboard/campaigns`: Quản lý các nhóm chiến dịch Affiliate trên MXH.
-
-**📍 Step 10: Auto Agent Loop (Tương lai)**
-- Chu trình tự hoàn lưu từ tìm kiếm → sáng tạo → đo đạc → tự rút kinh nghiệm. (Tính năng Auto-Post sẽ được mở trong Phase 2 API).
+### 📊 8. Dashboard & Analytics
+- **Bảng điều khiển trực quan**: Giao diện hiện đại với hiệu ứng Glassmorphism.
+- **System Diagnostics**: Kiểm tra trạng thái Database (Neon) và AI Engine thời gian thực.
+- **Quick Access**: Truy cập nhanh tất cả Studios và công cụ.
 
 ---
 
-## ⚙️ Hướng Dẫn Cài Đặt (Local Development)
+## 🛠️ Tech Stack
 
-### 1. Khởi động Database (Docker)
-Cấu hình PostgreSQL chạy ngầm tại Port `8020`.
+- **Frontend**: Next.js 16 (App Router), React 19, Tailwind CSS.
+- **Backend**: Next.js Server Actions & API Routes.
+- **Database**: PostgreSQL (Managed by [Neon](https://neon.tech/)), Prisma ORM.
+- **AI**: Google Gemini AI (1.5 Flash / 2.0 Flash / 3.0 Flash).
+- **Facebook API**: Facebook Graph API v21.0 (Auto-Post + Auto-Comment).
+- **Auth**: NextAuth.js.
+- **Documentation**: Swagger UI / OpenAPI 3.1.
+
+---
+
+## 🚀 Hướng dẫn cài đặt
+
+### 1. Yêu cầu hệ thống
+- Node.js 18.x trở lên.
+- PostgreSQL (Hoặc tài khoản Neon.tech).
+- Google Gemini API Key.
+- (Tùy chọn) Facebook App + Page Access Token.
+
+### 2. Cài đặt các phụ thuộc
 ```bash
-cd docker
-docker-compose up -d
+npm install
+# hoặc
+pnpm install
 ```
 
-### 2. Thiết lập Môi trường (.env)
-Khai báo tại root dự án file `.env`:
+### 3. Cấu hình môi trường
+Tạo file `.env` từ `.env.example` và điền đầy đủ các thông số:
 ```env
-DATABASE_URL="postgresql://affiliate_user:affiliate_pass_2024@localhost:8020/affiliate_db"
-GEMINI_API_KEY="AIzaSy...YourKey"
-SHOPEE_APP_ID="[Tùy chọn: Để rút gọn link]"
-SHOPEE_SECRET_KEY="[Tùy chọn]"
+DATABASE_URL="postgresql://..."
+NEXTAUTH_SECRET="..."
+GEMINI_API_KEY="..."
+GEMINI_MODEL="gemini-2.0-flash"
 ```
 
-### 3. Migration Prisma
-Nạp Database Schema:
+### 4. Thiết lập Database
 ```bash
-npx prisma generate
 npx prisma db push
-npx prisma db seed # (Nếu có file seed)
+npx prisma generate
 ```
 
-### 4. Bật Server
+### 5. Chạy dự án
 ```bash
 npm run dev
 ```
-Trang Web chạy tại: `http://localhost:3000/dashboard`
-Tài liệu APIs (Swagger): `http://localhost:3000/api-docs`
+
+Truy cập `http://localhost:3000` để bắt đầu.
 
 ---
-*Phát triển và kiến trúc bởi Google AI Agent — Đóng gói tư duy Senior Fullstack + AI Blueprint System.*
+
+## 📖 Cấu trúc dự án
+
+```
+src/
+├── app/
+│   ├── api/
+│   │   ├── content/
+│   │   │   ├── expert/         # Facebook Expert API
+│   │   │   ├── tiktok-expert/  # TikTok Expert API
+│   │   │   ├── youtube-expert/ # YouTube Expert API
+│   │   │   └── bulk/           # Bulk Generate API
+│   │   ├── facebook/
+│   │   │   ├── publish/        # Auto-Post API
+│   │   │   ├── pages/          # Pages Management API
+│   │   │   └── token-check/    # Token Validation API
+│   │   ├── utm/                # UTM Builder API
+│   │   ├── affiliate/          # Shopee Affiliate API
+│   │   └── links/              # Link Repository API
+│   └── dashboard/
+│       ├── facebook-expert/    # FB Studio + History
+│       ├── facebook-connect/   # FB Page Connection
+│       ├── tiktok-expert/      # TikTok Studio + History
+│       ├── youtube-expert/     # YouTube Studio + History
+│       ├── utm-builder/        # UTM Link Builder
+│       ├── templates/          # Content Templates
+│       ├── bulk-generate/      # Bulk Generator
+│       ├── links/              # Affiliate Links
+│       └── guide/              # User Guide
+├── components/
+│   └── Sidebar.tsx             # Multi-platform navigation
+└── lib/
+    ├── gemini.ts               # Gemini AI integration
+    ├── facebook-api.ts         # Facebook Graph API
+    ├── tiktok-prompts.ts       # TikTok prompt templates
+    ├── youtube-prompts.ts      # YouTube prompt templates
+    ├── utm-builder.ts          # UTM URL builder
+    └── shopee-links.ts         # Shopee link management
+```
+
+---
+
+## 📖 Tài liệu API
+Hệ thống tích hợp sẵn Swagger UI để tra cứu API:
+- Truy cập: `/api-docs`
+
+---
+
+## 🛡️ Bảo mật & Tối ưu
+- **Token Security**: Access Token lưu trong Database, không hiển thị trên UI.
+- **Anti-Spam**: Comment seeding có delay 30-120s, tối đa 5 comments/bài.
+- **Responsive Design**: Tối ưu hóa trải nghiệm trên Mobile và Desktop.
+- **Performance**: Sử dụng Next.js Streaming và Caching để đạt tốc độ phản hồi tối ưu.
+
+---
+
+*Phát triển bởi **Antigravity AI Team**.*
