@@ -8,9 +8,28 @@ export default function DebugLogsPage() {
   const [logs, setLogs] = useState('');
   const [loading, setLoading] = useState(true);
   const [autoRefresh, setAutoRefresh] = useState(true);
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const scrollRef = useRef<HTMLPreElement>(null);
 
+  useEffect(() => {
+    const auth = sessionStorage.getItem('admin_auth');
+    if (auth === 'true') setIsAuthorized(true);
+  }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (username === 'quangkhanh' && password === 'quangkhanh') {
+      setIsAuthorized(true);
+      sessionStorage.setItem('admin_auth', 'true');
+    } else {
+      alert('Sai tài khoản hoặc mật khẩu hệ thống!');
+    }
+  };
+
   const fetchLogs = async () => {
+    if (!isAuthorized) return;
     try {
       const res = await fetch('/api/debug/logs');
       if (res.ok) {
@@ -27,19 +46,67 @@ export default function DebugLogsPage() {
   };
 
   useEffect(() => {
-    fetchLogs();
-    let interval: any;
-    if (autoRefresh) {
-      interval = setInterval(fetchLogs, 3000); // Tự động làm mới mỗi 3 giây
+    if (isAuthorized) {
+      fetchLogs();
+      let interval: any;
+      if (autoRefresh) {
+        interval = setInterval(fetchLogs, 3000);
+      }
+      return () => clearInterval(interval);
     }
-    return () => clearInterval(interval);
-  }, [autoRefresh]);
+  }, [autoRefresh, isAuthorized]);
 
+  // Logic tự động thoát sau 5 phút không hoạt động
   useEffect(() => {
-    if (scrollRef.current && autoRefresh) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [logs, autoRefresh]);
+    if (!isAuthorized) return;
+
+    let timeoutId: any;
+
+    const resetTimer = () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        sessionStorage.removeItem('admin_auth');
+        setIsAuthorized(false);
+        console.log('Session expired due to inactivity');
+      }, 5 * 60 * 1000); // 5 phút
+    };
+
+    const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+    events.forEach(name => document.addEventListener(name, resetTimer));
+
+    resetTimer();
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      events.forEach(name => document.removeEventListener(name, resetTimer));
+    };
+  }, [isAuthorized]);
+
+  if (!isAuthorized) {
+    return (
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0f172a' }}>
+        <form onSubmit={handleLogin} className="glass-panel" style={{ padding: '40px', borderRadius: '24px', width: '100%', maxWidth: '400px', textAlign: 'center' }}>
+          <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔐</div>
+          <h2 style={{ fontSize: '24px', fontWeight: '800', color: '#fff', marginBottom: '8px' }}>ADMIN ACCESS</h2>
+          <p style={{ color: '#64748b', fontSize: '14px', marginBottom: '30px' }}>Trang này chỉ dành cho quản trị viên hệ thống.</p>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', textAlign: 'left' }}>
+            <div>
+              <label style={{ fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '6px', display: 'block' }}>USERNAME</label>
+              <input type="text" value={username} onChange={e => setUsername(e.target.value)} style={{ width: '100%', padding: '12px', borderRadius: '10px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff' }} />
+            </div>
+            <div>
+              <label style={{ fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '6px', display: 'block' }}>PASSWORD</label>
+              <input type="password" value={password} onChange={e => setPassword(e.target.value)} style={{ width: '100%', padding: '12px', borderRadius: '10px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff' }} />
+            </div>
+            <button type="submit" style={{ marginTop: '10px', padding: '14px', borderRadius: '12px', background: 'linear-gradient(135deg, #f87171, #fb923c)', color: '#fff', border: 'none', fontWeight: '800', cursor: 'pointer' }}>
+              XÁC MINH DANH TÍNH 🚀
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -105,6 +172,20 @@ export default function DebugLogsPage() {
             }}
           >
             🔄 Làm mới ngay
+          </button>
+          <button
+            onClick={() => { sessionStorage.removeItem('admin_auth'); setIsAuthorized(false); }}
+            style={{
+              padding: '10px 20px',
+              borderRadius: '10px',
+              background: '#ef4444',
+              color: 'white',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+            }}
+          >
+            🔒 Thoát
           </button>
         </div>
       </header>
