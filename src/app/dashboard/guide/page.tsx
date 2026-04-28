@@ -172,6 +172,25 @@ export default function GuidePage() {
           </div>
         </section>
 
+        {/* ═══════════════════ NEW PLATFORMS ═══════════════════ */}
+        <div style={{ padding: '4px 16px', borderRadius: '10px', background: 'rgba(217,70,239,0.1)', border: '1px solid rgba(217,70,239,0.2)', alignSelf: 'flex-start', marginTop: '16px' }}>
+          <span style={{ fontSize: '13px', fontWeight: '900', color: '#d946ef' }}>🌟 ĐA NỀN TẢNG (INSTAGRAM, ZALO, EMAIL)</span>
+        </div>
+
+        <section style={sectionStyle}>
+          <h2 style={{ color: '#d946ef', marginBottom: '16px' }}>5. Chuyên gia Instagram & Zalo & Email</h2>
+          <p style={{ lineHeight: '1.8', color: '#cbd5e1' }}>
+            Hệ thống giờ đây đã phủ sóng toàn bộ các nền tảng Marketing phổ biến nhất tại Việt Nam:
+          </p>
+          <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '2', marginTop: '12px' }}>
+            <li>📸 <b>Instagram Expert</b>: Tạo caption mang đậm phong cách Lifestyle, gợi ý hình ảnh Aesthetic cho Carousel và tối ưu Hashtag.</li>
+            <li>💬 <b>Zalo Expert</b>: Viết tin nhắn Broadcast ngắn gọn chốt sale hoặc Bài đăng Nhật ký gần gũi. Rất phù hợp với tệp khách hàng Việt Nam.</li>
+            <li>📧 <b>Email Campaign</b>: Tối đa Open Rate với Subject Line hấp dẫn, và tạo sẵn mã HTML Body chuyên nghiệp để bạn paste thẳng vào Mailchimp/GetResponse.</li>
+            <li>📅 <b>Content Calendar</b>: Xem toàn bộ bài viết đã lên lịch cho mọi nền tảng trong một giao diện Lịch trực quan.</li>
+            <li>📊 <b>Analytics & Product Research</b>: Phân tích doanh thu, click, và công cụ săn sản phẩm Shopee hoa hồng cao tự động tạo QR Code.</li>
+          </ul>
+        </section>
+
         {/* ═══════════════════ TOOLS ═══════════════════ */}
         <div style={{ padding: '4px 16px', borderRadius: '10px', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', alignSelf: 'flex-start', marginTop: '16px' }}>
           <span style={{ fontSize: '13px', fontWeight: '900', color: '#6366f1' }}>🔧 CÔNG CỤ</span>

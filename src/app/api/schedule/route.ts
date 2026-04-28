@@ -40,3 +40,29 @@ export async function POST(req: NextRequest) {
     return errorResponse(err.message || 'Lỗi server', 500);
   }
 }
+
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const month = parseInt(searchParams.get('month') || (new Date().getMonth() + 1).toString(), 10);
+    const year = parseInt(searchParams.get('year') || new Date().getFullYear().toString(), 10);
+
+    const startDate = new Date(year, month - 1, 1);
+    const endDate = new Date(year, month, 0, 23, 59, 59);
+
+    const schedules = await prisma.postSchedule.findMany({
+      where: {
+        scheduledAt: {
+          gte: startDate,
+          lte: endDate,
+        }
+      },
+      orderBy: { scheduledAt: 'asc' }
+    });
+
+    return successResponse(schedules);
+  } catch (error) {
+    console.error('Schedule API Error:', error);
+    return errorResponse('Lỗi lấy dữ liệu lịch', 500);
+  }
+}

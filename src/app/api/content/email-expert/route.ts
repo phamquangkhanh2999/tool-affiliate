@@ -1,31 +1,7 @@
 import { NextRequest } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { successResponse, errorResponse } from '@/lib/api-response';
-import { generateExpertFacebookPost } from '@/lib/gemini';
-
-export async function GET(req: NextRequest) {
-  try {
-    const userId = 'demo-user';
-    await prisma.user.upsert({
-      where: { id: userId },
-      update: {},
-      create: {
-        id: userId,
-        email: 'demo@example.com',
-        name: 'Demo User'
-      }
-    });
-
-    const history = await prisma.generatedContent.findMany({
-      where: { userId, platform: 'facebook' },
-      orderBy: { createdAt: 'desc' },
-      take: 50
-    });
-    return successResponse(history);
-  } catch (err) {
-    return errorResponse('Lỗi lấy lịch sử', 500);
-  }
-}
+import { generateExpertEmailPost } from '@/lib/email-prompts';
 
 export async function POST(req: NextRequest) {
   try {
@@ -35,7 +11,6 @@ export async function POST(req: NextRequest) {
       return errorResponse('Thiếu thông tin sản phẩm hoặc link affiliate', 400);
     }
 
-    // Đảm bảo userId tồn tại trong Database (Upsert để không lỗi nếu đã có)
     const userId = 'demo-user'; 
     await prisma.user.upsert({
       where: { id: userId },
@@ -49,8 +24,7 @@ export async function POST(req: NextRequest) {
 
     let currentPrompt = '';
     try {
-      // 1. Gọi AI tạo nội dung
-      const result = await generateExpertFacebookPost(
+      const result = await generateExpertEmailPost(
         productName,
         affiliateLink,
         additionalInfo
@@ -58,26 +32,19 @@ export async function POST(req: NextRequest) {
       
       currentPrompt = result.prompt || '';
 
-      // 2. Lưu vào Database (Bọc trong try-catch để không làm chết quy trình nếu DB lỗi)
       let savedId = null;
       try {
         const saved = await prisma.generatedContent.create({
           data: {
             userId,
-            contentType: 'CAPTION',
-            platform: 'facebook',
+            contentType: 'EMAIL',
+            platform: 'email',
             tone: 'expert',
             prompt: currentPrompt,
-            content: result.longVersion || result.shortVersion,
-            hashtags: [],
+            content: result.bodyHtml,
             metadata: {
-              hooks: result.hooks,
-              shortVersion: result.shortVersion,
-              longVersion: result.longVersion,
-              imagePrompt: result.imagePrompt,
-              videoPrompt: result.videoPrompt,
-              videoScript: result.videoScript,
-              commentSeedings: result.commentSeedings,
+              subject: result.subject,
+              previewText: result.previewText,
               productName,
               affiliateLink
             } as any
@@ -86,7 +53,6 @@ export async function POST(req: NextRequest) {
         savedId = saved.id;
       } catch (dbErr) {
         console.error('!!! [DATABASE SAVE ERROR]:', dbErr);
-        // Không return lỗi ở đây, để người dùng vẫn thấy kết quả AI
       }
 
       return successResponse({

@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
       if (commentSeedings.length > 0) {
         // Đợi 5s cho video xử lý sơ bộ
         await new Promise(r => setTimeout(r, 5000));
-        const seedResult = await autoSeedComments(publishResult.id, fbPage.accessToken, commentSeedings, commentDelay);
+        const seedResult = await autoSeedComments(video_id, fbPage.accessToken, commentSeedings, commentDelay);
         commentsPosted = seedResult.posted;
         seedErrors = seedResult.errors;
       }
@@ -63,8 +63,8 @@ export async function POST(req: NextRequest) {
       await prisma.facebookPublishLog.create({
         data: {
           facebookPageId: fbPage.id,
-          fbPostId: publishResult.id,
-          fbPostUrl: `https://www.facebook.com/reels/${publishResult.id}`,
+          fbPostId: video_id,
+          fbPostUrl: `https://www.facebook.com/reels/${video_id}`,
           status: seedErrors.length > 0 ? 'POSTED' : 'COMPLETED',
           commentsPosted: commentsPosted,
           errorLog: seedErrors.length > 0 ? seedErrors.join('\n') : 'Facebook Reel Published'
@@ -73,8 +73,8 @@ export async function POST(req: NextRequest) {
 
       return successResponse({
         success: true,
-        reelId: publishResult.id,
-        reelUrl: `https://www.facebook.com/reels/${publishResult.id}`,
+        reelId: video_id,
+        reelUrl: `https://www.facebook.com/reels/${video_id}`,
         commentsPosted
       });
 

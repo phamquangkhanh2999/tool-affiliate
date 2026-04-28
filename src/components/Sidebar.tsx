@@ -10,12 +10,18 @@ const SECTIONS = [
     label: 'Điều hướng',
     items: [
       { href: '/dashboard', icon: '⚡', label: 'Bảng điều khiển' },
+      { href: '/dashboard/analytics', icon: '📊', label: 'Phân tích doanh thu' },
+      { href: '/dashboard/product-research', icon: '🔍', label: 'Nghiên cứu sản phẩm' },
+      { href: '/dashboard/calendar', icon: '📅', label: 'Lịch nội dung' },
     ],
   },
   {
     label: 'Xưởng nội dung AI',
     items: [
       { href: '/dashboard/facebook-expert', icon: '📘', label: 'Chuyên gia Facebook' },
+      { href: '/dashboard/instagram-expert', icon: '📸', label: 'Chuyên gia Instagram' },
+      { href: '/dashboard/zalo-expert', icon: '💬', label: 'Chuyên gia Zalo' },
+      { href: '/dashboard/email-campaign', icon: '📧', label: 'Chiến dịch Email' },
       { href: '/dashboard/facebook-connect', icon: '🔌', label: 'Kết nối Facebook' },
       { href: '/dashboard/tiktok-expert', icon: '🎵', label: 'Chuyên gia TikTok' },
       { href: '/dashboard/youtube-expert', icon: '🎬', label: 'Chuyên gia YouTube' },

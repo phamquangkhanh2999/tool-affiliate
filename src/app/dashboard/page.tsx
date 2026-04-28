@@ -87,7 +87,7 @@ export default function DashboardPage() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
           <div>
             <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#fff', marginBottom: '8px' }}>🛡️ System Diagnostics</h3>
-            <p style={{ color: '#64748b', fontSize: '14px' }}>Xác minh kết nối thời gian thực tới Database và AI Engine</p>
+            <p style={{ color: '#64748b', fontSize: '14px' }}>Xác minh kết nối thời gian thực tới Database, AI Engine và Facebook</p>
           </div>
           <button id="diag-btn" className="btn-tech" style={{ padding: '12px 30px', fontSize: '14px' }} onClick={async () => {
             const btn = document.getElementById('diag-btn');
@@ -95,7 +95,11 @@ export default function DashboardPage() {
             try {
               const res = await fetch('/api/debug/system-check');
               const data = await res.json();
-              if (data.success) alert(`✅ DATABASE: ${data.data.database.message}\n✅ AI ENGINE: ${data.data.ai.message}`);
+              if (data.success) {
+                const fbStatus = data.data.facebook?.status === 'error' ? '❌' : (data.data.facebook?.status === 'warning' ? '⚠️' : '✅');
+                const fbMsg = data.data.facebook ? `\n${fbStatus} FACEBOOK: ${data.data.facebook.message}` : '';
+                alert(`✅ DATABASE: ${data.data.database.message}\n✅ AI ENGINE: ${data.data.ai.message}${fbMsg}`);
+              }
             } catch { alert('❌ Lỗi kết nối hệ thống'); }
             finally { if (btn) btn.innerText = 'Bắt đầu kiểm tra'; }
           }}>Bắt đầu kiểm tra</button>
@@ -103,8 +107,8 @@ export default function DashboardPage() {
       </section>
 
       {/* Stats Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '20px', marginBottom: '40px' }}>
-        <div className="glass-panel" style={{ gridColumn: 'span 8', padding: '36px', borderRadius: '28px', position: 'relative', overflow: 'hidden' }}>
+      <div className="grid-container" style={{ marginBottom: '40px' }}>
+        <div className="glass-panel col-span-8" style={{ padding: '36px', borderRadius: '28px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '100%', background: 'linear-gradient(to left, rgba(34,211,238,0.05), transparent)', zIndex: 0 }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ fontSize: '12px', fontWeight: '800', color: '#475569', letterSpacing: '0.15em', marginBottom: '30px' }}>TOTAL GENERATED CONTENT</div>
@@ -114,14 +118,14 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-        <div className="glass-panel" style={{ gridColumn: 'span 4', padding: '36px', borderRadius: '28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <div className="glass-panel col-span-4" style={{ padding: '36px', borderRadius: '28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
             <div style={{ fontSize: '11px', fontWeight: '800', color: '#475569', letterSpacing: '0.15em', marginBottom: '8px' }}>REPOSITORY SIZE</div>
             <div style={{ fontSize: '48px', fontWeight: '900', color: '#fff' }}>{stats.uniqueLinks}</div>
           </div>
           <div style={{ fontSize: '13px', color: '#64748b', fontWeight: '600' }}>UNIQUE AFFILIATE LINKS</div>
         </div>
-        <div className="glass-panel" style={{ gridColumn: 'span 4', padding: '36px', borderRadius: '28px' }}>
+        <div className="glass-panel col-span-4" style={{ padding: '36px', borderRadius: '28px' }}>
           <div style={{ fontSize: '11px', fontWeight: '800', color: '#475569', letterSpacing: '0.15em', marginBottom: '20px' }}>AI ENGINE STATUS</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
             <div style={{ flex: 1, height: '4px', background: 'rgba(34,211,238,0.2)', borderRadius: '10px', overflow: 'hidden' }}>
@@ -133,7 +137,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Tools Quick Access */}
-        <div style={{ gridColumn: 'span 8', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+        <div className="col-span-8" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
           {tools.map(t => (
             <Link key={t.href} href={t.href} style={{ textDecoration: 'none' }}>
               <div className="glass-panel" style={{ padding: '24px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '16px', height: '100%' }}>

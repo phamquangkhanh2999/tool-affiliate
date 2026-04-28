@@ -8,6 +8,7 @@ interface FBResult {
   hooks: string[];
   shortVersion: string;
   longVersion: string;
+  videoScript?: string;
   commentSeedings: string[];
   prompt?: string;
   dbStatus?: string;
@@ -47,7 +48,7 @@ export default function FacebookExpertPage() {
   const [autoComment, setAutoComment] = useState(true);
   const [commentDelay, setCommentDelay] = useState(45);
   const [publishing, setPublishing] = useState(false);
-  const [publishStatus, setPublishStatus] = useState<{ status: string; postUrl?: string; comments?: number } | null>(null);
+  const [publishStatus, setPublishStatus] = useState<{ status: string; postUrl?: string; comments?: number; message?: string } | null>(null);
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
 
   // Reels state
@@ -206,10 +207,10 @@ export default function FacebookExpertPage() {
       } else if (data.errorCode === 'TOKEN_EXPIRED') {
         setPublishStatus({ status: 'token_expired' });
       } else {
-        setPublishStatus({ status: 'failed' });
+        setPublishStatus({ status: 'failed', message: data.error || data.message || 'Lỗi từ server' });
       }
-    } catch {
-      setPublishStatus({ status: 'failed' });
+    } catch (err: any) {
+      setPublishStatus({ status: 'failed', message: err.message || 'Lỗi mạng' });
     } finally { setPublishing(false); }
   };
 
@@ -273,10 +274,10 @@ export default function FacebookExpertPage() {
       } else if (data.errorCode === 'TOKEN_EXPIRED') {
         setPublishStatus({ status: 'token_expired' });
       } else {
-        setPublishStatus({ status: 'failed' });
+        setPublishStatus({ status: 'failed', message: data.error || data.message || 'Lỗi từ server' });
       }
-    } catch {
-      setPublishStatus({ status: 'failed' });
+    } catch (err: any) {
+      setPublishStatus({ status: 'failed', message: err.message || 'Lỗi mạng' });
     } finally { setPublishing(false); }
   };
 
@@ -298,15 +299,34 @@ export default function FacebookExpertPage() {
       });
       const data = await res.json();
       if (data.success) {
-        setPublishStatus({ status: 'completed', postUrl: data.reelUrl });
-      } else if (res.status === 401) {
+        setPublishStatus({ status: 'completed', postUrl: data.data?.reelUrl || data.reelUrl });
+      } else if (res.status === 401 || data.errorCode === 'TOKEN_EXPIRED') {
         setPublishStatus({ status: 'token_expired' });
       } else {
-        setPublishStatus({ status: 'failed' });
+        setPublishStatus({ status: 'failed', message: data.error || data.message || 'Lỗi không xác định từ server' });
       }
-    } catch {
-      setPublishStatus({ status: 'failed' });
+    } catch (err: any) {
+      setPublishStatus({ status: 'failed', message: err.message || 'Lỗi mạng hoặc server không phản hồi' });
     } finally { setPublishing(false); }
+  };
+
+  const handleTabSwitch = (newMode: 'ai' | 'quick' | 'reels') => {
+    setMode(newMode);
+    setPublishStatus(null);
+    if (result) {
+      if (newMode === 'quick' && !quickContent.trim()) {
+        setQuickContent(result.longVersion || '');
+        if (result.commentSeedings && result.commentSeedings.length > 0) {
+          setQuickComments(result.commentSeedings.join('\n'));
+        }
+      }
+      if (newMode === 'reels' && !reelsDescription.trim()) {
+        setReelsDescription(result.shortVersion || result.longVersion || '');
+        if (result.commentSeedings && result.commentSeedings.length > 0) {
+          setQuickComments(result.commentSeedings.join('\n'));
+        }
+      }
+    }
   };
 
   return (
@@ -321,9 +341,9 @@ export default function FacebookExpertPage() {
 
       {/* Mode Tabs */}
       <div style={{ display: 'flex', gap: '8px', padding: '6px', borderRadius: '16px', background: 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.05)', marginBottom: '30px' }}>
-        <button onClick={() => {setMode('ai'); setPublishStatus(null);}} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'ai' ? '#22d3ee' : 'transparent', color: mode === 'ai' ? '#000' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>🤖 TẠO BÀI AI</button>
-        <button onClick={() => {setMode('quick'); setPublishStatus(null);}} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'quick' ? '#22d3ee' : 'transparent', color: mode === 'quick' ? '#000' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>⚡ ĐĂNG NHANH</button>
-        <button onClick={() => {setMode('reels'); setPublishStatus(null);}} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'reels' ? '#1877F2' : 'transparent', color: mode === 'reels' ? '#fff' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>🎬 ĐĂNG REELS</button>
+        <button onClick={() => handleTabSwitch('ai')} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'ai' ? '#22d3ee' : 'transparent', color: mode === 'ai' ? '#000' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>🤖 TẠO BÀI AI</button>
+        <button onClick={() => handleTabSwitch('quick')} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'quick' ? '#22d3ee' : 'transparent', color: mode === 'quick' ? '#000' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>⚡ ĐĂNG NHANH</button>
+        <button onClick={() => handleTabSwitch('reels')} style={{ flex: 1, padding: '12px', borderRadius: '12px', border: 'none', background: mode === 'reels' ? '#1877F2' : 'transparent', color: mode === 'reels' ? '#fff' : '#64748b', fontWeight: '800', fontSize: '13px', cursor: 'pointer', transition: 'all 0.3s' }}>🎬 ĐĂNG REELS</button>
         <a href="/dashboard/facebook-expert/history" style={{ flex: 1, padding: '12px', borderRadius: '12px', background: 'transparent', color: '#64748b', fontWeight: '800', fontSize: '13px', textAlign: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>📚 LỊCH SỬ</a>
       </div>
 
@@ -335,7 +355,22 @@ export default function FacebookExpertPage() {
             <p style={{ color: '#64748b', fontSize: '13px', marginBottom: '20px' }}>Gõ hoặc dán nội dung bạn muốn đăng. Không cần AI tạo — đăng trực tiếp lên Page.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '11px', fontWeight: '800', color: '#475569', marginBottom: '10px', letterSpacing: '0.1em' }}>NỘI DUNG BÀI VIẾT *</label>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                  <label style={{ fontSize: '11px', fontWeight: '800', color: '#475569', letterSpacing: '0.1em' }}>NỘI DUNG BÀI VIẾT *</label>
+                  {result && (
+                    <button 
+                      onClick={() => {
+                        setQuickContent(result.longVersion || '');
+                        if (result.commentSeedings && result.commentSeedings.length > 0) {
+                          setQuickComments(result.commentSeedings.join('\n'));
+                        }
+                      }}
+                      style={{ background: 'rgba(16,185,129,0.1)', color: '#10b981', border: '1px solid rgba(16,185,129,0.2)', padding: '4px 10px', borderRadius: '8px', fontSize: '11px', fontWeight: '800', cursor: 'pointer' }}
+                    >
+                      ✨ Lấy Data AI vừa tạo
+                    </button>
+                  )}
+                </div>
                 <textarea rows={10} placeholder="Viết nội dung bài viết Facebook tại đây..." value={quickContent} onChange={e => setQuickContent(e.target.value)} style={{ ...iStyle, resize: 'vertical', fontFamily: 'inherit', lineHeight: '1.6' }} />
               </div>
               <div>
@@ -373,8 +408,18 @@ export default function FacebookExpertPage() {
               )}
               {publishStatus && (
                 <div style={{ padding: '16px', borderRadius: '14px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  {publishStatus.status === 'completed' && <div style={{ color: '#10b981' }}>✅ Thành công!</div>}
-                  {publishStatus.postUrl && <a href={publishStatus.postUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#1877F2', fontSize: '13px' }}>🔗 Xem bài đăng</a>}
+                  {publishStatus.status === 'publishing' && <div style={{ color: '#22d3ee', fontWeight: 'bold' }}>⏳ Đang đăng bài lên Facebook...</div>}
+                  {publishStatus.status === 'completed' && <div style={{ color: '#10b981', fontWeight: 'bold' }}>✅ Đăng bài thành công!</div>}
+                  {publishStatus.status === 'failed' && <div style={{ color: '#ef4444', lineHeight: '1.4' }}>❌ Thất bại: {publishStatus.message}</div>}
+                  {publishStatus.status === 'token_expired' && (
+                    <div style={{ color: '#ef4444', lineHeight: '1.4' }}>
+                      ⚠️ Token đã hết hạn. 
+                      <button onClick={() => setIsConnectModalOpen(true)} style={{ background: 'none', border: 'none', color: '#1877F2', fontWeight: 'bold', cursor: 'pointer', marginLeft: '5px' }}>
+                        Kết nối lại Page ngay →
+                      </button>
+                    </div>
+                  )}
+                  {publishStatus.postUrl && <a href={publishStatus.postUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#1877F2', fontSize: '13px', marginTop: '4px', display: 'inline-block', fontWeight: 'bold' }}>🔗 Xem bài đăng →</a>}
                 </div>
               )}
             </div>
@@ -449,38 +494,62 @@ export default function FacebookExpertPage() {
             {result ? (
               <>
                 <div className="glass-panel" style={{ background: '#fff', borderRadius: '24px', color: '#1c1e21', overflow: 'hidden' }}>
-                  <div style={{ padding: '20px', fontSize: '15px', whiteSpace: 'pre-wrap' }}>{result.longVersion}</div>
-                  <div style={{ padding: '20px', borderTop: '1px solid #f0f2f5' }}>
-                    <button onClick={() => handleCopy(result.longVersion, 'post')} style={{ width: '100%', padding: '12px', borderRadius: '10px', background: '#1877F2', color: '#fff', border: 'none', cursor: 'pointer' }}>COPY CONTENT</button>
-                  </div>
-                </div>
+                  <div style={{ padding: '20px', fontSize: '15px', whiteSpace: 'pre-wrap' }}>
+                    <h3 style={{ color: '#1877F2', fontWeight: '800', marginBottom: '10px' }}>📝 NỘI DUNG BÀI ĐĂNG FACEBOOK</h3>
+                    {result.longVersion}
+                    
+                    {result.videoScript && (
+                      <>
+                        <hr style={{ margin: '20px 0', borderTop: '1px solid #f0f2f5' }} />
+                        <h3 style={{ color: '#10b981', fontWeight: '800', marginBottom: '10px' }}>🎬 KỊCH BẢN VIDEO (REELS/TIKTOK)</h3>
+                        {result.videoScript}
+                      </>
+                    )}
+                    {result.imagePrompt && (
+                      <>
+                        <hr style={{ margin: '20px 0', borderTop: '1px solid #f0f2f5' }} />
+                        <h3 style={{ color: '#d946ef', fontWeight: '800', marginBottom: '10px' }}>🎨 PROMPT TẠO ẢNH (MIDJOURNEY/IMAGEN)</h3>
+                        <p style={{ fontStyle: 'italic', background: '#f8fafc', padding: '10px', borderRadius: '8px', borderLeft: '4px solid #d946ef' }}>
+                          {result.imagePrompt}
+                        </p>
+                      </>
+                    )}
 
-                <div className="glass-panel" style={{ padding: '30px', borderRadius: '24px' }}>
-                  <h4 style={{ color: '#1877F2', fontSize: '14px', fontWeight: '800', marginBottom: '20px' }}>🚀 ĐĂNG LÊN FACEBOOK</h4>
-                  {pages.length > 0 ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                      <select value={selectedPage} onChange={e => setSelectedPage(e.target.value)} style={iStyle}>
-                        {pages.map(p => <option key={p.pageId} value={p.pageId}>{p.pageName}</option>)}
-                      </select>
-                      <div style={{ marginTop: '10px', padding: '15px', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                        <label style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', marginBottom: isScheduled ? '15px' : '0' }}>
-                          <input type="checkbox" checked={isScheduled} onChange={e => setIsScheduled(e.target.checked)} style={{ width: '18px', height: '18px', accentColor: '#1877F2' }} />
-                          <span style={{ fontSize: '13px', fontWeight: '700', color: isScheduled ? '#1877F2' : '#64748b' }}>📅 Lên lịch đăng bài</span>
-                        </label>
-                        {isScheduled && (
-                          <div style={{ animation: 'fadeIn 0.3s ease-out' }}>
-                            <label style={{ display: 'block', fontSize: '10px', fontWeight: '800', color: '#475569', marginBottom: '8px' }}>THỜI GIAN ĐĂNG</label>
-                            <input type="datetime-local" value={scheduledTime} onChange={e => setScheduledTime(e.target.value)} style={{ ...iStyle, padding: '10px', fontSize: '13px', border: '1px solid rgba(24,119,242,0.2)' }} />
-                          </div>
-                        )}
-                      </div>
-                      <button onClick={handlePublish} disabled={publishing} className="btn-tech" style={{ width: '100%', padding: '18px', background: '#1877F2' }}>
-                        {publishing ? '⏳ ĐANG ĐĂNG...' : (isScheduled ? '📅 LÊN LỊCH ĐĂNG BÀI' : '🚀 ĐĂNG BÀI + SEEDING')}
-                      </button>
-                    </div>
-                  ) : (
-                    <div style={{ textAlign: 'center', color: '#64748b' }}>Chưa kết nối Page.</div>
-                  )}
+                    {result.videoPrompt && (
+                      <>
+                        <hr style={{ margin: '20px 0', borderTop: '1px solid #f0f2f5' }} />
+                        <h3 style={{ color: '#f59e0b', fontWeight: '800', marginBottom: '10px' }}>🎥 PROMPT TẠO VIDEO (GOOGLE LABS/VEO)</h3>
+                        <p style={{ fontStyle: 'italic', background: '#f8fafc', padding: '10px', borderRadius: '8px', borderLeft: '4px solid #f59e0b' }}>
+                          {result.videoPrompt}
+                        </p>
+                      </>
+                    )}
+                  </div>
+                  <div style={{ padding: '20px', borderTop: '1px solid #f0f2f5', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                    <button onClick={() => handleCopy(result.longVersion + (result.videoScript ? '\n\n--- KỊCH BẢN VIDEO ---\n' + result.videoScript : ''), 'post')} style={{ flex: '1 1 30%', padding: '12px', borderRadius: '10px', background: '#e4e6eb', color: '#050505', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>📋 COPY CONTENT</button>
+                    
+                    <button onClick={() => {
+                      setMode('quick');
+                      setQuickContent(result.longVersion || '');
+                      if (result.commentSeedings && result.commentSeedings.length > 0) {
+                        setQuickComments(result.commentSeedings.join('\n'));
+                      }
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} style={{ flex: '1 1 30%', padding: '12px', borderRadius: '10px', background: 'linear-gradient(135deg, #10b981, #34d399)', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>
+                      🚀 DÙNG ĐỂ ĐĂNG BÀI →
+                    </button>
+
+                    <button onClick={() => {
+                      setMode('reels');
+                      setReelsDescription(result.shortVersion || result.longVersion || '');
+                      if (result.commentSeedings && result.commentSeedings.length > 0) {
+                        setQuickComments(result.commentSeedings.join('\n'));
+                      }
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} style={{ flex: '1 1 30%', padding: '12px', borderRadius: '10px', background: 'linear-gradient(135deg, #1877F2, #00C6FF)', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>
+                      🎬 DÙNG ĐỂ ĐĂNG REELS →
+                    </button>
+                  </div>
                 </div>
               </>
             ) : (
@@ -502,7 +571,22 @@ export default function FacebookExpertPage() {
             </div>
 
             <div className="glass-panel" style={{ padding: '24px', borderRadius: '24px' }}>
-              <label style={{ display: 'block', fontSize: '11px', fontWeight: '800', color: '#1877F2', marginBottom: '12px' }}>MÔ TẢ VIDEO</label>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <label style={{ fontSize: '11px', fontWeight: '800', color: '#1877F2' }}>MÔ TẢ VIDEO</label>
+                {result && (
+                  <button 
+                    onClick={() => {
+                      setReelsDescription(result.shortVersion || result.longVersion || '');
+                      if (result.commentSeedings && result.commentSeedings.length > 0) {
+                        setQuickComments(result.commentSeedings.join('\n'));
+                      }
+                    }}
+                    style={{ background: 'rgba(24,119,242,0.1)', color: '#1877F2', border: '1px solid rgba(24,119,242,0.2)', padding: '4px 10px', borderRadius: '8px', fontSize: '11px', fontWeight: '800', cursor: 'pointer' }}
+                  >
+                    ✨ Lấy Data AI vừa tạo
+                  </button>
+                )}
+              </div>
               <textarea placeholder="Gõ mô tả hấp dẫn..." value={reelsDescription} onChange={e => setReelsDescription(e.target.value)} style={{ ...iStyle, height: '120px', resize: 'none' }} />
             </div>
 
@@ -557,9 +641,18 @@ export default function FacebookExpertPage() {
 
               {publishStatus && (
                 <div style={{ marginTop: '20px', padding: '14px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  {publishStatus.status === 'completed' && <div style={{ color: '#10b981' }}>✅ Thành công!</div>}
-                  {publishStatus.status === 'failed' && <div style={{ color: '#ef4444' }}>❌ Thất bại.</div>}
-                  {publishStatus.postUrl && <a href={publishStatus.postUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#1877F2', fontSize: '13px', marginTop: '4px', display: 'block' }}>🔗 Xem Reels</a>}
+                  {publishStatus.status === 'publishing' && <div style={{ color: '#22d3ee', fontWeight: 'bold' }}>⏳ Đang xử lý và tải video lên máy chủ... (Vui lòng đợi 1-3 phút tùy dung lượng)</div>}
+                  {publishStatus.status === 'completed' && <div style={{ color: '#10b981', fontWeight: 'bold' }}>✅ Đăng Reels thành công!</div>}
+                  {publishStatus.status === 'failed' && <div style={{ color: '#ef4444', lineHeight: '1.4' }}>❌ Thất bại: {publishStatus.message}</div>}
+                  {publishStatus.status === 'token_expired' && (
+                    <div style={{ color: '#ef4444', lineHeight: '1.4' }}>
+                      ⚠️ Token đã hết hạn. 
+                      <button onClick={() => setIsConnectModalOpen(true)} style={{ background: 'none', border: 'none', color: '#1877F2', fontWeight: 'bold', cursor: 'pointer', marginLeft: '5px' }}>
+                        Kết nối lại Page ngay →
+                      </button>
+                    </div>
+                  )}
+                  {publishStatus.postUrl && <a href={publishStatus.postUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#22d3ee', fontSize: '13px', marginTop: '8px', display: 'inline-block', fontWeight: 'bold' }}>🔗 Xem Reels trên Facebook →</a>}
                 </div>
               )}
             </div>

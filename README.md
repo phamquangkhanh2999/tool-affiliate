@@ -5,61 +5,40 @@
 [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
 [![Gemini AI](https://img.shields.io/badge/Gemini%20AI-Neural%20Engine-4285F4?style=for-the-badge&logo=google-gemini)](https://deepmind.google/technologies/gemini/)
 
-**Tool Affiliate** là hệ điều hành nội dung AI tối thượng, được thiết kế dành riêng cho Affiliate Marketer. Tự động hóa quy trình sáng tạo nội dung, tự động đăng bài, quản lý link liên kết và tối ưu hóa chiến dịch trên **3 nền tảng chính: Facebook, TikTok, YouTube**.
+**Tool Affiliate** là hệ điều hành nội dung AI tối thượng, được thiết kế dành riêng cho Affiliate Marketer. Tự động hóa quy trình sáng tạo nội dung, tự động đăng bài, quản lý link liên kết và tối ưu hóa chiến dịch.
 
 ---
 
 ## ✨ Tính năng nổi bật
 
-### ⚡ 1. Intelligence & Automation (MỚI)
+### 🛡️ 1. Security & Stability (MỚI)
+- **Rate Limiting (In-memory)**: Chống spam và brute-force các API quan trọng.
+- **Secure Logging**: Tự động mã hóa (mask) API Key và dữ liệu nhạy cảm trước khi lưu log. Rotate log thông minh.
+- **Environment Validation**: Hệ thống tự động kiểm tra biến môi trường khi startup.
+- **Security Headers**: Hỗ trợ CSP, HSTS, X-Frame-Options chống XSS, Clickjacking.
+
+### ⚡ 2. Intelligence & Automation
 - **Smart Product Scraper**: Tự động quét thông tin sản phẩm từ Shopee, Lazada, TikTok Shop... qua URL.
-- **📅 Post Scheduling**: Lên lịch đăng bài tự động vào "giờ vàng" cho Facebook Feed.
+- **📅 Content Calendar**: Quản lý lịch đăng bài đa nền tảng trực quan (Facebook, TikTok, Zalo).
 - **🎬 Facebook Reels Publishing**: Đăng video Reels trực tiếp kèm auto-seeding bình luận.
 - **🤖 Automation Engine**: Hệ thống xử lý hàng đợi đăng bài tự động qua Cron.
 
-### 📘 2. Chuyên gia Facebook (AI Content + Auto-Post)
-- **Tự động tạo nội dung**: Caption, bài review chuyên sâu, hooks gây tò mò.
-- **🚀 Auto-Post lên Facebook Page**: Đăng bài trực tiếp qua Facebook Graph API.
-- **💬 Auto-Comment Seeding**: Tự động comment 3-5 bình luận mồi (delay 30-120s chống spam).
-- **Kết nối Facebook Page**: Quản lý token, kết nối/ngắt kết nối Page.
+### 📘 3. Chuyên gia Nội dung Đa nền tảng (AI Content)
+- **Facebook Expert**: Tạo caption đánh trúng nỗi đau, auto-comment seeding.
+- **Instagram Expert**: Gợi ý Carousel Images (Aesthetic), phong cách Lifestyle, tối ưu hashtag.
+- **Zalo Expert**: Tạo tin nhắn Broadcast (chốt sale) & bài đăng Nhật ký gần gũi.
+- **TikTok Expert**: Lên kịch bản 15s/30s/60s, gợi ý hook và nhạc trending.
+- **YouTube Expert**: Tạo kịch bản, description chuẩn SEO, tags, thumbnail text.
+- **Email Campaign**: Viết Subject Line tối đa Open Rate và thiết kế HTML Body tăng CTR.
 
-### 🎵 2. Chuyên gia TikTok
-- **Script video 3 phiên bản**: 15 giây, 30 giây, 60 giây.
-- **Hook 3 giây đầu**: 3 câu mở đầu gây chú ý ngay lập tức.
-- **Gợi ý nhạc trending**: Nhạc nền phù hợp cho từng sản phẩm.
-- **Caption + Hashtags**: Tối ưu cho thuật toán TikTok (#fyp #viral).
-- **Comment seeding**: Bình luận kích tương tác.
+### 🔗 4. Affiliate Expert & Tooling
+- **Shopee Affiliate API**: Tự động tìm kiếm sản phẩm hoa hồng cao, gen link affiliate qua HMAC-SHA256.
+- **Multi-Platform Link Shortener**: Rút gọn link (có custom UTM), tạo mã QR code tự động.
+- **UTM Link Builder**: Tạo UTM tracking đồng loạt cho nhiều nền tảng.
+- **Mẫu nội dung (Templates)**: 12 template (Review, Unboxing...) + Bulk Generator tạo hàng loạt 10 sản phẩm/batch.
 
-### 🎬 3. Chuyên gia YouTube
-- **Tiêu đề tối ưu CTR**: 3-5 tiêu đề A/B test.
-- **Thumbnail text**: Gợi ý text ngắn cho ảnh bìa video.
-- **Script video**: Hook 30s → Nội dung chính → CTA.
-- **Description SEO**: Mô tả tối ưu kèm timestamps, link, keywords.
-- **Tags**: 15-20 tags SEO liên quan.
-- **Pinned comment**: Comment ghim kèm link affiliate.
-- **Community post**: Bài đăng Community tab promote video.
-
-### 🔗 4. UTM Link Builder
-- **Tạo UTM theo platform**: Facebook, TikTok, YouTube, Zalo, Instagram.
-- **Multi-platform mode**: Tạo UTM cho tất cả nền tảng cùng lúc.
-- **Đo lường ROI**: Biết chính xác nguồn click từ nền tảng nào.
-
-### 📋 5. Mẫu nội dung (Templates)
-### 📋 6. Mẫu nội dung (Templates)
-- **12 template sẵn có**: Review, Flash Sale, Unboxing, Tutorial, So sánh...
-- **Phân loại theo platform**: Lọc Facebook / TikTok / YouTube.
-- **Quick-use**: Nhấn "Dùng Template" để mở Studio tương ứng.
-
-### 📦 7. Tạo hàng loạt (Bulk Generator)
-- **Tối đa 10 sản phẩm/batch**: Nhập tên + link cho nhiều sản phẩm.
-- **Đa nền tảng**: Chọn Facebook + TikTok + YouTube cùng lúc.
-- **Kết quả tổng hợp**: Xem và copy từng nội dung theo platform.
-
-### 🔗 8. Shopee & Affiliate Management
-- **Smart Link Transformation**: Chuyển đổi link Shopee sang link Affiliate cá nhân hóa.
-- **Link Repository**: Lưu trữ và quản lý tập trung toàn bộ kho link sản phẩm.
-
-### 📊 9. Dashboard & Analytics
+### 📊 5. Dashboard & Analytics
+- **Phân tích Doanh thu**: Theo dõi tổng doanh thu, clicks, conversion và top sản phẩm hiệu quả.
 - **Bảng điều khiển trực quan**: Giao diện hiện đại với hiệu ứng Glassmorphism.
 - **System Diagnostics**: Kiểm tra trạng thái Database (Neon) và AI Engine thời gian thực.
 - **Quick Access**: Truy cập nhanh tất cả Studios và công cụ.
