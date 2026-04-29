@@ -7,6 +7,8 @@ export interface TikTokExpertResult {
   trendingSounds: string[];
   commentSeedings: string[];
   cta: string;
+  imagePrompt?: string;
+  videoPrompt?: string;
   prompt?: string;
   dbStatus?: 'success' | 'error';
 }
@@ -33,6 +35,8 @@ CHIẾN THUẬT NỘI DUNG TIKTOK (MANDATORY):
 5. CTA CHO BIO LINK: Hướng người xem vào bio vì TikTok không cho link trong caption.
 6. HASHTAG STRATEGY: Kết hợp hashtag lớn (#fyp #viral #tiktokmademebuyit) + hashtag niche.
 7. COMMENT SEEDING: Tạo 3-5 bình luận kích tương tác (dạng hỏi đáp, review ngắn).
+8. PROMPT TẠO ẢNH (IMAGE PROMPT): Cung cấp 1 câu lệnh tiếng Anh cực kỳ chi tiết để tạo ảnh dọc (9:16) dùng cho Midjourney/Imagen. Cấu trúc chuẩn: [Chủ đề/Nhân vật chi tiết] + [Hành động] + [Bối cảnh xung quanh] + [Ánh sáng/Phong cách điện ảnh] + --ar 9:16.
+9. PROMPT TẠO VIDEO (VIDEO PROMPT): Cung cấp 1 câu lệnh tiếng Anh để tạo chuyển động từ bức ảnh trên (dùng cho Veo, Gen-3).
 
 Output JSON schema:
 {
@@ -43,7 +47,9 @@ Output JSON schema:
   "caption": "Caption cho video kèm hashtags (tối đa 150 ký tự caption + hashtags)",
   "trendingSounds": ["3-5 gợi ý bài nhạc/sound trending phù hợp"],
   "commentSeedings": ["3-5 bình luận seeding kích tương tác, có thể nhắc link bio"],
-  "cta": "Câu CTA cuối video hướng tới bio link"
+  "cta": "Câu CTA cuối video hướng tới bio link",
+  "imagePrompt": "Detailed English prompt for AI Image generation (9:16)",
+  "videoPrompt": "Detailed English prompt for AI Video generation"
 }
 Return ONLY valid JSON.`;
 }

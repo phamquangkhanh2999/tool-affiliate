@@ -4,6 +4,9 @@ export interface ExpertInstagramPostResult {
   imageConcepts: string[];
   caption: string;
   hashtags: string[];
+  imagePrompt?: string;
+  videoPrompt?: string;
+  videoScript?: string;
   prompt?: string;
   dbStatus?: 'success' | 'error';
 }
@@ -18,14 +21,20 @@ CHIẾN THUẬT NỘI DUNG (MANDATORY):
 3. STORYTELLING: Mô tả ngắn gọn, tập trung vào phong cách sống và cảm xúc mang lại.
 4. CTA RÕ RÀNG: Kêu gọi người dùng click link trên Bio hoặc comment để nhận link trực tiếp (${affiliateLink}).
 5. HASHTAGS TỐI ƯU: 10-15 hashtags phù hợp ngách và thịnh hành.
+6. PROMPT TẠO ẢNH (IMAGE PROMPT): 1 câu lệnh tiếng Anh chi tiết cho Midjourney (9:16).
+7. PROMPT TẠO VIDEO (VIDEO PROMPT): 1 câu lệnh tiếng Anh cho AI Video (9:16).
+8. KỊCH BẢN VIDEO (VIDEO SCRIPT): Kịch bản Reels chi tiết từng giây (Cảnh - Hình ảnh - Lời thoại).
 
 Thông tin bổ sung: ${additionalInfo || 'Không có'}
 
 Output JSON schema:
 {
   "imageConcepts": ["Ý tưởng ảnh 1...", "Ý tưởng ảnh 2...", "Ý tưởng ảnh 3..."],
-  "caption": "Nội dung caption hoàn chỉnh, chia đoạn dễ nhìn...",
-  "hashtags": ["#hashtag1", "#hashtag2"]
+  "caption": "Nội dung caption hoàn chỉnh...",
+  "hashtags": ["#hashtag1", "#hashtag2"],
+  "imagePrompt": "English prompt for Midjourney...",
+  "videoPrompt": "English prompt for AI Video...",
+  "videoScript": "Kịch bản video chi tiết (Cảnh 1: ..., Lời thoại: ...)"
 }
 Return ONLY JSON.`;
 }

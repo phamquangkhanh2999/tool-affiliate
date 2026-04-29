@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
@@ -41,7 +43,7 @@ export async function GET(req: Request) {
     // Dữ liệu biểu đồ (mock theo ngày để dễ render)
     // Trong thực tế cần group by date sử dụng raw query hoặc Prisma groupby
     // Demo data for chart:
-    const chartData = [];
+    const chartData: any[] = [];
     let current = new Date(startDate);
     const end = new Date();
     

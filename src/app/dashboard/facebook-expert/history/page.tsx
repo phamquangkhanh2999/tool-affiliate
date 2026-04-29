@@ -12,7 +12,14 @@ export default function FacebookExpertHistory() {
   const [history, setHistory] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
+  const [displayedContent, setDisplayedContent] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (selectedItem) {
+      setDisplayedContent(selectedItem.content);
+    }
+  }, [selectedItem]);
 
   // Publish from history
   const [pages, setPages] = useState<FBPage[]>([]);
@@ -80,7 +87,7 @@ export default function FacebookExpertHistory() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           pageId: selectedPage,
-          content: selectedItem.content,
+          content: displayedContent,
           commentSeedings: autoComment ? (selectedItem.metadata?.commentSeedings || []) : [],
           commentDelay: commentDelay * 1000,
         }),
@@ -163,10 +170,31 @@ export default function FacebookExpertHistory() {
                     <div style={{ fontSize: '13px', color: '#65676b' }}>Đã lưu lúc {new Date(selectedItem.createdAt).toLocaleTimeString('vi-VN')}</div>
                   </div>
                 </div>
-                <div style={{ padding: '4px 16px 16px', fontSize: '15px', whiteSpace: 'pre-wrap' }}>{selectedItem.content}</div>
-                <div style={{ padding: '0 16px 16px' }}>
-                  <button style={{ width: '100%', padding: '12px', borderRadius: '8px', background: '#1877F2', color: 'white', fontWeight: '700', border: 'none', cursor: 'pointer' }} onClick={() => copyToClipboard(selectedItem.content, 'main')}>
-                    {copiedId === 'main' ? '✅ ĐÃ COPY!' : '📋 Copy bài viết chính'}
+                <div style={{ padding: '4px 16px 16px', fontSize: '15px', whiteSpace: 'pre-wrap' }}>{displayedContent}</div>
+                <div style={{ padding: '0 16px 16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {/* Variant Selection in History */}
+                  {selectedItem.metadata?.variants && selectedItem.metadata.variants.length > 0 && (
+                    <div style={{ display: 'flex', gap: '8px', padding: '8px', background: '#f0f2f5', borderRadius: '10px' }}>
+                      <button 
+                        onClick={() => setDisplayedContent(selectedItem.content)}
+                        style={{ flex: 1, padding: '6px', borderRadius: '6px', background: displayedContent === selectedItem.content ? '#1877F2' : 'white', color: displayedContent === selectedItem.content ? 'white' : '#65676b', border: '1px solid #ddd', fontSize: '11px', fontWeight: 'bold', cursor: 'pointer' }}
+                      >
+                        GỐC
+                      </button>
+                      {selectedItem.metadata.variants.map((v: any, idx: number) => (
+                        <button 
+                          key={idx}
+                          onClick={() => setDisplayedContent(v.long)}
+                          style={{ flex: 1, padding: '6px', borderRadius: '6px', background: displayedContent === v.long ? '#1877F2' : 'white', color: displayedContent === v.long ? 'white' : '#65676b', border: '1px solid #ddd', fontSize: '11px', fontWeight: 'bold', cursor: 'pointer' }}
+                        >
+                          V{idx + 1}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  <button style={{ width: '100%', padding: '12px', borderRadius: '8px', background: '#1877F2', color: 'white', fontWeight: '700', border: 'none', cursor: 'pointer' }} onClick={() => copyToClipboard(displayedContent, 'main')}>
+                    {copiedId === 'main' ? '✅ ĐÃ COPY!' : '📋 Copy nội dung đang chọn'}
                   </button>
                 </div>
               </div>
@@ -214,6 +242,47 @@ export default function FacebookExpertHistory() {
                 )}
               </div>
 
+              {/* Video Script Section */}
+              {selectedItem.metadata?.videoScript && (
+                <div style={{ background: 'rgba(59, 130, 246, 0.05)', borderRadius: '24px', padding: '24px', border: '1px solid rgba(59, 130, 246, 0.1)' }}>
+                  <h4 style={{ color: '#60a5fa', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    🎬 KỊCH BẢN VIDEO (REELS/TIKTOK):
+                  </h4>
+                  <div style={{ position: 'relative' }}>
+                    <div style={{ 
+                      whiteSpace: 'pre-wrap', 
+                      color: '#e2e8f0', 
+                      fontSize: '14px', 
+                      lineHeight: '1.6', 
+                      padding: '20px', 
+                      background: 'rgba(0,0,0,0.3)', 
+                      borderRadius: '16px',
+                      borderLeft: '4px solid #60a5fa'
+                    }}>
+                      {selectedItem.metadata.videoScript}
+                    </div>
+                    <button 
+                      onClick={() => copyToClipboard(selectedItem.metadata.videoScript, 'v-script')}
+                      style={{ 
+                        position: 'absolute', 
+                        top: '12px', 
+                        right: '12px', 
+                        background: 'rgba(59, 130, 246, 0.2)', 
+                        border: '1px solid rgba(59, 130, 246, 0.3)', 
+                        color: '#60a5fa', 
+                        padding: '6px 12px', 
+                        borderRadius: '8px', 
+                        cursor: 'pointer',
+                        fontSize: '12px',
+                        fontWeight: '700'
+                      }}
+                    >
+                      {copiedId === 'v-script' ? '✅ COPIED' : '📋 COPY SCRIPT'}
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {/* Hooks & Seeding */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                 <div style={{ background: 'rgba(30, 41, 59, 0.4)', borderRadius: '24px', padding: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
@@ -237,6 +306,31 @@ export default function FacebookExpertHistory() {
                       </button>
                     </div>
                   ))}
+                </div>
+              </div>
+
+              {/* AI Prompts Section */}
+              <div style={{ background: 'rgba(99, 102, 241, 0.05)', borderRadius: '24px', padding: '24px', border: '1px solid rgba(99, 102, 241, 0.1)' }}>
+                <h4 style={{ color: '#818cf8', marginBottom: '16px' }}>🤖 AI Generation Prompts:</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {selectedItem.metadata?.imagePrompt && (
+                    <div style={{ background: 'rgba(0,0,0,0.2)', padding: '16px', borderRadius: '12px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: '800', color: '#818cf8', marginBottom: '6px' }}>🎨 IMAGE PROMPT</div>
+                      <div style={{ fontSize: '13px', fontStyle: 'italic', color: '#94a3b8' }}>{selectedItem.metadata.imagePrompt}</div>
+                      <button onClick={() => copyToClipboard(selectedItem.metadata.imagePrompt, 'img-p')} style={{ marginTop: '10px', background: 'none', border: 'none', color: '#818cf8', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copiedId === 'img-p' ? '✅ ĐÃ COPY' : '📋 Copy Image Prompt'}
+                      </button>
+                    </div>
+                  )}
+                  {selectedItem.metadata?.videoPrompt && (
+                    <div style={{ background: 'rgba(0,0,0,0.2)', padding: '16px', borderRadius: '12px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: '800', color: '#f59e0b', marginBottom: '6px' }}>🎥 VIDEO PROMPT</div>
+                      <div style={{ fontSize: '13px', fontStyle: 'italic', color: '#94a3b8' }}>{selectedItem.metadata.videoPrompt}</div>
+                      <button onClick={() => copyToClipboard(selectedItem.metadata.videoPrompt, 'vid-p')} style={{ marginTop: '10px', background: 'none', border: 'none', color: '#f59e0b', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copiedId === 'vid-p' ? '✅ ĐÃ COPY' : '📋 Copy Video Prompt'}
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -46,9 +46,19 @@ export default function YouTubeHistoryPage() {
                   <div style={{ whiteSpace: 'pre-wrap', color: '#94a3b8', fontSize: '14px', lineHeight: '1.6', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', marginBottom: '12px', maxHeight: '150px', overflow: 'auto' }}>
                     {meta?.script?.hook || meta?.description || item.content || 'No content'}
                   </div>
-                  <button onClick={() => copy(JSON.stringify(meta, null, 2), `h-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: copied === `h-${i}` ? '#10b981' : 'rgba(255,0,0,0.1)', border: 'none', color: copied === `h-${i}` ? '#fff' : '#FF0000', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                  <button onClick={() => copy(JSON.stringify(meta, null, 2), `h-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: copied === `h-${i}` ? '#10b981' : 'rgba(255,0,0,0.1)', border: 'none', color: copied === `h-${i}` ? '#fff' : '#FF0000', cursor: 'pointer', fontSize: '12px', fontWeight: '700', marginRight: '10px' }}>
                     {copied === `h-${i}` ? '✅ Copied' : '📋 Copy All Data'}
                   </button>
+                  {meta?.imagePrompt && (
+                    <button onClick={() => copy(meta.imagePrompt, `img-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(255,107,107,0.1)', border: 'none', color: '#FF6B6B', cursor: 'pointer', fontSize: '12px', fontWeight: '700', marginRight: '10px' }}>
+                      {copied === `img-${i}` ? '✅ Copied' : '🎨 Copy Thumbnail Prompt'}
+                    </button>
+                  )}
+                  {meta?.videoPrompt && (
+                    <button onClick={() => copy(meta.videoPrompt, `vid-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(16,185,129,0.1)', border: 'none', color: '#10b981', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                      {copied === `vid-${i}` ? '✅ Copied' : '🎥 Copy Video Prompt'}
+                    </button>
+                  )}
                 </div>
               );
             })}

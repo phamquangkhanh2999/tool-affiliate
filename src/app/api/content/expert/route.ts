@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { successResponse, errorResponse } from '@/lib/api-response';
 import { generateExpertFacebookPost } from '@/lib/gemini';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   try {
     const userId = 'demo-user';
@@ -59,7 +61,7 @@ export async function POST(req: NextRequest) {
       currentPrompt = result.prompt || '';
 
       // 2. Lưu vào Database (Bọc trong try-catch để không làm chết quy trình nếu DB lỗi)
-      let savedId = null;
+      let savedId: string | null = null;
       try {
         const saved = await prisma.generatedContent.create({
           data: {
@@ -71,13 +73,7 @@ export async function POST(req: NextRequest) {
             content: result.longVersion || result.shortVersion,
             hashtags: [],
             metadata: {
-              hooks: result.hooks,
-              shortVersion: result.shortVersion,
-              longVersion: result.longVersion,
-              imagePrompt: result.imagePrompt,
-              videoPrompt: result.videoPrompt,
-              videoScript: result.videoScript,
-              commentSeedings: result.commentSeedings,
+              ...result,
               productName,
               affiliateLink
             } as any

@@ -10,6 +10,8 @@ export interface YouTubeExpertResult {
   tags: string[];
   pinnedComment: string;
   communityPost: string;
+  imagePrompt?: string;
+  videoPrompt?: string;
   prompt?: string;
   dbStatus?: 'success' | 'error';
 }
@@ -44,6 +46,8 @@ CHIẾN THUẬT NỘI DUNG YOUTUBE (MANDATORY):
 5. TAGS: 15-20 tags liên quan, mix giữa broad + specific keywords.
 6. PINNED COMMENT: Comment ghim ở đầu kèm link affiliate và câu kêu gọi.
 7. COMMUNITY POST: Bài đăng Community tab để promote video.
+8. PROMPT TẠO ẢNH (IMAGE PROMPT): Cung cấp 1 câu lệnh tiếng Anh cực kỳ chi tiết để tạo ảnh Thumbnail (16:9).
+9. PROMPT TẠO VIDEO (VIDEO PROMPT): Cung cấp 1 câu lệnh tiếng Anh để tạo chuyển động Video intro (16:9).
 
 Output JSON schema:
 {
@@ -57,7 +61,9 @@ Output JSON schema:
   "description": "Mô tả SEO đầy đủ với link, timestamps, hashtags",
   "tags": ["15-20 tags tối ưu SEO"],
   "pinnedComment": "Comment ghim kèm link affiliate ${affiliateLink}",
-  "communityPost": "Bài đăng Community tab"
+  "communityPost": "Bài đăng Community tab",
+  "imagePrompt": "Detailed English prompt for AI Thumbnail Image (16:9)",
+  "videoPrompt": "Detailed English prompt for AI Video generation (16:9)"
 }
 Return ONLY valid JSON.`;
 }

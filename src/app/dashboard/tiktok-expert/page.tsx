@@ -11,6 +11,8 @@ interface TikTokResult {
   trendingSounds: string[];
   commentSeedings: string[];
   cta: string;
+  imagePrompt?: string;
+  videoPrompt?: string;
 }
 
 export default function TikTokExpertPage() {
@@ -113,6 +115,41 @@ export default function TikTokExpertPage() {
                   <div style={{ color: '#fff', fontSize: '15px', fontWeight: '600' }}>{result.cta}</div>
                 </div>
               </div>
+
+              {/* AI Prompts (Image/Video) */}
+              {(result.imagePrompt || result.videoPrompt) && (
+                <div className="glass-panel" style={{ padding: '30px', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  <h4 style={{ color: '#c084fc', fontSize: '14px', fontWeight: '800', marginBottom: '20px' }}>🤖 AI GENERATION PROMPTS</h4>
+                  
+                  {result.imagePrompt && (
+                    <div style={{ marginBottom: '24px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: '800', color: '#c084fc', marginBottom: '8px' }}>🎨 IMAGE PROMPT (9:16)</div>
+                      <div style={{ position: 'relative' }}>
+                        <div style={{ padding: '16px', background: 'rgba(0,0,0,0.4)', borderRadius: '12px', fontSize: '13px', color: '#cbd5e1', fontStyle: 'italic', borderLeft: '4px solid #c084fc', lineHeight: '1.6' }}>
+                          {result.imagePrompt}
+                        </div>
+                        <button onClick={() => copy(result.imagePrompt!, 'img-p')} style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', color: copied === 'img-p' ? '#10b981' : '#c084fc', cursor: 'pointer' }}>
+                          {copied === 'img-p' ? '✅' : '📋'}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {result.videoPrompt && (
+                    <div>
+                      <div style={{ fontSize: '11px', fontWeight: '800', color: '#f59e0b', marginBottom: '8px' }}>🎥 VIDEO PROMPT (AI MOTION)</div>
+                      <div style={{ position: 'relative' }}>
+                        <div style={{ padding: '16px', background: 'rgba(0,0,0,0.4)', borderRadius: '12px', fontSize: '13px', color: '#cbd5e1', fontStyle: 'italic', borderLeft: '4px solid #f59e0b', lineHeight: '1.6' }}>
+                          {result.videoPrompt}
+                        </div>
+                        <button onClick={() => copy(result.videoPrompt!, 'vid-p')} style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', color: copied === 'vid-p' ? '#10b981' : '#f59e0b', cursor: 'pointer' }}>
+                          {copied === 'vid-p' ? '✅' : '📋'}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* Trending Sounds */}
               <div className="glass-panel" style={{ padding: '30px', borderRadius: '24px' }}>

@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { successResponse, errorResponse } from '@/lib/api-response';
 import { generateExpertZaloPost } from '@/lib/zalo-prompts';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   try {
     const { productName, affiliateLink, additionalInfo } = await req.json();
@@ -32,7 +34,7 @@ export async function POST(req: NextRequest) {
       
       currentPrompt = result.prompt || '';
 
-      let savedId = null;
+      let savedId: string | null = null;
       try {
         const saved = await prisma.generatedContent.create({
           data: {
@@ -43,8 +45,7 @@ export async function POST(req: NextRequest) {
             prompt: currentPrompt,
             content: result.zaloMessage, // default to message
             metadata: {
-              zaloMessage: result.zaloMessage,
-              zaloArticle: result.zaloArticle,
+              ...result,
               productName,
               affiliateLink
             } as any

@@ -3,11 +3,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import FacebookConnectModal from '@/components/FacebookConnectModal';
 import MediaUpload from '@/components/MediaUpload';
+import { useToast } from '@/components/Toast';
 
 interface FBResult {
   hooks: string[];
   shortVersion: string;
   longVersion: string;
+  variants?: { short: string; long: string }[];
+  imagePrompt?: string;
+  videoPrompt?: string;
   videoScript?: string;
   commentSeedings: string[];
   prompt?: string;
@@ -22,6 +26,7 @@ interface FBPage {
 }
 
 export default function FacebookExpertPage() {
+  const { success, error: toastError } = useToast();
   const [mode, setMode] = useState<'ai' | 'quick' | 'reels'>(() => {
     if (typeof window !== 'undefined') {
       if (window.location.hash === '#quick-post') return 'quick';
@@ -524,9 +529,92 @@ export default function FacebookExpertPage() {
                         </p>
                       </>
                     )}
+
+                    {result.commentSeedings && result.commentSeedings.length > 0 && (
+                      <>
+                        <hr style={{ margin: '20px 0', borderTop: '1px solid #f0f2f5' }} />
+                        <h3 style={{ color: '#6366f1', fontWeight: '800', marginBottom: '10px' }}>💬 BÌNH LUẬN MỒI (SEEDING)</h3>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          {result.commentSeedings.map((c, i) => (
+                            <div key={i} style={{ padding: '10px 14px', background: '#f0f2f5', borderRadius: '12px', fontSize: '13px', color: '#050505' }}>
+                              {c}
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+
+                    {/* Multi-variant Selector */}
+                    {result.variants && result.variants.length > 0 && (
+                      <>
+                        <hr style={{ margin: '20px 0', borderTop: '1px solid #f0f2f5' }} />
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                          <h3 style={{ color: '#6366f1', fontWeight: '800' }}>🔄 BIẾN THỂ NỘI DUNG (TRÁNH QUÉT)</h3>
+                          <div style={{ display: 'flex', gap: '8px' }}>
+                            <button 
+                              onClick={() => setResult({...result, longVersion: result.longVersion, shortVersion: result.shortVersion})}
+                              style={{ padding: '6px 12px', borderRadius: '8px', background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.2)', color: '#6366f1', fontSize: '11px', fontWeight: '800', cursor: 'pointer' }}
+                            >
+                              GỐC
+                            </button>
+                            {result.variants.map((v, idx) => (
+                              <button 
+                                key={idx}
+                                onClick={() => {
+                                  setResult({
+                                    ...result,
+                                    longVersion: v.long,
+                                    shortVersion: v.short
+                                  });
+                                  success?.('Đã chuyển sang biến thể ' + (idx + 1));
+                                }}
+                                style={{ padding: '6px 12px', borderRadius: '8px', background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.2)', color: '#6366f1', fontSize: '11px', fontWeight: '800', cursor: 'pointer' }}
+                              >
+                                V{idx + 1}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                        <p style={{ fontSize: '12px', color: '#64748b', fontStyle: 'italic', marginBottom: '10px' }}>
+                          * Click vào các nút V1, V2, V3 để đổi nội dung bài đăng. Giúp tránh bị Facebook đánh dấu spam khi đăng vào nhiều nhóm.
+                        </p>
+                      </>
+                    )}
                   </div>
                   <div style={{ padding: '20px', borderTop: '1px solid #f0f2f5', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                    <button onClick={() => handleCopy(result.longVersion + (result.videoScript ? '\n\n--- KỊCH BẢN VIDEO ---\n' + result.videoScript : ''), 'post')} style={{ flex: '1 1 30%', padding: '12px', borderRadius: '10px', background: '#e4e6eb', color: '#050505', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>📋 COPY CONTENT</button>
+                    <button 
+                      onClick={() => {
+                        handleCopy(result.longVersion, 'post');
+                        success?.('Đã copy nội dung bài đăng!');
+                      }} 
+                      style={{ flex: '1 1 20%', padding: '12px', borderRadius: '10px', background: '#1877F2', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}
+                    >
+                      {copied === 'post' ? '✅ ĐÃ COPY BÀI' : '📝 COPY BÀI ĐĂNG'}
+                    </button>
+                    
+                    {result.videoScript && (
+                      <button 
+                        onClick={() => {
+                          handleCopy(result.videoScript!, 'v-script');
+                          success?.('Đã copy kịch bản video!');
+                        }} 
+                        style={{ flex: '1 1 20%', padding: '12px', borderRadius: '10px', background: '#e4e6eb', color: '#050505', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}
+                      >
+                        {copied === 'v-script' ? '✅ ĐÃ COPY SCRIPT' : '🎬 COPY KỊCH BẢN'}
+                      </button>
+                    )}
+
+                    {result.commentSeedings && result.commentSeedings.length > 0 && (
+                      <button 
+                        onClick={() => {
+                          handleCopy(result.commentSeedings.join('\n'), 'comments');
+                          success?.('Đã copy danh sách bình luận!');
+                        }} 
+                        style={{ flex: '1 1 20%', padding: '12px', borderRadius: '10px', background: '#e4e6eb', color: '#050505', border: 'none', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}
+                      >
+                        {copied === 'comments' ? '✅ ĐÃ COPY SEEDING' : '💬 COPY SEEDING'}
+                      </button>
+                    )}
                     
                     <button onClick={() => {
                       setMode('quick');

@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { successResponse, errorResponse } from '@/lib/api-response';
 import { generateExpertInstagramPost } from '@/lib/instagram-prompts';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   try {
     const { productName, affiliateLink, additionalInfo } = await req.json();
@@ -32,7 +34,7 @@ export async function POST(req: NextRequest) {
       
       currentPrompt = result.prompt || '';
 
-      let savedId = null;
+      let savedId: string | null = null;
       try {
         const saved = await prisma.generatedContent.create({
           data: {
@@ -44,7 +46,7 @@ export async function POST(req: NextRequest) {
             content: result.caption,
             hashtags: result.hashtags,
             metadata: {
-              imageConcepts: result.imageConcepts,
+              ...result,
               productName,
               affiliateLink
             } as any

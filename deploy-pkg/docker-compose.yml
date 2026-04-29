@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    image: tool-affiliate:latest
+    container_name: affiliate_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: affiliate_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: affiliate_user
+      POSTGRES_PASSWORD: affiliate_pass_2024
+      POSTGRES_DB: affiliate_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "8020:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U affiliate_user -d affiliate_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

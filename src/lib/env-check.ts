@@ -11,6 +11,10 @@ const envSchema = z.object({
 });
 
 export function validateEnv() {
+  if (process.env.SKIP_ENV_VALIDATION === '1') {
+    return;
+  }
+
   const parsed = envSchema.safeParse(process.env);
 
   if (!parsed.success) {

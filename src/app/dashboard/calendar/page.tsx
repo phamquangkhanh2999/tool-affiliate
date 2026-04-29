@@ -48,7 +48,7 @@ export default function ContentCalendar() {
     const daysInMonth = getDaysInMonth(month, year);
     const firstDay = getFirstDayOfMonth(month, year);
     
-    const days = [];
+    const days: any[] = [];
     // Empty cells for days before the first day of the month
     for (let i = 0; i < firstDay; i++) {
       days.push(<div key={`empty-${i}`} className="calendar-cell empty" style={{ minHeight: '120px', padding: '10px', background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.05)' }}></div>);

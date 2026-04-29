@@ -4,6 +4,8 @@ import { successResponse, errorResponse } from '@/lib/api-response';
 import { callGeminiApi } from '@/lib/gemini';
 import { getTikTokExpertPrompt } from '@/lib/tiktok-prompts';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const userId = 'demo-user';
@@ -46,7 +48,7 @@ export async function POST(req: NextRequest) {
       const cleaned = resultText.replace(/```json/g, '').replace(/```/g, '').trim();
       const result = JSON.parse(cleaned);
 
-      let savedId = null;
+      let savedId: string | null = null;
       try {
         const saved = await prisma.generatedContent.create({
           data: {

@@ -38,9 +38,33 @@ export default function TikTokHistoryPage() {
                   <div style={{ whiteSpace: 'pre-wrap', color: '#94a3b8', fontSize: '14px', lineHeight: '1.6', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', marginBottom: '12px', maxHeight: '200px', overflow: 'auto' }}>
                     {meta?.script30s || meta?.caption || item.content || 'No content'}
                   </div>
-                  <button onClick={() => copy(meta?.script30s || item.content, `h-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: copied === `h-${i}` ? '#10b981' : 'rgba(255,0,80,0.1)', border: 'none', color: copied === `h-${i}` ? '#fff' : '#ff0050', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
-                    {copied === `h-${i}` ? '✅ Copied' : '📋 Copy Script'}
-                  </button>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {meta?.script15s && (
+                      <button onClick={() => copy(meta.script15s, `h15-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(255,0,80,0.05)', border: '1px solid rgba(255,0,80,0.1)', color: '#ff0050', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copied === `h15-${i}` ? '✅ 15s' : '📹 Script 15s'}
+                      </button>
+                    )}
+                    {meta?.script30s && (
+                      <button onClick={() => copy(meta.script30s, `h30-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(255,0,80,0.1)', border: 'none', color: '#ff0050', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copied === `h30-${i}` ? '✅ 30s' : '📹 Script 30s'}
+                      </button>
+                    )}
+                    {meta?.script60s && (
+                      <button onClick={() => copy(meta.script60s, `h60-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(255,0,80,0.05)', border: '1px solid rgba(255,0,80,0.1)', color: '#ff0050', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copied === `h60-${i}` ? '✅ 60s' : '📹 Script 60s'}
+                      </button>
+                    )}
+                    {meta?.imagePrompt && (
+                      <button onClick={() => copy(meta.imagePrompt, `img-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(192,132,252,0.1)', border: 'none', color: '#c084fc', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copied === `img-${i}` ? '✅' : '🎨 Image Prompt'}
+                      </button>
+                    )}
+                    {meta?.videoPrompt && (
+                      <button onClick={() => copy(meta.videoPrompt, `vid-${i}`)} style={{ padding: '8px 16px', borderRadius: '10px', background: 'rgba(245,158,11,0.1)', border: 'none', color: '#f59e0b', cursor: 'pointer', fontSize: '12px', fontWeight: '700' }}>
+                        {copied === `vid-${i}` ? '✅' : '🎥 Video Prompt'}
+                      </button>
+                    )}
+                  </div>
                 </div>
               );
             })}

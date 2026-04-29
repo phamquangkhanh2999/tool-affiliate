@@ -144,6 +144,40 @@ export default function EmailCampaign() {
                   {result.bodyHtml}
                 </div>
               </div>
+
+              {/* AI Generation Prompts */}
+              {(result.imagePrompt || result.videoPrompt || result.videoScript) && (
+                <div className="glass-panel" style={{ padding: '30px', borderRadius: '24px' }}>
+                  <h3 style={{ fontSize: '18px', fontWeight: '800', color: '#fff', marginBottom: '20px' }}>🤖 AI Generation Assets (Support Content)</h3>
+                  
+                  {result.videoScript && (
+                    <div style={{ marginBottom: '24px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: '800', color: '#22d3ee', marginBottom: '8px' }}>🎬 VIDEO SCRIPT (FOR EMAIL ATTACHMENT/LINK)</div>
+                      <div style={{ padding: '16px', background: 'rgba(0,0,0,0.3)', borderRadius: '12px', fontSize: '14px', whiteSpace: 'pre-wrap' }}>
+                        {result.videoScript}
+                      </div>
+                      <button onClick={() => copyToClipboard(result.videoScript!)} style={{ marginTop: '8px', background: 'none', border: '1px solid rgba(34,211,238,0.2)', color: '#22d3ee', padding: '6px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '11px', fontWeight: '700' }}>Copy Script</button>
+                    </div>
+                  )}
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                    {result.imagePrompt && (
+                      <div>
+                        <div style={{ fontSize: '11px', fontWeight: '800', color: '#c084fc', marginBottom: '8px' }}>🎨 BANNER PROMPT</div>
+                        <div style={{ padding: '12px', background: 'rgba(0,0,0,0.3)', borderRadius: '10px', fontSize: '12px', fontStyle: 'italic', color: '#94a3b8' }}>{result.imagePrompt}</div>
+                        <button onClick={() => copyToClipboard(result.imagePrompt!)} style={{ marginTop: '6px', background: 'none', border: 'none', color: '#c084fc', cursor: 'pointer', fontSize: '11px', fontWeight: '700' }}>Copy Prompt</button>
+                      </div>
+                    )}
+                    {result.videoPrompt && (
+                      <div>
+                        <div style={{ fontSize: '11px', fontWeight: '800', color: '#f59e0b', marginBottom: '8px' }}>🎥 VIDEO INTRO PROMPT</div>
+                        <div style={{ padding: '12px', background: 'rgba(0,0,0,0.3)', borderRadius: '10px', fontSize: '12px', fontStyle: 'italic', color: '#94a3b8' }}>{result.videoPrompt}</div>
+                        <button onClick={() => copyToClipboard(result.videoPrompt!)} style={{ marginTop: '6px', background: 'none', border: 'none', color: '#f59e0b', cursor: 'pointer', fontSize: '11px', fontWeight: '700' }}>Copy Prompt</button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </>
           )}
 

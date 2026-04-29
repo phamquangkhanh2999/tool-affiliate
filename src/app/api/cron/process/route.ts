@@ -3,6 +3,8 @@ import { validateFBToken, autoSeedComments, publishToPage } from '@/lib/facebook
 import { prisma } from '@/lib/prisma';
 import { errorResponse, successResponse } from '@/lib/api-response';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   // Security check: Verify a secret key to prevent unauthorized cron triggering
   const authHeader = req.headers.get('authorization');
@@ -19,7 +21,7 @@ export async function GET(req: NextRequest) {
     take: 5 
   });
 
-  const results = [];
+  const results: any[] = [];
 
   for (const post of pending) {
     try {

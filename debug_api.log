@@ -366,3 +366,477 @@
   }
 }
 --------------------------------------------------
+
+[2026-04-28T06:46:06.323Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Say \"Hello System Test\""
+          }
+        ]
+      }
+    ]
+  }
+}
+--------------------------------------------------
+
+[2026-04-28T06:46:07.567Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "Hello System Test",
+              "thoughtSignature": "Eu0B****zLBT+0GmO****TNSV/w778lshHiN5EQhg/UE7iuyxjZHl0WhQp3//AA6A90B2QEdnzC+I5o1****LWz1/ntJd0k1ux6J6Nr2J/VUMvWFjSw36D/vRFy****yggI+89RZqEfW"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "dFfw****MmQg"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:10:00.495Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Quạt gấp 180° im lặng GOOJODOQ siêu gió điều chỉnh 100 cấp độ, mini quạt di động, màn hình nguồn LED\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://s.shopee.vn/2LUjZaToGW.\n7. HASHTAGS: 5-10 trending.\n8. PROMPT TẠO ẢNH (IMAGE PROMPT): Cung cấp 1 câu lệnh tiếng Anh cực kỳ chi tiết để tạo ảnh dọc (9:16) dùng cho Midjourney/Imagen. Cấu trúc chuẩn: [Chủ đề/Nhân vật chi tiết] + [Hành động] + [Bối cảnh xung quanh] + [Ánh sáng/Phong cách điện ảnh] + --ar 9:16. (Ví dụ: \"A photorealistic portrait of an elegant Vietnamese woman wearing an apron, using the product in a modern, bright kitchen, smiling, cinematic lighting, 8k, --ar 9:16\")\n9. PROMPT TẠO VIDEO (GOOGLE LABS VEO/GEN-3): Cung cấp 1 câu lệnh tiếng Anh để tạo chuyển động từ bức ảnh trên. Cấu trúc chuẩn: [Chuyển động của camera/nhân vật] + [Môi trường/Ánh sáng/Hiệu ứng] + [Chất lượng]. (Ví dụ: \"A cinematic shot of a Vietnamese woman in an apron, smoothly stirring a pot, steam rising beautifully, natural lighting, smooth motion, photorealistic\")\n10. KỊCH BẢN VIDEO (VIDEO SCRIPT): Soạn kịch bản Video Reels cực kỳ chi tiết theo từng giây (tổng 15-30s). Phải chia rõ: [Thời gian cụ thể] - [Mô tả hình ảnh/chuyển động trên màn hình] - [Lời thoại/Voice-over].\n11. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://s.shopee.vn/2LUjZaToGW.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"imagePrompt\": \"English prompt for Text-to-Image AI...\",\n  \"videoPrompt\": \"English prompt for Text-to-Video AI (e.g. Veo, Gen-3)...\",\n  \"videoScript\": \"Kịch bản quay Video Reels/TikTok bằng tiếng Việt (Cảnh 1: ... Lời thoại: ...)\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:10:13.667Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Trời nóng như đổ lửa mà cầm cái quạt này thì đúng là 'cứu tinh' cuộc đời luôn!\",\n    \"Bỏ túi ngay chiếc quạt 'biến hình' 100 cấp độ gió - Thách thức mọi cái nắng gắt!\",\n    \"Đừng để mồ hôi nhễ nhại làm mất 'vibe' sang chảnh của bạn, xem ngay bảo bối này!\"\n  ],\n  \"shortVersion\": \"🔥 NẮNG NÀY KHÔNG CÓ EM NÓ THÌ CHỈ CÓ NƯỚC 'CHẢY MỠ'!\\n\\nChiếc quạt GOOJODOQ này đang làm mưa làm gió vì:\\n✅ Chỉnh tận 100 cấp độ gió (thích nhẹ có nhẹ, mạnh có mạnh).\\n✅ Gập 180 độ: Vừa cầm tay, vừa để bàn làm việc cực tiện.\\n✅ Màn hình LED hiện % pin rõ mồn một, không lo hết điện giữa chừng.\\n✅ Chạy êm ru, mang vào thư viện hay văn phòng đều okela.\\n\\n👉 Chốt ngay tại đây: https://s.shopee.vn/2LUjZaToGW\\n\\n#QuatMini #Goojodoq #SummerEssentials #ShopeeHaul #GiaDungThongMinh\",\n  \"longVersion\": \"KHIẾP THẬT, CÁI THỜI TIẾT NÀY MÀ KHÔNG CÓ QUẠT LÀ KHÔNG SỐNG NỔI! 🥵\\n\\nAnh chị em văn phòng hay mấy bạn hay phải di chuyển ngoài trời lưu gấp con quạt GOOJODOQ này lại. Không phải tự nhiên mà nó hot rần rần đâu, vì nó giải quyết đúng 3 cái nỗi khổ:\\n\\n1️⃣ Nỗi khổ quạt yếu: Con này cho phép chỉnh tận 100 mức gió bằng nút xoay. Muốn gió hiu hiu hay gió lốc thổi bay cả người đều có đủ.\\n2️⃣ Nỗi khổ hết pin đột ngột: Có ngay màn hình LED hiển thị % pin. Nhìn phát biết ngay khi nào cần sạc, không bao giờ rơi vào cảnh đang nóng mà quạt 'ngỏm'.\\n3️⃣ Nỗi khổ cồng kềnh: Thiết kế gập 180 độ thông minh. Lúc đi ngoài đường thì cầm tay, về đến bàn làm việc thì gập lại đặt lên bàn làm quạt mini luôn.\\n\\nĐặc biệt nhất là nó chạy SIÊU IM LẶNG. Ai ngồi văn phòng cần sự tập trung mà sợ tiếng quạt vù vù thì em này là chân ái. Nhỏ gọn, sang chảnh, bỏ túi xách nhẹ tênh.\\n\\n💥 Đang có giá cực hời, múc ngay kẻo hết: https://s.shopee.vn/2LUjZaToGW\\n\\n#Goojodoq #QuatCamTay #QuatMini #Lifestyle #ShopeeVideo #SummerVibes #TiệnÍch #HàngGiaDụng\",\n  \"imagePrompt\": \"A photorealistic portrait of a stylish young Vietnamese woman in a sunlit modern minimalist cafe, holding a sleek white GOOJODOQ foldable fan, the fan is folded at a 90-degree angle on the wooden table, a clear LED digital display on the fan shows '100', her hair is gently blowing in the breeze, cinematic lighting, soft bokeh background, high resolution, 8k, --ar 9:16\",\n  \"videoPrompt\": \"A cinematic close-up shot of a hand turning a small dial on a portable fan, the LED screen quickly counts up from 01 to 100, followed by a smooth transition to a woman's face looking refreshed as her hair blows gently, natural sunlight, high frame rate, photorealistic, smooth motion.\",\n  \"videoScript\": \"00-03s: Cảnh quay cận cảnh khuôn mặt đang nhễ nhại mồ hôi, tay dùng tập giấy quạt lấy quạt để. Lời thoại: 'Nắng thế này thì chịu sao thấu?'\\n03-08s: Nhân vật lấy chiếc quạt GOOJODOQ từ túi xách, gập nhẹ 180 độ và bật lên. Lời thoại: 'May mà có bảo bối này cứu cánh!'\\n08-15s: Quay cận cảnh ngón tay xoay nút, con số trên màn hình LED chạy nhanh từ 01 lên 100. Lời thoại: 'Chỉnh được tận 100 cấp độ gió luôn nhé, cực đã!'\\n15-22s: Cảnh nhân vật đặt quạt lên bàn làm việc, quạt chạy êm ru, nhân vật thảnh thơi làm việc. Lời thoại: 'Êm ru, không một tiếng động, để bàn hay cầm tay đều xinh.'\\n22-30s: Nhân vật cười tươi, đưa quạt về phía camera. Hiện text: 'Mát lịm tim - Click link ngay!'. Lời thoại: 'Sắm ngay đi mọi người ơi, link ở ngay đây nha!'\",\n  \"commentSeedings\": [\n    \"Quạt này dùng êm thật sự, mình hay mang đi làm cực tiện luôn: https://s.shopee.vn/2LUjZaToGW\",\n    \"Mới nhận hàng hôm qua, gió mạnh mà nhìn sang chảnh phết, đáng tiền! Link cho ai cần: https://s.shopee.vn/2LUjZaToGW\",\n    \"Ưng nhất cái màn hình LED, biết rõ khi nào hết pin để sạc chứ mấy loại cũ toàn chết bất đắc kỳ tử: https://s.shopee.vn/2LUjZaToGW\",\n    \"Nhỏ mà có võ, cấp độ 100 gió thổi tung tóc luôn mng ơi 😂: https://s.shopee.vn/2LUjZaToGW\"\n  ]\n}",
+              "thoughtSignature": "EuoV****o6y0+IMWi****3Zle+smvKYXOFOBRZzBf/Z2tF****PN7a+A93a****p2lJ+GGZeWFct1K8HFKizZH/mHkmS722xss2KNZnD+OVDs****6862/u/CzeE****aZ69/iLZ+Rkv/ar/eZGm****COCw/nnZq8XZh4VkvjlL+TGfw****FyoH/s4Hf****BRcF/cOSS****kR6T/AxLf/wjLp****uzty/oxLn+ddSuHlyNs0KkJfVp/jdRnfi0UV3m18/VAwfuIPTDNvJ+vxjk****UHP4/r4uJ****kIS5/iMLj****XP1h+JYjQ****hnGP+ytzb****viNo+JOhX****dDZg+UpNCH2OFjKQI/ZoMy****QNmT+5a2z****VnI9/bV7t****deYA/IR4/5vFc****ls3V/1viW****RDPl+56cTVj3pU+dOd1e+eqlH****yvHD/gf6W****p5B0/JBZZ****tbnn+mam+tREb****b2PS/G9T6****6pPd+rQyW8mw4OupkwOX+fg3q****b6fj+Ek3anp7yZIJ+7WqJad4HzREtBpE5gcg+cJgTTPKbIZ+/u9o/Ahxz****fanV+YcEv****NEIx+1H7k/kF6Y****0WlO/xNO2FvhZoT+OgoW****eGe0/bIzPmsatAMuGwS42yP/0lbT+mQJl****5XKR+SB7J****5fKP/1fHwm6FqR9+V/9Kut3Q/XXBk5a5pvkOIX/PiFlV7AU7iq/DaeV****jhCt/f6cq****XfNQ/ODzd****kq4Z+pzNd****TdsU+FLnBx/z8/18vY****9hIM/MPBk****IoOP+AsF8pKCb4c8S/aMaH****qfgx+YwJH****2DHO/BrweC+koYZ****hMUN/ZozA****FJoI+8wgC****v9nP/MIVk9r+cAJHCB14p3g+DQ+3HozpFdudmcfwq2z/aEDo****sIhS+bxzB****w2QF+OwGEedjWVePbIks/NB87****BIuN/5TJp4t8/cjuk****qIwR/ivLswOzj+4hPf****4V2O+SbPW/1qXDYON0q/ESXwrsNN8pJ9ay/H56n****x9n7+j5/ajJu****SoNy/S9/3oWynG68jA5+fku2****X0ig+jvYABgRF3li5a+C0F3****OoBj/KtkO****Uuhd+hb5JY0uDenHIgKkO+t/dY0G+pz8R****Zhnq/eHu2Jp2nxA61wCIs+aailP/dEX+9epI/JrV5TC5Iq+kndx8y//yEo/jnEGulVZbRxKyCVQS+cyan****uB49/As4b****mspx+41enN6u1i+G3+icY3****k5rh+S73c****hfdT+GDT79t4+GmCa****OK5L+TeiV****hYFO+BJGfvHA/nvg7****ngeT/+Zfsu****nvMq/ydlK****7jYX+Msp40dtLqx1A=="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "SWjx****TmA4"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:25:43.359Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"Nồi chiên không dầu Magic Eco AC-162, dung tích 8L chiên nguyên con gà, 12 chế độ tự động, BH 12th\" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://s.shopee.vn/20rtC3r6B1.\n7. HASHTAGS: 5-10 trending.\n8. PROMPT TẠO ẢNH (IMAGE PROMPT): Cung cấp 1 câu lệnh tiếng Anh cực kỳ chi tiết để tạo ảnh dọc (9:16) dùng cho Midjourney/Imagen. Cấu trúc chuẩn: [Chủ đề/Nhân vật chi tiết] + [Hành động] + [Bối cảnh xung quanh] + [Ánh sáng/Phong cách điện ảnh] + --ar 9:16. (Ví dụ: \"A photorealistic portrait of an elegant Vietnamese woman wearing an apron, using the product in a modern, bright kitchen, smiling, cinematic lighting, 8k, --ar 9:16\")\n9. PROMPT TẠO VIDEO (GOOGLE LABS VEO/GEN-3): Cung cấp 1 câu lệnh tiếng Anh để tạo chuyển động từ bức ảnh trên. Cấu trúc chuẩn: [Chuyển động của camera/nhân vật] + [Môi trường/Ánh sáng/Hiệu ứng] + [Chất lượng]. (Ví dụ: \"A cinematic shot of a Vietnamese woman in an apron, smoothly stirring a pot, steam rising beautifully, natural lighting, smooth motion, photorealistic\")\n10. KỊCH BẢN VIDEO (VIDEO SCRIPT): Soạn kịch bản Video Reels cực kỳ chi tiết theo từng giây (tổng 15-30s). Phải chia rõ: [Thời gian cụ thể] - [Mô tả hình ảnh/chuyển động trên màn hình] - [Lời thoại/Voice-over].\n11. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://s.shopee.vn/20rtC3r6B1.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài: Bao gồm nội dung + Hashtags\",\n  \"imagePrompt\": \"English prompt for Text-to-Image AI...\",\n  \"videoPrompt\": \"English prompt for Text-to-Video AI (e.g. Veo, Gen-3)...\",\n  \"videoScript\": \"Kịch bản quay Video Reels/TikTok bằng tiếng Việt (Cảnh 1: ... Lời thoại: ...)\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:26:06.955Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Dẹp ngay cái chảo dầu mỡ đi, siêu phẩm 8L 'nuốt trọn' cả con gà là có thật các bác ơi!\",\n    \"Lương 7 triệu vẫn muốn ăn ngon như nhà hàng? Bí kíp nằm gọn trong chiếc nồi 'thần thánh' này.\",\n    \"Cảnh báo: Chiếc nồi này sẽ khiến bạn trở nên 'lười' vì nấu gì cũng chỉ mất đúng 1 nút bấm!\"\n  ],\n  \"shortVersion\": \"Gà chiên nguyên con vàng ươm, không một giọt dầu mà chỉ mất 20 phút? 🍗 Tin được không, với Nồi chiên Magic Eco AC-162 (8L), cả thế giới nội trợ bỗng chốc thu bé lại vừa bằng 12 chế độ tự động. Không còn cảnh dầu bắn tung tóe, không còn lo béo phì. Bảo hành 12 tháng chuẩn hãng cho anh em yên tâm 'cháy' bếp. Chốt ngay kẻo lỡ deal hời tại đây: https://s.shopee.vn/20rtC3r6B1 #MagicEco #NoiChienKhongDau #CookingHacks #ShopeeSale #ReviewGiaDung\",\n  \"longVersion\": \"❌ Đừng để việc nấu nướng trở thành 'nỗi ám ảnh' mỗi khi đi làm về! ❌\\n\\nBạn ghét cảnh dầu mỡ bắn đầy người? Bạn mệt mỏi vì phải đứng canh chảo rán cả tiếng đồng hồ? Hay đơn giản là muốn ăn đồ chiên mà sợ tăng cân, hại tim mạch?\\n\\n✅ Giải pháp đây rồi: Nồi chiên không dầu Magic Eco AC-162 - 'Trợ lý' đắc lực cho mọi căn bếp Việt!\\n👉 Dung tích 'khủng' 8L: Chiên nguyên con gà 2-3kg thoải mái, không cần chặt nhỏ, giữ trọn vị ngọt tự nhiên.\\n👉 12 chế độ tự động: Từ làm bánh, nướng tôm, chiên khoai đến rã đông... chỉ cần bấm chọn, máy tự lo từ A-Z.\\n👉 Công nghệ xoáy nhiệt Rapid Air: Giảm đến 80% lượng mỡ thừa, món ăn giòn tan bên ngoài, mọng nước bên trong.\\n👉 Thiết kế sang trọng, dễ vệ sinh: Lòng nồi chống dính cao cấp, rửa trong 1 nốt nhạc.\\n\\n🛡 Bảo hành chính hãng 12 tháng - Lỗi là đổi!\\n\\nHàng nghìn chị em đã 'vứt chảo' để sang dùng Magic Eco, còn bạn thì sao? Đừng để bữa cơm gia đình thiếu đi sự tiện lợi này.\\n\\n🛒 Mua ngay tại link Shopee nhận ưu đãi: https://s.shopee.vn/20rtC3r6B1\\n\\n#MagicEco #NoiChienKhongDau #SmartKitchen #GiaDungThongMinh #ReviewVn #ShopeeVN #AmThuc #HealthyFood\",\n  \"imagePrompt\": \"A photorealistic shot of a modern, sleek black Magic Eco AC-162 air fryer on a white marble kitchen countertop. The air fryer drawer is slightly open, revealing a perfectly golden-brown, crispy whole roasted chicken inside with steam rising. In the background, a beautiful Vietnamese woman in her 30s, wearing a clean linen apron, is smiling and looking at the chicken, cinematic lighting, shallow depth of field, 8k resolution, highly detailed textures --ar 9:16\",\n  \"videoPrompt\": \"A smooth cinematic camera movement zooming in on the crispy, bubbling skin of a roasted chicken inside the air fryer. The camera then pans up to show the digital touch control panel glowing with 12 icons. High-quality textures, steam effects, natural warm kitchen lighting, photorealistic, 60fps.\",\n  \"videoScript\": \"00-03s: Cảnh quay cận mặt một con gà vàng rộm, da giòn tan đang bốc khói nghi ngút. Lời thoại: 'Ăn gà ngon thế này mà không cần 1 giọt dầu, tin được không?'\\n03-08s: Quay cảnh tay người dùng chạm nhẹ vào bảng điều khiển cảm ứng của nồi Magic Eco AC-162, các icon sáng đèn. Lời thoại: 'Nồi chiên Magic Eco 8L, có tận 12 chế độ tự động, thông minh cực kỳ!'\\n08-15s: Cảnh người phụ nữ nhấc khay nồi ra, con gà nguyên con nằm gọn bên trong. Lời thoại: 'Dung tích tận 8L, bỏ nguyên con gà vào vẫn dư chỗ. Chỉ cần bấm nút và đi làm việc khác.'\\n15-22s: Cảnh gia đình quây quần ăn món gà vừa nấu, ai cũng khen ngon. Lời thoại: 'Giảm 80% mỡ thừa, ăn thoải mái không lo béo. Bảo hành tận 12 tháng nhé!'\\n22-30s: Hiển thị link Shopee và nút 'Mua ngay'. Lời thoại: 'Click ngay vào link bên dưới để hốt em nó về bếp nhà mình nhé!'\",\n  \"commentSeedings\": [\n    \"Nồi này dùng sướng thật sự, chiên gà nguyên con vàng đều mà không bị khô. Link cho ai cần nhé: https://s.shopee.vn/20rtC3r6B1\",\n    \"Mới mua đợt sale trước, 12 chế độ dùng cực tiện, mình hay làm bánh bằng nồi này luôn. Link chuẩn đây ạ: https://s.shopee.vn/20rtC3r6B1\",\n    \"Giao hàng nhanh, đóng gói kỹ. Nhà mình 5 người dùng size 8L này là vừa xinh. Mua ở đây uy tín nè: https://s.shopee.vn/20rtC3r6B1\",\n    \"Từ ngày có nồi này mình lười đứng bếp hẳn, cứ ném đồ vào bấm nút là xong. Đáng đồng tiền bát gạo! https://s.shopee.vn/20rtC3r6B1\"\n  ]\n}",
+              "thoughtSignature": "ErsP****pmI4/Zr0q****7CMx+JSvr****WSmD/gMzi****yeyM/3Ssi****nbIJ+iZuG****cBzH/SrkYxt+XXH4****5ayw/uwGa****grYf/0H8bIJIFeMCA+cN3zU19rl3cs/wPyXibpoqN/QB3y****sruX/0U7O****NfXd+WTt5L6pX0knH0PK5Bo+AqMS****PWJx/NRE836sFPSN2zt/sWWl****TFHp+4wQyJgVpqHp/Zghm/c8rp****Pb8D+RhRNvDmTCz/ohXo****LVdh/oMV+OA1YNlLtVNDUVMv+hXDy****Cy2A+UUCyS9WVAGSwET+/4/ayD9****jI08/hOvxdNY3Ui956FKwrMy/I3Sp****bYhv++uH/OdI8****Ut0P/VrLn****hkHf+lyhp****uL1d/8nbNwQYe+UdUrJXV25zRx+DbcQ****aaXd+inO6si2GP/WhjQ****R72N+ZZ5Tk/bgWD****sgVY+Kuoz****kS4a/8mva****KHWe+g1Y7wxwpIG2THY+y92zO4a+oSCxnC4nsEeJ9UXQp2t+mzh9M+kTkMQP+7cGn****m47o/eMVI****M63c/yccn****n9lg+GlGtMLoDJ2JhVnT+cPJh****3f5a/tqg1****kHO3/1mfl****e87a+EmuPj+NRP/FdIA****azkg+F07j****fumG+5KDrQsUyzD+O+C1Qx****I2dU+Nhl4****qUh3+p8aa****hwoP/zH2ikISBlbH0Ch/6ywyUcMhZz/9RgS****PJLX+YyjM****vtcI/lElw****adnt/ZTyJX/OSZGsB+ttinIXKvpG+5wT7****vFoW+9Ny7Us86NZHyv/8P34+s56o****ZZuY+CJKGkyK24P+L/1r1D****6X3t/IdG8****XfUb/PJ/WsoyJugJEMOTRYryXQ="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "Amzx****ikQo"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:30:51.518Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Affiliate & Social Media Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm \"(MUA 1 TẶNG 5) Bình giữ nhiệt Topgia tặng 5 bịch khăn giấy rút đáy sương mai 1000 tờ 4 lớp hàng Việt \" để tối ưu tỉ lệ click và chốt đơn.\n\nCHIẾN THUẬT NỘI DUNG (MANDATORY):\n1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.\n2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).\n3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).\n4. VĂN PHONG \"NGƯỜI THẬT\": Dùng từ ngữ đời thường, tránh robot.\n5. CẤU TRÚC DỄ ĐỌC.\n6. CTA THÔI THÚC: Kèm link affiliate https://s.shopee.vn/7VCpkXQmvu.\n7. HASHTAGS: 5-10 trending.\n8. PROMPT TẠO ẢNH (IMAGE PROMPT): 1 câu lệnh tiếng Anh chi tiết cho Midjourney (9:16).\n9. PROMPT TẠO VIDEO (VIDEO PROMPT): 1 câu lệnh tiếng Anh cho AI Motion (9:16).\n10. KỊCH BẢN VIDEO (VIDEO SCRIPT): Kịch bản Video Reels cực kỳ chi tiết (15-30s).\n11. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate https://s.shopee.vn/7VCpkXQmvu.\n12. ĐA DẠNG NỘI DUNG (VARIANTS): Tạo thêm 3 phiên bản bài đăng khác nhau hoàn toàn về cấu trúc và hook để tránh bị Facebook quét nội dung trùng lặp khi đăng nhiều nơi.\n\nOutput JSON schema:\n{\n  \"hooks\": [\"3 câu mở đầu gây tò mò nhất\"],\n  \"shortVersion\": \"Bản ngắn mặc định: Bao gồm nội dung + Hashtags\",\n  \"longVersion\": \"Bản dài mặc định: Bao gồm nội dung + Hashtags\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English prompt for Image AI...\",\n  \"videoPrompt\": \"English prompt for Video AI...\",\n  \"videoScript\": \"Kịch bản quay Video Reels bằng tiếng Việt...\",\n  \"commentSeedings\": [\"Bình luận 1 kèm link\", \"Bình luận 2...\", \"Bình luận 3...\"]\n}\nReturn ONLY JSON."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:31:06.484Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"🔥 GÌ VẬY TRỜI? MUA 1 CÁI BÌNH MÀ TẶNG TẬN 5 BỊCH KHĂN GIẤY 1000 TỜ?\",\n    \"😱 Đừng lướt qua nếu bạn không muốn bỏ lỡ cái deal 'chấn động' nhất Shopee hôm nay!\",\n    \"💸 Chỉ từ mấy chục cành mà nhận về cả 'núi' quà, Topgia chơi lớn quá rồi anh em ơi!\"\n  ],\n  \"shortVersion\": \"🔥 DEAL HỜI NHẤT NĂM: MUA 1 ĐƯỢC 6! 😱\\nChỉ cần chốt 1 Bình giữ nhiệt Topgia xịn xò, tặng ngay 5 bịCH KHĂN GIẤY SƯƠNG MAI (1000 tờ/bịch, 4 lớp siêu dày). \\n✅ Bình giữ nhiệt lâu, thiết kế cực sang.\\n✅ Khăn giấy dùng cả năm không hết, hàng Việt an toàn.\\n👉 Chốt ngay kẻo hết: https://s.shopee.vn/7VCpkXQmvu\\n#Topgia #BinhGiuNhiet #DealHoi #ShopeeHaul #Khansươngmai\",\n  \"longVersion\": \"🔥 CỨU CÁI VÍ VỚI ANH EM ƠI - MUA 1 MÀ NHẬN VỀ CẢ TÁ QUÀ! 😱\\n\\nNhiều ông cứ than tốn tiền mua khăn giấy, rồi lại than bình giữ nhiệt nhanh hỏng. Đây, giải pháp '2 trong 1' cực cháy từ nhà Topgia cho anh em đây:\\n\\n💎 MUA 1 Bình giữ nhiệt Topgia (siêu bền, giữ đá lạnh từ sáng đến đêm).\\n🎁 TẶNG MIỄN PHÍ 5 Bịch Khăn Giấy Rút Đáy Sương Mai.\\n\\nTại sao phải chốt ngay?\\n👉 Khăn giấy 1000 tờ/bịch, 4 lớp dày dặn, không mủn, hàng Việt Nam chất lượng cao. Tặng 5 bịch là dùng nhòe cả năm luôn!\\n👉 Bình giữ nhiệt thiết kế tối giản, cầm chắc tay, mang đi làm hay đi học đều cực cool.\\n👉 Deal này là deal độc quyền, số lượng quà tặng có hạn thôi.\\n\\nĐừng để đến lúc hết quà mới tiếc nha. Click ngay vào link bên dưới để hốt trọn bộ:\\n📍 Link ưu đãi: https://s.shopee.vn/7VCpkXQmvu\\n\\n#Topgia #SaleShopee #ComboGiaRe #BinhGiuNhiet #VlogGiaDinh #ShopeeCheck #AffiliateVN\",\n  \"variants\": [\n    {\n      \"short\": \"⚡️ CHỐT LẸ: Mua Bình giữ nhiệt Topgia tặng 5 bịch khăn giấy 1000 tờ. Deal này không mua thì mua cái gì nữa? Link đây: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"😱 TIN ĐƯỢC KHÔNG? MUA 1 BÌNH GIỮ NHIỆT MÀ QUÀ TẶNG NẶNG HƠN CẢ HÀNG CHÍNH!\\nTopgia đang có chương trình tri ân cực khủng: \\n1️⃣ Bình giữ nhiệt cao cấp, giữ nhiệt siêu đỉnh.\\n2️⃣ 5 Bịch khăn giấy Sương Mai 4 lớp (mỗi bịch tận 1000 tờ).\\nTính ra rẻ như cho luôn ấy. Khăn giấy này dùng lau mặt, lau tay hay làm gì cũng sướng vì nó dày và dai lắm. \\n👇 Anh em vào xem ngay không hết suất:\\nhttps://s.shopee.vn/7VCpkXQmvu\"\n    },\n    {\n      \"short\": \"📦 Unboxing bộ đôi hủy diệt: Bình Topgia + 5 bịch khăn giấy Sương Mai. Quá hời cho một cuộc tình! Chốt: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"❌ NỖI ĐAU CỦA DÂN VĂN PHÒNG: Bình nước thì đổ mồ hôi, khăn giấy thì lúc nào cũng hết giữa chừng!\\nGiải quyết triệt để với combo Topgia: Mua 1 bình giữ nhiệt tặng kèm 5 bịch khăn giấy 4 lớp siêu to khổng lồ. \\n- Bình giữ lạnh 12h, nóng 6h.\\n- Khăn giấy Sương Mai 1000 tờ, hàng Việt lành tính cho da.\\nMua một lần dùng cả mùa, tội gì không sắm?\\n🔗 Link mua tại đây: https://s.shopee.vn/7VCpkXQmvu\"\n    },\n    {\n      \"short\": \"🔥 CẢNH BÁO: Deal này quá cháy! Bình giữ nhiệt tặng kèm 5 bịch khăn giấy Sương Mai. Mua ngay: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"🌟 HÀNG VIỆT CHO NGƯỜI VIỆT - CHẤT LƯỢNG KHỎI BÀN!\\nCombo Bình giữ nhiệt Topgia và 5 bịch khăn giấy Sương Mai đang làm mưa làm gió trên Shopee. \\n✅ Khăn giấy rút đáy cực tiện, 4 lớp mịn màng.\\n✅ Bình giữ nhiệt thiết kế hiện đại, nhiều màu cực xinh.\\nSố lượng quà tặng có hạn, các bác nhanh tay thì còn chậm tay thì... mua giá gốc nhé!\\n👉 Link chính hãng: https://s.shopee.vn/7VCpkXQmvu\"\n    }\n  ],\n  \"imagePrompt\": \"A high-quality lifestyle photography of a sleek, aesthetic Topgia thermos bottle standing prominently on a clean wooden table. Surrounding the bottle are five large, stacked packs of 'Sương Mai' tissue papers with colorful packaging. The background is a bright, cozy modern kitchen with natural sunlight streaming in. Cinematic lighting, 8k resolution, photorealistic, vertical aspect ratio --ar 9:16.\",\n  \"videoPrompt\": \"Dynamic vertical video starting with a close-up of a stylish Topgia thermos bottle. The camera zooms out to reveal 5 huge packs of tissues being placed one by one next to it by a person. Soft transitions, vibrant colors, clean aesthetic, high frame rate for smooth motion --ar 9:16.\",\n  \"videoScript\": \"Kịch bản Reels (20s):\\n- 0-3s: Cận cảnh bình Topgia cực sang, chèn text 'MUA 1 TẶNG 5?'\\n- 3-8s: Hiệu ứng chuyển cảnh nhanh, hiện ra 5 bịch khăn giấy Sương Mai to đùng, chồng lên nhau.\\n- 8-15s: Tay người dùng rút thử một tờ giấy, vò nhẹ để thấy độ dai (4 lớp). Sau đó rót nước đá vào bình Topgia để thấy hơi lạnh không thoát ra ngoài.\\n- 15-20s: Hiện text 'LINK Ở BIO / DƯỚI COMMENT' kèm tiếng chuông ting ting và trỏ tay vào link.\",\n  \"commentSeedings\": [\n    \"Vừa nhận hàng xong, khăn giấy dày dặn dã man, bình thì đẹp xuất sắc luôn nha. Link cho ai cần: https://s.shopee.vn/7VCpkXQmvu\",\n    \"Giao hàng nhanh thật sự, 5 bịch giấy to vật vã dùng chắc sang năm mới hết. Deal hời quá!\",\n    \"Bình giữ nhiệt tốt phết, sáng mang đá đi làm chiều vẫn còn. Quà tặng kèm chất lượng thực sự.\",\n    \"Bác nào hay dùng khăn giấy thì múc combo này là chuẩn bài, tiết kiệm được khối tiền.\",\n    \"Ủa có thật không shop? Để em đặt thử 1 bộ xem sao. Link đây đúng không: https://s.shopee.vn/7VCpkXQmvu\"\n  ]\n}\n}",
+              "thoughtSignature": "EqMS****99W9/3rSOMx46hB/PafCX7pcakP7b3x0AhQ+ch4AQC2/1CAc****gKDN+5Mry****gr1T+rOdM****Ocui/Jpl6FlI0Pl+Ttj1****oDr8+XwgY6+CFrR****uabY+9jEy****a9Yr+hU8uV7u+Y0fl****6SI8+rw9T****Lppw+hn7W****nBbo/wdhAplMHU/b6K6+90SAPWMIHGuQ8fwVteA/I4pJgQUPLGfQyyyuuh/hfS1****DzUU/v8Dz****Bmo9/pDbF****D2CB+RwPW****bIUG/qbCC****pF05+Fvwz1tAMnkDJgS4TVs++oOiN****ycDB+XgNg****GGgN/45jQ****G1S9/XRdlfyfo0reAohBf+xTyb/K/sMRP****J0mw+NIxE****MMH4/RdsQ****CRWT+Eb9RwFu7EsTtKxTI/vygBFQMJ/itxx3DXm1KxQ+7HSx****urQN/g+CHXO****dgSk/UPL+vuEdZPi4NvXIkeD+I4uI6L/Mu7E****b4Oh+wUOK****v1YW+zrDb****fnoq/0tLf****qX6b/sU9G/8NNf****DKNM/C/ETLixh64yNxWQRc3ajB/XhS1****nqdk/K6W6****GfEX+UL09****iFmc/wnfGKS5Oy2vtAHd271+XHFw****kNSR/TOYE****CkSO+m2g4****J4JU+Q/Na4j****R5p7/orRt****o2j1/iu7S****7mH9+DvNF****F1c5+4dxy****2zTi/VkKt****Zp9f/FG8DpAqqV5zen/lXxY****5AF2/W8nB****gbD1/HFbaoBVtQtH4Ur/hLVCpovlXp+3P95****gYKC/ZxYA****YwfQ/kgVn7ABPp+eeru****hfAg+/Gmad****hlVb+2q5U****DLZF/BYt+J0O37klycSo+iKnpKHLewSMtsV2VN+iAEB****ZTVZ+Vtyd****Nenm+5tzF****huiK/R527kDme5SRU/hKk9****hnQs+zqm8Dw+yzu5****e4FE/6vPN****7e7Y+XWfl****rmye+yFzJFqLJ7U0tGQ/+H4FM8EUez1VQ/d3F9****W508="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "Lm3x****n2Ak"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:33:05.856Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook cho \"(MUA 1 TẶNG 5) Bình giữ nhiệt Topgia tặng 5 bịch khăn giấy rút đáy sương mai 1000 tờ 4 lớp hàng Việt \". Link: https://s.shopee.vn/7VCpkXQmvu. \n\nYÊU CẦU:\n1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.\n2. Văn phong \"người thật\", dễ đọc, CTA mạnh.\n3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.\n4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.\n5. Tạo 3-5 comment seeding.\n\nOutput JSON:\n{\n  \"hooks\": [\"3 câu mở đầu\"],\n  \"shortVersion\": \"Bản ngắn mặc định\",\n  \"longVersion\": \"Bản dài mặc định\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English Image Prompt...\",\n  \"videoPrompt\": \"English Video Prompt...\",\n  \"videoScript\": \"Kịch bản Video tiếng Việt...\",\n  \"commentSeedings\": [\"Comment 1\", \"Comment 2\"]\n}\nReturn ONLY JSON. No preamble."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:33:24.866Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Mua 1 tặng 5 - Deal 'hủy diệt' túi tiền nhưng cực hời cho anh chị em văn phòng!\",\n    \"Đừng mua bình giữ nhiệt nếu chưa thấy quà tặng 'siêu to khổng lồ' này từ Topgia!\",\n    \"Sốc: Mua 1 bình nước mà được tặng tận 5000 tờ khăn giấy 4 lớp, tin được không?\"\n  ],\n  \"shortVersion\": \"MUA 1 TẶNG 5! Sắm 1 bình giữ nhiệt Topgia (Inox 304 xịn xò) tặng ngay 5 bịch khăn giấy rút đáy Sương Mai 1000 tờ/bịch. Giữ nhiệt đỉnh, giấy dùng cả năm không hết. Link săn sale: https://s.shopee.vn/7VCpkXQmvu\",\n  \"longVersion\": \"REVIEW COMBO HỜI NHẤT SHOPEE: Bình giữ nhiệt Topgia x Khăn giấy Sương Mai. \\n\\n✅ Bình giữ nhiệt: Inox 304 an toàn, giữ lạnh 12h - giữ nóng 8h. Thiết kế cực sang, mang đi học đi làm đều đẹp.\\n✅ Quà tặng gây sốc: 5 bịch khăn giấy rút đáy (mỗi bịch 1000 tờ, tổng 5000 tờ!). Hàng Việt Nam chất lượng cao, 4 lớp dày dặn, cực dai, không bụi mịn.\\n\\nTính ra mua 1 được 6, giá rẻ như cho. Deal này không húp thì húp deal nào? \\n👉 Chốt ngay tại đây: https://s.shopee.vn/7VCpkXQmvu\",\n  \"variants\": [\n    {\n      \"short\": \"Deal sập sàn: Mua 1 bình giữ nhiệt tặng 5 bịch giấy 1000 tờ. Hàng Việt chất lượng cao, dùng bao phê! Chốt đơn: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"Cảnh báo: Deal này có thể làm bạn 'ngộp' vì quà quá nhiều! Topgia chơi lớn: Mua 1 bình giữ nhiệt tặng hẳn 5 bịch khăn giấy Sương Mai 1000 tờ 4 lớp. Bình giữ nhiệt bền bỉ, giấy Sương Mai thì quá nổi tiếng về độ dai và an toàn. Số lượng có hạn, nhanh tay thì còn chậm tay thì hết. \\n🛒 Link mua: https://s.shopee.vn/7VCpkXQmvu\"\n    },\n    {\n      \"short\": \"Hết nước đá lại đến hết giấy lau? Sắm ngay combo (1 TẶNG 5) của Topgia là giải quyết hết! Link: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"Góc tiết kiệm: Thay vì mua lẻ tẻ, anh em sắm ngay combo (MUA 1 TẶNG 5) này của Topgia nhé. Mua 1 bình giữ nhiệt inox xịn xò, tặng kèm 5 bịch khăn giấy rút 1000 tờ 4 lớp siêu dày. Giấy này dùng để bàn làm việc hay dùng trong nhà vệ sinh đều cực tiết kiệm. \\n📍 Link săn: https://s.shopee.vn/7VCpkXQmvu\"\n    },\n    {\n      \"short\": \"Ủng hộ hàng Việt: Bình giữ nhiệt Topgia + 5 bịch giấy Sương Mai 1000 tờ. Giá cực hời chỉ có tại: https://s.shopee.vn/7VCpkXQmvu\",\n      \"long\": \"Combo quốc dân cho mọi nhà: Bình giữ nhiệt Topgia (giữ đá siêu lâu) tặng kèm 5 bịch khăn giấy Sương Mai (hàng Việt 4 lớp siêu dai). Quà tặng gì mà to hơn cả sản phẩm chính thế này? Giấy thấm hút tốt, không mủn, bình nước thì sang chảnh. \\n🔥 Link Shopee: https://s.shopee.vn/7VCpkXQmvu\"\n    }\n  ],\n  \"imagePrompt\": \"A high-end professional product photography shot of a sleek Topgia stainless steel vacuum flask positioned in the center. Around the flask are 5 large, thick packs of 'Suong Mai' brand white facial tissues with 1000 sheets printed on the label. Bright, clean, modern kitchen background with soft natural lighting, 8k resolution, commercial style.\",\n  \"videoPrompt\": \"A dynamic 15-second product showcase video. It starts with a close-up of ice cubes being poured into a Topgia flask. Then, a quick panshot reveals a massive pile of 5 large tissue packs. The camera zooms in on the 4-layer thickness of the tissue being pulled out easily. High energy, vibrant colors, Shopee-style editing.\",\n  \"videoScript\": \"00:00-00:05: [Cảnh cận] Đổ nước đá vào bình Topgia. 'Bình Topgia giữ lạnh cực trâu, 12 tiếng đá vẫn chưa tan!'\\n00:05-00:15: [Cảnh tay đập vào chồng 5 bịch giấy] 'Sốc nhất là quà tặng: 5 bịch khăn giấy Sương Mai 1000 tờ mỗi bịch.'\\n00:15-00:25: [Cảnh tay kéo giấy] 'Giấy 4 lớp, hàng Việt Nam, cực dai và không bụi mịn.'\\n00:25-00:30: [Cảnh hiện link Shopee] 'Mua 1 tặng 5, hời thế này không mua hơi phí. Link ở comment nha!'\",\n  \"commentSeedings\": [\n    \"Hàng về rồi shop ơi, giấy nhiều dã man, dùng cả năm chưa chắc hết.\",\n    \"Bình giữ nhiệt xịn thật sự, đá để từ sáng đến tối vẫn còn. Ưng cái quà tặng kèm ghê.\",\n    \"Vừa nhận combo này xong, giấy 4 lớp dày dặn lắm, mọi người nên mua nhé.\",\n    \"Shop giao nhanh, đóng gói kỹ. Deal này quá hời luôn.\",\n    \"Giấy Sương Mai dùng thích lắm, mềm mịn không bị bụi, ủng hộ hàng Việt!\"\n  ]\n}",
+              "thoughtSignature": "EvMy****iZEc/aeFcgqQQMxKclsCO/UDoWVcmlqf3IG/I1a08/VEpr****EQBv+CK6kEIOISjna/0Khu****bGZy/OGy8****Mvs8/0A639J/kbdWYQuBK6+KcL9****mgN9/0Kpq****6cpM/tkx0****G2bd+VAMl****Br7l/x3gQJ+XrD9****MOv0+WfOpfoIW/gPss****s5iy/LHaj****606s/G/IfIf****1Uz1/OGDU****qucn/ZgIi****5ufi/sGID****fcuE+1LQLUzhTpmr/eeYKexLeMqqOlzC/JznI****x1EJ+T79f****1qrc+Dwpi****1udO+ffcF****Z5XV+GGE5****UxgP+ng7z****8RTk/4e/UloZwMa20VyBVCbr+Ym8C****9uYa/ekWb****0RYq/HUWD****VfBQ+lfQdqQwPJjhx+ETma****wyJG/iVLkGQyqXh7K/A0GF****3eSX+8/9l267oTgIu10ve/sAKA****8myf+Rxxv****mGpV+thkT7af0RxWzses+UACerTMkxKtBOHGseV+zmCfvt+FFfs****vDB4+ZMhk****EYVM/go0Z****NYEX/BI6q****xROU+8rek****ZdeQ+7MEf****vix3+JuAJ****1rGA/nPym****mMsg/X+otZKc+ZFMcOeqjid+hxqB****vXzU+1/qkJVUqi4BT//F7WG****2u8Q/sweVYPHYMnTjwKxHs/h8wJjr/+AvDt****Xc4O+ZyYOjLRkietuFZwPe/M5iQF8ibTvY3b+OA6k****mVIP/uOBT****TPO0+O0sB****xViQ//gj3x****OWxP/SxgvcVk8Ca+B6Hy****CmRe/gm+Jkug1kOfY+mpEs****ZzOh+B9nFKpAKBh+knbZ****RX57/srtz****7rW5+wWxq****fpr6+U5wZVKWXIOczKoY+Quxj****50Ss/mhgeXRHNvpz+od7r****2V3R+APHbwb+ls8v****dct2/z2Bm****TL9l+l+q92C****Ad8P+/zktC3CV+SkYd****pGRW/emhk****2dyR/BvSjaMW2xW/NDyy****jby2/GSWA****ipVU+SZKn****Etf8/rrYLDJpg4v+In9/wDyYLxK5H/jWFP****9B1K/+RlRg****gim4/6MxV****zO6g+EiHz****1NZP+Th+ffWI****r6pU+e+TZfcZi+tYQqZYm71JA5+/55x6****Bsfx/D8Zr****MFDW/+itoL****Qj7L/qJ8A****cK5z/JWq1X4qc0+NOzAIlq5bSqrP//mrfS****gLpJ/Xpp/m9EHk1rK/KAG1****Sim9+d3s1****lPS4/xpeAMtFBtQAgQ5L/gfsi****imLO+mL8c****4qhL+g099****QdC0/sZYs****ills+FNGY****0Noe/f11I****tdLf/eFdr****UL1A+nSAn****zcC6/ChqG****L7w3+7BrVFXzyi4wrcC/C+2N3/6ax4****04gB+oO2S****eeKq+5lYS****Z42T/jccf****SpVO+VKcu****IitW/NztO****SECK+XCAX****JTXX/cwUW****B2Fp+nCV10w++4SGe****Ilnv+w1Qk****rgqf+6+v9mmJrTu/X45xRIrlj6mAHVTc0u0+JMtT****JKSc/3Bzm****mOnF+nl+IoWK****pwKS+w6GF****Iq4V+XpM6****LxVj+bel0****nvJh+eAJB/fqzx****xZDC/7Ct2****FmfT/VAbb****RxAR/3mpv****5ZIq+lfGN****10in+AZUq****R8pM/C2C8****xEuu+GZ1NWWT9+qzW9****9o3V+jmeS****0AKg+1jw8****m6P2/6URO****yyZy+dtBaUjG6CglS+8IIX****g1RP+iWpq****KsUP/Er5S****ixFa+eaV5****QtYr/U0NV0/YP/mtcQF3C3/aMiW****K0bG+NyMl****7dLU+gg0Y****wt4L+l3+3QKI****v54c/rJCB****CXJs/tsbIa6bQhR5ZDf9pZ+FR0R****Mki1/4fSI****vHEH+9+xsLQLzeRYes3x6sART+rb7IsnU+7WRC****CvvO/vFi5****7R0e/jTWH****3W9z/ll4EZ/GSgO****5BsI/29Aa****kFNz+TgZn****nR8q/BiMrRUTD3PKlq0gi+6L9IQWmiU1NFx4ZLNi6/hIFz****QCEf+aBUIVYkC6lz91+/B+myGc****zmfi+8IKb****qgor+NDvq****4aVp/3QeNklXfiPpyC2Kg+4AZ9****S43l+GiIp****V7Cq+t4H2****ehhb/7Yg3****2xZn/acE/jbaz****oUL7/VwvO****wh87/64iF****YPU4+vuSzP0IWBCEDSUMK+lsvY****XnaP+AVei****IaRR+UtaV****km5m+EZQ0****Zdhb+MLBG****v6Nb/SUNs****gNmL+HbTu****giOW+9LEvEBeF/1Tcu0fj4GD/2P511zD9NPHES+2KeGIe/u/ckPZKW7aIeSKxVlAI+0A5q****KyF8/oxJIdlr+wFrn****DuHn/wYo8****M6XZ//Ms13****Jm9P/bN3H8F5C8Mpc3NLuETt+INKrfa+Di1yrGZee5STE/XcwDy8rCwO+mnW3LH6rqV/Rulf+CtCZ/bm3OTVWHhB+zGnx+AVsR****8ngL/+ERrB****Cgiw/p9Zdc/em4EdO2HC5RqqKD849/H7lK****wRLg/9QnMekzXJr/Ffru****wsjG/EIKj****1mVh+anLG****zn1v+G9z/4+vcpZ****5tBE+XOPh****6qUF+3/hTFp****0Lls+r3CH****okl3+L7ky****wfR7+6DnJX1+SuBO****zsXl/SXVc****aXFt+7IeB****VnLE+bdEZ****SQeQ/+4qMD****zKBW+VAVta/ejBR****gQTX+kH6d****xuxs/yA4pB0GAYRik/yUfb/vX5h****hYn9/LxIT****uof5+wB2qNCbNcUdo/0M8c3x9vY+8Fnq****b1UH+snjG****NQQs+Y2GQhUCyPL+ZWeVcDtYka8od+4WpQ****Zt8T+5olS****N1tJ/VyL1AC+xeHX****81nR/F9a0****bIC4="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "uG3x****EyA0"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:38:34.649Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook cho \"Quạt gấp 180° im lặng GOOJODOQ siêu gió điều chỉnh 100 cấp độ, mini quạt di động, màn hình nguồn LED\". Link: https://s.shopee.vn/3B3qb6HNH6. \n\nYÊU CẦU:\n1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.\n2. Văn phong \"người thật\", dễ đọc, CTA mạnh.\n3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.\n4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.\n5. COMMENT SEEDING: Tạo 3-5 bình luận mồi (seeding) tự nhiên. Bình luận cuối cùng BẮT BUỘC phải dán nguyên văn link: https://s.shopee.vn/3B3qb6HNH6.\n\nOutput JSON:\n{\n  \"hooks\": [\"3 câu mở đầu\"],\n  \"shortVersion\": \"Bản ngắn mặc định\",\n  \"longVersion\": \"Bản dài mặc định\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English Image Prompt...\",\n  \"videoPrompt\": \"English Video Prompt...\",\n  \"videoScript\": \"Kịch bản Video tiếng Việt...\",\n  \"commentSeedings\": [\n    \"Bình luận 1: Hỏi về giá/chất lượng\",\n    \"Bình luận 2: Review đã nhận hàng rất ưng\",\n    \"Bình luận 3: Mọi người mua ở đây nhé: https://s.shopee.vn/3B3qb6HNH6\"\n  ]\n}\nReturn ONLY JSON. No preamble."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:38:47.492Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Nóng chảy mỡ mà cầm cái quạt 'đồ chơi' yếu xìu thì chỉ có thêm bực!\",\n    \"Quạt gì mà có tận 100 cấp độ gió? GOOJODOQ thực sự làm mình sốc vì độ mát!\",\n    \"Gấp gọn 180 độ, êm ru không tiếng động - Chân ái cho dân văn phòng và hội hay đi du lịch đây rồi!\"\n  ],\n  \"shortVersion\": \"Siêu phẩm quạt mini GOOJODOQ: Gió cực mạnh với 100 cấp độ, gập 180 độ linh hoạt, màn hình LED xịn xò. Nhỏ mà có võ, cân mọi cái nóng! Chốt ngay: https://s.shopee.vn/3B3qb6HNH6\",\n  \"longVersion\": \"Mùa hè này không có em quạt GOOJODOQ này là một thiếu sót cực lớn! ☀️\\n\\n✅ 100 cấp độ gió: Muốn hiu hiu hay gió lốc đều có đủ, điều chỉnh cực mượt.\\n✅ Thiết kế gập 180°: Cầm tay, để bàn hay treo cổ đều được, cực gọn cho vào túi xách.\\n✅ Màn hình LED thông minh: Hiển thị phần trăm pin và mức gió, không lo hết điện đột ngột.\\n✅ Vận hành êm ái: Không tiếng ồn, dùng trong văn phòng hay lớp học thoải mái.\\n\\nĐừng để cái nóng làm hỏng tâm trạng của bạn. Sắm ngay một em quạt 'quốc dân' này thôi! \\n👉 Link mua chính hãng: https://s.shopee.vn/3B3qb6HNH6\",\n  \"variants\": [\n    {\n      \"short\": \"Gió mạnh 100 cấp độ - GOOJODOQ gập 180 độ, màn hình LED cực chất. Mua tại: https://s.shopee.vn/3B3qb6HNH6\",\n      \"long\": \"Đỉnh cao quạt mini cầm tay gọi tên GOOJODOQ! 🌪️\\n\\nBạn đã bao giờ thấy quạt mini nào có tới 100 mức gió chưa? Em này không chỉ mát mà còn cực kỳ thông minh với màn hình LED báo pin. Thiết kế gập 180 độ siêu tiện lợi cho mọi tư thế. Đặc biệt là máy chạy cực êm, không hề gây ồn ào.\\n\\nHàng về số lượng có hạn, đặt ngay kẻo hết: https://s.shopee.vn/3B3qb6HNH6\"\n    },\n    {\n      \"short\": \"Quạt gấp 180 độ GOOJODOQ: 100 cấp độ gió, màn hình LED, pin trâu. Sắm ngay: https://s.shopee.vn/3B3qb6HNH6\",\n      \"long\": \"Bí kíp giải nhiệt cực nhanh cho mùa hè oi bức! ❄️\\n\\nQuạt GOOJODOQ với 100 cấp độ tùy chỉnh, từ gió nhẹ nhàng đến gió mạnh mẽ. Màn hình LED hiển thị rõ ràng thông số pin. Thiết kế gấp gọn 180 độ dễ dàng mang đi bất cứ đâu: đi học, đi làm, hay đi du lịch.\\n\\nƯu đãi cực sốc hôm nay, đừng bỏ lỡ: https://s.shopee.vn/3B3qb6HNH6\"\n    },\n    {\n      \"short\": \"Mini mà mạnh kinh hoàng! Quạt GOOJODOQ 100 cấp độ gió, gập gọn tiện lợi. Link: https://s.shopee.vn/3B3qb6HNH6\",\n      \"long\": \"Tạm biệt những chiếc quạt mini yếu ớt! 🚀\\n\\nGOOJODOQ mang đến trải nghiệm làm mát hoàn toàn mới với 100 mức độ gió tùy chỉnh theo ý muốn. Thiết kế gập 180 độ linh hoạt giúp bạn sử dụng ở mọi không gian. Màn hình LED giúp bạn kiểm soát pin dễ dàng.\\n\\nChất lượng vượt trội, giá lại cực hời. Mua ngay tại đây: https://s.shopee.vn/3B3qb6HNH6\"\n    }\n  ],\n  \"imagePrompt\": \"Close-up high-quality studio shot of a white GOOJODOQ mini foldable fan, showing the LED digital display showing '100', 180-degree folded position on a wooden desk, soft natural lighting, aesthetic workspace background, 8k resolution.\",\n  \"videoPrompt\": \"Cinematic product showcase of a hand holding a sleek portable fan, adjusting the speed from 1 to 100, the LED screen glowing, folding it 180 degrees and placing it on a cafe table, modern and trendy vibe.\",\n  \"videoScript\": \"00-05s: Cận cảnh quạt đang chạy, tay bấm nút tăng tốc độ, màn hình LED nhảy số từ 1 lên 100 cực nhanh. (Text: Gió cực mạnh - 100 cấp độ).\\n05-15s: Thao tác gập quạt 180 độ đặt lên bàn, rồi gập thẳng lại để cầm tay. (Text: Gập mở linh hoạt 180°).\\n15-25s: Cận cảnh màn hình LED hiển thị dung lượng pin còn lại. (Text: Màn hình LED xịn xò - Không lo hết pin).\\n25-30s: Cảnh người dùng mỉm cười thư giãn với quạt. (Text: Click link mua ngay tại bio!)\",\n  \"commentSeedings\": [\n    \"Quạt này pin dùng được bao lâu vậy shop? Nhìn mẫu mã đẹp quá.\",\n    \"Mình mới nhận hàng hôm qua, quạt mát cực kỳ luôn, nấc 100 gió mạnh như quạt cây ấy!\",\n    \"Ship nhanh không shop ơi? Đang cần gấp cho chuyến đi du lịch tuần sau.\",\n    \"Bé này gập lại bỏ túi xách tiện thật sự, đi làm không sợ nóng nữa rồi.\",\n    \"Mọi người mua ở đây nhé, hàng chuẩn mà giá tốt lắm: https://s.shopee.vn/3B3qb6HNH6\"\n  ]\n}",
+              "thoughtSignature": "EsIR****gxf8+JZ4E+ofvS****Gd1Q/PUTaYv19R6Ewn97/0x9jxqZ0/QlJZX3+540mR3zTxckPPs9c5et/ak3WVCFa8ZWe169DoY/bUtY****F36K/yLIQFpOhWrlAp/LpLH****aqSg+nhjm****X2tm+181c****syvs/kiUt****SRJJ+OmPJ****A9oB+MTJj****ePLy+QNBX****Dvx9/cGh7****2elY+r2Es****UjGQ/1PD9****r26w/GjbqKtQ/TpuD8/ig7k****y9oV+yOc1OpCJHRFRNC0W/Brm2+iVEz****xGQl/uuTMS3RbfNpQyPyih/51iOngxeYtr9UVcf/ivwf9SVk1IW6sQJRgW0/0e7m27g/Ai795E1BXI+Vxk1u+MDzk****HkaK+tAev6ofYGfLL6v2+zKZ+Mj82w9aPgnQECzeP/pVjO****kl6F/bMzD****MR0P+bhh2****3zV6+GASHdXqda+dsE3****ru8a/DIOf****4lWQ+u5H8+L9CD****XpcT+D3xO****GB53/GBdj****NNBV+TI+fk7w****ZfX3+Uc0Ct+3QBWs8Dr/Zsb0****790Q+AlpU****1s0r+nDuP****AChm/NXxBcVcG5v72fS/FhyI****30ZC+lNPz****faXO+56tF****oKdT+3bnN****6CPF+zoAnos3kZ8rmH/lT2N****PJqj+AUGtut7rZL0hO9m363/zUeB****H1P8/ukIu****mmKN/Ya8F****g2rr/5PSO****hZHh/EBQi****C6dl/4QhT/NFgRrZrNQXGa4UIYHJ/4RsO****6mtP+TPDr****yMDi/tFVb****JYNW/3sZ5****vgh0+YXuAYVUPSf5+SWQWzM4NIdJ7/5iEdz5SliMR+ZitJ****D3cX+9MYe****RPSk+208e/+6NX9****MQBq+h0FdjnR3EYkTrW/WBgg****pGoq/svQI****xfE6/maoMbIjNox0OVcIw=="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "-27x****5gAQ"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:47:36.958Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook cho \"[MUA 1 TẶNG 1] Túi Nước Giặt Xả MaxKleen 3.8kg/ 3.6kg + Túi Nước Giặt Xả 1.2kg Mùi ngẫu nhiên\". Link: https://s.shopee.vn/7fWFxzx06x. \n\nYÊU CẦU:\n1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.\n2. Văn phong \"người thật\", dễ đọc, CTA mạnh.\n3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.\n4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.\n5. COMMENT SEEDING: Tạo 3-5 bình luận mồi (seeding) tự nhiên. Bình luận cuối cùng BẮT BUỘC phải dán nguyên văn link: https://s.shopee.vn/7fWFxzx06x.\n\nOutput JSON:\n{\n  \"hooks\": [\"3 câu mở đầu\"],\n  \"shortVersion\": \"Bản ngắn mặc định\",\n  \"longVersion\": \"Bản dài mặc định\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English Image Prompt...\",\n  \"videoPrompt\": \"English Video Prompt...\",\n  \"videoScript\": \"Kịch bản Video tiếng Việt...\",\n  \"commentSeedings\": [\n    \"Bình luận 1: Hỏi về giá/chất lượng\",\n    \"Bình luận 2: Review đã nhận hàng rất ưng\",\n    \"Bình luận 3: Mọi người mua ở đây nhé: https://s.shopee.vn/7fWFxzx06x\"\n  ]\n}\nReturn ONLY JSON. No preamble."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:47:53.156Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Trời mưa ẩm mốc, quần áo hôi rình khiến bạn stress? MaxKleen 2-trong-1 vừa giặt vừa xả, đánh bay mùi hôi chỉ trong 1 nốt nhạc!\",\n    \"Bí mật của những 'nàng thơ' luôn thơm phức: Mua 1 được 2, deal MaxKleen 3.8kg tặng 1.2kg cực hời, thơm lâu bất chấp nắng mưa!\",\n    \"Dừng ngay việc lãng phí tiền vào nước xả riêng biệt! MaxKleen tích hợp 2-trong-1, nay lại còn Mua 1 Tặng 1, tiết kiệm gấp đôi cho mẹ bỉm.\"\n  ],\n  \"shortVersion\": \"🔥 DEAL SỐC: MUA 1 TẶNG 1! MaxKleen 3.8kg tặng thêm túi 1.2kg. Giặt sạch, xả thơm, giá cực mềm. Săn ngay kẻo hết quà: https://s.shopee.vn/7fWFxzx06x\",\n  \"longVersion\": \"🌈 QUẦN ÁO THƠM NHƯ SPA - GIÁ RẺ BẤT NGỜ!\\n\\nCác chị em nội trợ ơi, đừng bỏ lỡ cơ hội có 1-0-2 này! MaxKleen - dòng nước giặt xả quốc dân đang có deal cực bốc trên Shopee:\\n✅ Mua 1 túi lớn (3.8kg/3.6kg) TẶNG NGAY 1 túi 1.2kg (mùi ngẫu nhiên).\\n✅ Công nghệ Ultra Kép: Vừa giặt sạch sâu, vừa xả thơm mềm vải.\\n✅ Hương thơm bền lâu, không cần dùng thêm nước xả vải tốn kém.\\n\\n👉 Chốt đơn ngay tại đây để nhận quà tặng: https://s.shopee.vn/7fWFxzx06x\",\n  \"variants\": [\n    {\n      \"short\": \"MaxKleen Mua 1 Tặng 1 - Túi khổng lồ dùng cả mùa không hết! Click mua ngay: https://s.shopee.vn/7fWFxzx06x\",\n      \"long\": \"Mưa gió thế này mà có MaxKleen thì chẳng sợ quần áo ẩm mốc! Nhà mình trung thành với em này vì mùi thơm sang trọng mà lại cực kỳ tiết kiệm thời gian. Đang có chương trình MUA 1 TẶNG 1 (Tặng túi 1.2kg), tính ra rẻ hơn mua lẻ cực nhiều. Các mẹ tranh thủ hốt vài combo về dùng dần nhé! \\n🔗 Link Shopee chính hãng: https://s.shopee.vn/7fWFxzx06x\"\n    },\n    {\n      \"short\": \"Vừa giặt vừa xả chỉ trong 1 bước với MaxKleen. Mua 1 được 2 cực đã: https://s.shopee.vn/7fWFxzx06x\",\n      \"long\": \"Gom gấp deal hời cho chị em mình nè! MaxKleen giặt xả 2-trong-1 túi lớn 3.8kg tặng kèm túi 1.2kg mùi ngẫu nhiên. \\n- Giặt sạch mọi vết bẩn cứng đầu.\\n- Lưu hương bền lâu, sợi vải mềm mại.\\n- Tiết kiệm chi phí tối đa cho gia đình.\\nSố lượng quà tặng có hạn, nhanh tay nhé cả nhà! \\n🛒 Mua tại đây: https://s.shopee.vn/7fWFxzx06x\"\n    },\n    {\n      \"short\": \"MaxKleen 3.8kg tặng túi 1.2kg - Deal thơm tho cho cả gia đình: https://s.shopee.vn/7fWFxzx06x\",\n      \"long\": \"MaxKleen chưa bao giờ làm mình thất vọng! Mùi hương dịu nhẹ mà bám lâu cực kỳ. Nay Shopee tung deal MUA 1 TẶNG 1 túi to oạch, tổng cộng gần 5kg nước giặt xả mà giá chỉ bằng 1 nửa. Các bác chỉ cần nhấn link, chọn mùi rồi đợi Shipper giao tận cửa thôi. \\n📌 Link săn deal: https://s.shopee.vn/7fWFxzx06x\"\n    }\n  ],\n  \"imagePrompt\": \"High-quality realistic studio product photography of a large MaxKleen detergent bag (3.8kg) next to a smaller gift bag (1.2kg). Clean, bright laundry room background with white fluffy towels and flowers. Professional lighting, 8k resolution, 'Buy 1 Get 1' sticker visible on the side.\",\n  \"videoPrompt\": \"A 15-second cinematic video showing a woman smelling a freshly washed shirt with a happy expression. The scene transitions to the MaxKleen Buy 1 Get 1 combo on a bright shelf. Fast-paced editing, vibrant colors, bubbly detergent textures, and a clear call to action text overlay.\",\n  \"videoScript\": \"[0-5s]: Cảnh quay cận mặt một người phụ nữ cau mày vì quần áo có mùi hôi. Text: 'Ám ảnh mùi ẩm mốc?'\\n[5-15s]: Chuyển cảnh nhanh sang bộ đôi MaxKleen 3.8kg và 1.2kg. Cảnh đổ nước giặt tím óng ánh vào máy giặt. Text: 'MaxKleen 2-trong-1: Giải pháp hoàn hảo!'\\n[15-25s]: Người phụ nữ ôm đống quần áo trắng sạch, thơm tho, cười tươi rạng rỡ. Text: 'MUA 1 TẶNG 1 - SIÊU TIẾT KIỆM'\\n[25-30s]: Màn hình hiển thị túi sản phẩm và Link Shopee. Text: 'Click ngay link bên dưới!'\",\n  \"commentSeedings\": [\n    \"Shop ơi cho mình hỏi túi tặng kèm 1.2kg là mùi gì thế ạ? Có được chọn mùi không?\",\n    \"Vừa nhận hàng sáng nay, đóng gói siêu kỹ, túi tặng kèm xịn xò lắm nha mọi người, nên mua!\",\n    \"MaxKleen này dùng thơm dã man, mình toàn dùng màu tím, nay có deal tặng thêm túi nhỏ phải chốt ngay.\",\n    \"Ship về Hà Nội mất bao lâu vậy shop? Đang cần gấp cho cả nhà dùng.\",\n    \"Mọi người mua ở đây nhé, hàng chính hãng mà deal hời thật sự: https://s.shopee.vn/7fWFxzx06x\"\n  ]\n}",
+              "thoughtSignature": "EvQb****Lk2N+k1hv****PYMd/ZRVImjo797qdl1a+lFAwwXanr0Wr2pVsX8+tZMt****Soe8+DU1m****wQUQ/f4tE****gi0M/nPrG****DxMz+TtjHa+ewU8ITafKmCDIriSD0X+dBri****wxXN/hzox****xjv5+0he3****AWMx+IXCs****UJUk+gmSJ****DxvX/0jNV1suhwJ0//vZT8/u5Xi****wFE5/daV6rZtIwqGdYGinSh/bcZw****x2C2+39Av****6euc+WpBR****UgzN+4QOK****aVqA+ts+HwX9****z4SQ+Dqzi/RD5e****TqdJ/x6ii****9e8o+mX0c****I2zJ+lgF+g3jK****UADt+/HNi/xGn9****K0wR/b7kfUEfyAR1ETjRQzt/lPwv****UJp0/FiiF****pqXi+S6Nl****ERNl+Lgw/rOBZv7C8+/Dvrp****wXO2/W8yr/IJhY****9eok/N29YqgBCNL3bIN/2upC****RoSm/G3vl1+Gki1****fYok+f3XR****DBUZ/yhPl****I4Z0+Rxq9****A3sE+dMIL****KdRJ+WkpaDXKVwJtuglmuJ/SiGW****XfwV/xvje****zAhN/brzcrrY42RV45WGSpu/xAE8****nds2/OarpU/i53dcCLzRCeKq5nXhFn/vZ0H****KMyX/ZN6pRR07W+YjNw****TSM8/A2u9EFKf/D7GY****JUjE/lENmIhnhqyaxI6P7C+15aXw7g8/+0KVX****i8Qk+M98b****484I/IRx6****2Vr1+qlpQ****SsNE+P1OLsb+Qg6L****yCIe/Jcsp****Skwn/hzjz****cfrP/jXPU****vCjO/P+1vUL****O5HV+e1CP****8cLL/WF3NuX8/nv58****rqAK/VoUgVU/1DQ8B/7be4****t6tV+fLCQ****2IOs+E08A****0Q03/opx1****t19Q/HGw/2yBOmNRzCA7N9Cv24i/IT00****yo8g+/ZbZW+Iotu****NiD3/3bShXCSp/Ir1NUhRzjSN+cXv8vKmRr+Z/4d1beDomctcnzB/iU99****kzgZ/XBpG****qoSO+XuqyUAFQFpqJe8C3rQT/R7Ntep6GfE+DJb+4K8l****nuHk+ze0O****sToP/gy1K****j2Tb+0WL2****G8rZ/AYRR****CtL8+sagmc/mP1MIhe7JAHj49Al1Ch/Ass2****0Dm5+EpCWe58rovtuRgUS+dojT4J+g+s6Y9Chv4NeipwG81h5f+/N9DqKF9jOA9iUXX1+5/ipAx****ii6R+YYnz****8MgI/c1BOdTUR6n6V+4KW2****nVu6/4KH7HH6PUIC++5MbWAnwrKj3+sR6dRh+T6EF****httk+NwV/SPJz****EP4R/HkM1****i8ic/rqlJX4u+WlmW****CRi0+//21hM****DFUU+edeGNA2LW3Ipft+aI1L****msTS+A5lG****JLU6/QW7ckyhW9wRrk4VF+K+J/7D8k****M93E/85UAbCiPDZTChe+CpUB****tOGy//SZ3djrqledtVaDYmY/1mAp****eNlC+A9T5****GJMe/NaGA6ThpEkm2VmjNMy+F6/tnT1/q8g1****H6ly+AJ7s****OilG/0s2e2C8uxT080+6/xesu****ZWBY/lno7****HIXO+qudFJLhgG6umD/Wf3zvCGi96+bqpI****Ee7N+Jia/Hdib****0Xqr/CIfX****nXQt+otAiPfPi6kh0c3uvM/OM+fmyPjtjnq/vR3tRe/0r5LVOS7n/92M4="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "HXHx****vwCQ"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:48:35.946Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook cho \"[MUA 2 GIẢM 42%] Combo Tẩy da chết mặt cà phê Đắk Lắk 150ml và Tẩy da chết cà phê cơ thể 200ml\". Link: https://s.shopee.vn/9Uxu9R5w4u. \n\nYÊU CẦU:\n1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.\n2. Văn phong \"người thật\", dễ đọc, CTA mạnh.\n3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.\n4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.\n5. COMMENT SEEDING: Tạo 3-5 bình luận mồi (seeding) tự nhiên. Bình luận cuối cùng BẮT BUỘC phải dán nguyên văn link: https://s.shopee.vn/9Uxu9R5w4u.\n\nOutput JSON:\n{\n  \"hooks\": [\"3 câu mở đầu\"],\n  \"shortVersion\": \"Bản ngắn mặc định\",\n  \"longVersion\": \"Bản dài mặc định\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English Image Prompt...\",\n  \"videoPrompt\": \"English Video Prompt...\",\n  \"videoScript\": \"Kịch bản Video tiếng Việt...\",\n  \"commentSeedings\": [\n    \"Bình luận 1: Hỏi về giá/chất lượng\",\n    \"Bình luận 2: Review đã nhận hàng rất ưng\",\n    \"Bình luận 3: Mọi người mua ở đây nhé: https://s.shopee.vn/9Uxu9R5w4u\"\n  ]\n}\nReturn ONLY JSON. No preamble."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:48:51.314Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Dùng đủ loại kem dưỡng mà da vẫn sạm, sần sùi? Thủ phạm chính là lớp tế bào chết dày đặc chưa được dọn dẹp đấy!\",\n    \"Chấn động: Combo tẩy da chết 'quốc dân' Đắk Lắk đang GIẢM SỐC 42%, mua 2 được cả mặt lẫn body!\",\n    \"Bí kíp để da mướt mịn như bún, chạm vào là mê chỉ với liệu trình 'cà phê' tại nhà cực hạt dẻ.\"\n  ],\n  \"shortVersion\": \"🔥 DEAL HỜI NHẤT NĂM: MUA 2 GIẢM 42%! 🔥\\nCombo tẩy da chết Cà Phê Đắk Lắk (Mặt 150ml + Body 200ml) giúp da sáng mịn, mờ thâm ngay lần đầu sử dụng. Mùi thơm cafe gây nghiện, da mướt mườn mượt mà giá lại quá hời.\\n👉 Sắm ngay kẻo hết: https://s.shopee.vn/9Uxu9R5w4u\",\n  \"longVersion\": \"🌟 TẠM BIỆT DA SẦN SÙI - ĐÓN DA MỊN MƯỚT CÙNG COMBO CÀ PHÊ ĐẮK LẮK 🌟\\n\\nBạn có biết, tế bào chết tích tụ là nguyên nhân khiến da sạm màu và bôi kem dưỡng mãi không trắng? Đừng lo, Cocoon đã có bộ đôi 'cứu tinh' cực cháy:\\n\\n✨ Tẩy da chết Body (200ml): Hạt cà phê xay nhuyễn quyện cùng bơ cacao, đánh bay lớp sừng thô ráp ở khuỷu tay, đầu gối, cho da body mướt rượt.\\n✨ Tẩy da chết Mặt (150ml): Làm sạch dịu nhẹ, lỗ chân lông thông thoáng, giúp da mặt sáng khỏe, hấp thụ dưỡng chất tốt hơn gấp 2 lần.\\n\\n🎁 ƯU ĐÃI ĐẶC BIỆT: MUA COMBO GIẢM NGAY 42%!\\n✅ Nguyên liệu thuần chay, an toàn cho mọi loại da.\\n✅ Mùi thơm cafe Đắk Lắk thư giãn như đi Spa.\\n\\n👇 Chốt đơn tại đây để nhận ưu đãi: https://s.shopee.vn/9Uxu9R5w4u\",\n  \"variants\": [\n    {\n      \"short\": \"Da mịn như nhung, thơm nức mùi cafe mà giá lại giảm tới 42%? Chỉ có thể là combo tẩy da chết mặt & body Đắk Lắk. Chốt ngay: https://s.shopee.vn/9Uxu9R5w4u\",\n      \"long\": \"GÓC SKINCARE TIẾT KIỆM 💸\\nThay vì mua lẻ tẻ, chị em hốt ngay Combo Tẩy da chết mặt & body Cà Phê Đắk Lắk để nhận ưu đãi 42% nhé! \\n- Da sạch sâu, hết mụn cám, mụn đầu đen.\\n- Giảm thâm sạm, da sáng đều màu thấy rõ.\\n- Cam kết 100% thuần chay.\\nMua nhanh tại: https://s.shopee.vn/9Uxu9R5w4u\"\n    },\n    {\n      \"short\": \"Cảnh báo: Dùng xong là nghiện! Combo tẩy da chết mặt & body đang sale 42% cực sốc trên Shopee. Link đây nè: https://s.shopee.vn/9Uxu9R5w4u\",\n      \"long\": \"ĐỪNG ĐỂ DA TRỞ NÊN 'KÉM SANG' VÌ TẾ BÀO CHẾT! ☕️\\nNhiều bạn thắc mắc tại sao da cứ xỉn màu dù dưỡng rất kỹ. Câu trả lời là bạn chưa tẩy da chết đều đặn đó! \\nCombo Cà Phê Đắk Lắk nhà Cocoon sẽ giúp bạn:\\n✅ Loại bỏ lớp da chết già cỗi.\\n✅ Mang lại làn da mịn màng, tràn đầy sức sống.\\n✅ Sale sập sàn 42% duy nhất hôm nay.\\n🛒 Link mua hàng: https://s.shopee.vn/9Uxu9R5w4u\"\n    },\n    {\n      \"short\": \"Combo tẩy da chết 'quốc dân' Cocoon đang giảm 42%. Da mặt mịn, da body thơm, giá lại rẻ. Múc ngay: https://s.shopee.vn/9Uxu9R5w4u\",\n      \"long\": \"QUY TRÌNH CHO LÀN DA 'TRỨNG CÚT BÓC' 🥚\\nBí quyết nằm ở bước tẩy da chết 2-3 lần/tuần. Combo Cà phê Đắk Lắk vừa sạch, vừa lành tính lại đang có deal giảm 42% cực hời. \\n- Body 200ml dùng cực lâu.\\n- Mặt 150ml cực dịu nhẹ.\\nLink chính hãng cho chị em: https://s.shopee.vn/9Uxu9R5w4u\"\n    }\n  ],\n  \"imagePrompt\": \"Professional product photography of Cocoon Coffee Face Scrub (150ml) and Coffee Body Scrub (200ml) jars placed on a rustic wooden table, surrounded by dark roasted coffee beans and splashes of moisturizing cream, soft natural sunlight, cinematic lighting, 8k resolution, high contrast.\",\n  \"videoPrompt\": \"Close-up cinematic shots of coffee scrub texture being applied to smooth skin, water droplets sparkling, transition to the two jars standing together on a clean bathroom shelf, warm and inviting atmosphere, 4k, slow motion.\",\n  \"videoScript\": \"00:00 - 00:05: Cận cảnh làn da sần sùi, khô ráp. Text: 'Da sạm, bôi kem không thấm?'\\n00:05 - 00:15: Cận cảnh mở nắp hũ cafe Cocoon, chất scrub đặc sánh, thơm nức. Thao tác massage nhẹ nhàng trên tay và mặt. Text: 'Giải pháp từ Cà Phê Đắk Lắk'\\n00:15 - 00:25: Da sau khi rửa sạch, căng bóng, mịn màng. Text: 'Mướt mịn tức thì - Giảm thâm sạm'\\n00:25 - 00:30: Hiện combo 2 hũ và text 'MUA 2 GIẢM 42%'. Link ở bio!\",\n  \"commentSeedings\": [\n    \"Dùng loại này thơm xỉu luôn, hạt cafe nhuyễn nên không bị rát da đâu mọi người ơi.\",\n    \"Combo này dùng được bao lâu vậy shop? Thấy sale 42% rẻ quá định chốt 2 bộ luôn.\",\n    \"Tẩy da chết xong bôi kem dưỡng thấm nhanh cực kỳ, da mịn hẳn, nên mua nha.\",\n    \"Đã nhận hàng, đóng gói kỹ, chuẩn chính hãng nha cả nhà.\",\n    \"Mọi người mua ở đây nhé: https://s.shopee.vn/9Uxu9R5w4u\"\n  ]\n}",
+              "thoughtSignature": "EqgUCqUUAQw51scCe/kA7F****XX58/fD75****MGJI/A9RB****QF4G/8pijpXxX/lK1e****UkyF/Awf1****cIQc/L4psy8s46oFQVIRGq+2LwH****Zini/thw/KX9K8bSpxUaO+awIM****11eC+gCJh****ynST+LDj2cL5FAIaH2+TBLx****aWtL+YwHeqfi+31Vq****f8XV/Vys2/aKo+NAmSAKeLHA8iCR/DLjT84bhKC+V4kQ****lcIP/a9gp****olkE+fJGAO+aL0HJzVlQpTs82Wtr2Z+KfrDEdw4/30fWzV8tbPp6/H48XiahJ4p0OfWhiE0H/pLKX****I0f0+U3E3****0pfc/4kAH****Xm1a/vAhO****Ku0C/RzCv****ueXb/zx9H****3BIH+ww6n****7tdS+u2jp****QzjZ/WTwDGI+daZ0****YKQ4+LThT****2AR5/kAs7xcu/orLK****sov5/YO3z****emxz+N+xM3A****bRDM/XN8A****4Xx2/84qN****OX1s/5dci****fbhz/oHBU****qGqG/K+jM8G****z2Wl/f0InfpoTUeOu/Gpt5BVrJ/d1XovTPWDcC2td7+AXbJ****3vGi/qMibdC7jb5ae/bmJuM1to3Y2kzBN8r/inb/mmAtL6DSDJSc2v+th8C****gkDa/rYK4****gf3d/BydRq/ybTm****dbO3/X1s0QF0Hwb5+TjilnZ5p1tnI/kaqqNrht3KqN9XdkXqS/dmFg****P6vQ+vvzh****HrJv/9p71****x8dt+SbJu****bFOX/IJHS****vUSc+sC2/JehI****oU6D/mi5VO0UY9W+ta2p****Sxit+RT/QCLL****oeQw/v+96aU6by+5oSr****OdYO+d56Z****jiA9/+M4iEnwxrhEp44+p9H5****UASR+MCvbrq+iaK8****yjO0+xauH+Mynyn8W2/i5M4****GG5f/oAf5****wXNp+fxYcAIYT0y5DaIIy8N+pdLaoB/BOgxI1uQ56+LaEE8T+iSVc****CJPI+P5BPiK/dTti****hrdd/t6O7****NgYZ/yCjKfrjdHuDL/ZzlH****38C9/Sb/8l6AdmSB9aDX/N9Gf****wldw+CVSr****egOQ+vL3NP/zpCOSVTq/UnMC****U0jL/m/0ESD****JApU+pefl9Dr/a0G1****2kzh+ZGRRnuiFknSPoW/yT15****Nmps/Suh8oZQjKY="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "V3Hx****VwQo"
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:49:45.339Z] [REQUEST]
+{
+  "attempt": 1,
+  "model": "gemi****view",
+  "payload": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "[FB EXPERT] Master Copywriter VN.\nNhiệm vụ: Viết bài đăng Facebook cho \"Dầu gội sạch gàu và bảo vệ da đầu Clear Scalpceuticals Pro Dandruff Defense 300G\". Link: https://s.shopee.vn/2g7a0xL3tY. \n\nYÊU CẦU:\n1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.\n2. Văn phong \"người thật\", dễ đọc, CTA mạnh.\n3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.\n4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.\n5. COMMENT SEEDING: Tạo 3-5 bình luận mồi (seeding) tự nhiên. Bình luận cuối cùng BẮT BUỘC phải dán nguyên văn link: https://s.shopee.vn/2g7a0xL3tY.\n\nOutput JSON:\n{\n  \"hooks\": [\"3 câu mở đầu\"],\n  \"shortVersion\": \"Bản ngắn mặc định\",\n  \"longVersion\": \"Bản dài mặc định\",\n  \"variants\": [\n    { \"short\": \"Biến thể ngắn 1\", \"long\": \"Biến thể dài 1\" },\n    { \"short\": \"Biến thể ngắn 2\", \"long\": \"Biến thể dài 2\" },\n    { \"short\": \"Biến thể ngắn 3\", \"long\": \"Biến thể dài 3\" }\n  ],\n  \"imagePrompt\": \"English Image Prompt...\",\n  \"videoPrompt\": \"English Video Prompt...\",\n  \"videoScript\": \"Kịch bản Video tiếng Việt...\",\n  \"commentSeedings\": [\n    \"Bình luận 1: Hỏi về giá/chất lượng\",\n    \"Bình luận 2: Review đã nhận hàng rất ưng\",\n    \"Bình luận 3: Mọi người mua ở đây nhé: https://s.shopee.vn/2g7a0xL3tY\"\n  ]\n}\nReturn ONLY JSON. No preamble."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "responseMimeType": "application/json"
+    }
+  }
+}
+--------------------------------------------------
+
+[2026-04-29T02:49:56.979Z] [RESPONSE]
+{
+  "status": 200,
+  "data": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"hooks\": [\n    \"Gàu dai dẳng như 'người yêu cũ', đuổi mãi không đi thì vào đây xem ngay!\",\n    \"Mặc áo đen mà gàu rơi đầy vai? Đừng để sự tự tin biến mất chỉ vì da đầu chưa sạch.\",\n    \"Bí quyết dứt điểm gàu ngứa chuẩn chuyên gia ngay tại nhà - Không thử là phí!\"\n  ],\n  \"shortVersion\": \"Dòng Clear Scalpceuticals Pro Dandruff Defense mới là 'cứu cánh' thực sự cho ai bị gàu kinh niên. Làm sạch sâu, bảo vệ da đầu mà không gây khô tóc. Chốt ngay link này đang có deal hời: https://s.shopee.vn/2g7a0xL3tY\",\n  \"longVersion\": \"Bạn đã thử đủ mọi loại dầu gội nhưng gàu vẫn 'ghé thăm' sau 1 ngày? Đó là do da đầu bạn chưa được bảo vệ đúng cách. Clear Scalpceuticals Pro Dandruff Defense 300G không chỉ là dầu gội thông thường, đây là giải pháp chuyên sâu giúp: \\n✅ Loại bỏ gàu tận gốc và ngăn ngừa quay trở lại.\\n✅ Cân bằng độ ẩm, nuôi dưỡng hàng rào bảo vệ da đầu.\\n✅ Công thức dịu nhẹ, mùi hương sang trọng như đi Spa.\\nĐừng để gàu làm cản trở phong thái của bạn. Mua ngay hàng chính hãng tại Shopee: https://s.shopee.vn/2g7a0xL3tY\",\n  \"variants\": [\n    {\n      \"short\": \"Gàu ngứa tan biến chỉ sau vài lần gội với Clear Scalpceuticals. Hàng về số lượng có hạn, săn ngay: https://s.shopee.vn/2g7a0xL3tY\",\n      \"long\": \"Ám ảnh gàu ngứa mỗi khi ra đường? Clear Scalpceuticals Pro Dandruff Defense chính là chân ái cho da đầu nhạy cảm. Với công nghệ đột phá, sản phẩm giúp làm sạch vảy gàu mà vẫn giữ cho tóc mềm mượt. Đầu tư cho mái tóc là khoản đầu tư thông minh nhất. Click ngay: https://s.shopee.vn/2g7a0xL3tY\"\n    },\n    {\n      \"short\": \"Muốn da đầu sạch thoáng, tóc chắc khỏe thì đừng bỏ qua Clear Pro Dandruff Defense nhé cả nhà! Link mua: https://s.shopee.vn/2g7a0xL3tY\",\n      \"long\": \"Gàu không tự nhiên mất đi, nó chỉ chuyển từ đầu bạn xuống vai áo nếu bạn không dùng đúng dầu gội! Clear Scalpceuticals 300G là dòng cao cấp chuyên trị gàu và bảo vệ da đầu tối ưu. Hiệu quả rõ rệt ngay từ tuần đầu sử dụng. Đặt hàng ngay tại Shopee Mall để nhận quà: https://s.shopee.vn/2g7a0xL3tY\"\n    },\n    {\n      \"short\": \"Combo sạch gàu + dưỡng tóc đỉnh nhất năm gọi tên Clear Scalpceuticals Pro. Xem tại: https://s.shopee.vn/2g7a0xL3tY\",\n      \"long\": \"Chưa bao giờ thấy loại dầu gội trị gàu nào mà mùi lại sang chảnh đến thế! Clear Scalpceuticals Pro Dandruff Defense không chỉ xử lý gàu mà còn tái tạo lớp bảo vệ da đầu, giúp tóc khỏe từ gốc đến ngọn. Anh chị em hay stress, da đầu yếu thì múc ngay em này. Link chuẩn đây: https://s.shopee.vn/2g7a0xL3tY\"\n    }\n  ],\n  \"imagePrompt\": \"Professional product photography of a Clear Scalpceuticals Pro Dandruff Defense 300G bottle. Set on a clean, medical-grade glass surface with water ripples and microscopic bubbles to represent deep cleaning. Soft blue and white laboratory lighting, high-end aesthetic, 8k resolution.\",\n  \"videoPrompt\": \"Cinematic close-up of a person with dark hair shaking their head confidently, no dandruff visible. Transition to a 3D animation of the scalp being cleaned and protected by a blue shield layer. Ends with the Clear Scalpceuticals bottle appearing elegantly against a modern bathroom background.\",\n  \"videoScript\": \"0:00-0:05: Cận cảnh người gãi đầu, gàu rơi trên vai áo đen (hiệu ứng trắng đen buồn bã). \\n0:05-0:10: Xuất hiện chai Clear Scalpceuticals Pro rạng rỡ (màu sắc tươi sáng). \\n0:10-0:20: Cảnh gội đầu thư giãn, bọt mịn, massage da đầu. \\n0:20-0:30: Tóc sạch bong, bóng mượt, người mẫu tự tin mặc áo đen quay đi. Text hiện lên: 'Sạch gàu - Bảo vệ da đầu'. CTA: Click link mua ngay!\",\n  \"commentSeedings\": [\n    \"Dùng loại này có bị khô tóc không shop ơi? Mình dùng mấy loại trị gàu hay bị xơ lắm.\",\n    \"Đã nhận hàng, đóng gói siêu kỹ. Mình dùng 3 ngày thấy da đầu nhẹ hẳn, không còn ngứa điên lên như trước nữa.\",\n    \"Mùi thơm cực kỳ, cảm giác như gội ở salon ấy, đáng đồng tiền bát gạo thực sự.\",\n    \"Hàng chính hãng dùng yên tâm thật sự, mng tranh thủ đang sale mà mua.\",\n    \"Mọi người mua ở đây nhé: https://s.shopee.vn/2g7a0xL3tY\"\n  ]\n}",
+              "thoughtSignature": "EpMSCpASAQw51sd+BTTP****CYes/kVcdC25pfp48/EPdP****KvVT/FIdSDrydqK60Mw6G9GL/Crct****2lKA+UC+RAvP****hcOM/PaYI/VjrB****YJbb+TWMX2J5uPRUgbmHF+6DJK****3GhM+EF/C8EI****YJez+1sVr****f6bJ/hRIYPl/t7Lo****UC4E+vw55Ak/7S32****VXZK/jbtZ****neRz/CmmeVorwGZkdsO7hI+St74****H2gR+9wxuk+PNhK****Zbip/Bkpo****HgB6+p508****iO3l/LTKBDIoJv2F/b2gr****G469/QSxe****f432/qwbC****41iO+eZjf****AvB0+GfUTamtwHI4c8wTiE6+O3OF8d874GKMx+2tKx****QPsX+ZTmh****B1Wi+dL+5hbe6oKvIBBZahp/a3EI****Bir3+olTzeVMVIW+ZII3****8OIl/Wu54****v0oo/y478****MAza/waAR****6uyi/Ew2O****yHxV+g1MX****5haI+wauR****gOA0+wNNb****858G+dtY+zDPb****f0CT/gbv6****ZATR/9urE/b2d3****sx1l/I9MBeA+A3Xm****TRgq/Y43F****mjX6+g0w5****ZhTC/4D4+wDic****of76/vD/dE7g****UGlK/hhP1****Y64R/c257mUBA9Hry/auM+qOla****WDfe+adlUyyBToEAwtIIt+1hUz6FZoKsmB++NaXr0h0O+cm8r****x4gr+xFPY****FzRi/rSpbZnt/00WeFawxn/8oLywLyhF8FlZ2JxK/xUsa****rWtL+O23G****Ov3Z/BAdn4x2n0UbQ+Aq7u****9dad+k7Wd****SnMk/XDVWb/IiOX****lOgL/ZURb****sHE4/s/vvipvpErGcLjInNvC+im3s1L0wT3TTn7Vi/+2RGUMw/8HBA****AjPQ/RbjU****lYZX+S+rvUM****SJ8D+GWvj****i6JQ=="
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": "[REDACTED]",
+      "candidatesTokenCount": "[REDACTED]",
+      "totalTokenCount": "[REDACTED]",
+      "promptTokensDetails": "[REDACTED]",
+      "thoughtsTokenCount": "[REDACTED]"
+    },
+    "modelVersion": "gemi****view",
+    "responseId": "mHHx****C2AY"
+  }
+}
+--------------------------------------------------

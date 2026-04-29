@@ -6,6 +6,10 @@ export interface ExpertFacebookPostResult {
   hooks: string[];
   shortVersion: string;
   longVersion: string;
+  variants: {
+    short: string;
+    long: string;
+  }[];
   imagePrompt?: string;
   videoPrompt?: string;
   videoScript?: string;
@@ -120,40 +124,54 @@ export async function callGeminiApi(prompt: string, options: { json?: boolean } 
 }
 
 export function cleanJsonResponse(text: string) {
-  return text.replace(/```json/g, '').replace(/```/g, '').trim();
+  // First, remove markdown code blocks
+  let cleaned = text.replace(/```json/g, '').replace(/```/g, '').trim();
+  
+  // Find the first '{' and last '}' to extract only the JSON object
+  const firstBrace = cleaned.indexOf('{');
+  const lastBrace = cleaned.lastIndexOf('}');
+  
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    cleaned = cleaned.substring(firstBrace, lastBrace + 1);
+  }
+  
+  return cleaned;
 }
 
 /**
  * Tạo Prompt chuyên gia Facebook
  */
 export function getExpertFacebookPrompt(productName: string, affiliateLink: string, additionalInfo?: string): string {
-  return `[FB EXPERT] Master Affiliate & Social Media Copywriter VN.
-Nhiệm vụ: Viết bài đăng Facebook chuyên gia cho sản phẩm "${productName}" để tối ưu tỉ lệ click và chốt đơn.
+  return `[FB EXPERT] Master Copywriter VN.
+Nhiệm vụ: Viết bài đăng Facebook cho "${productName}". Link: ${affiliateLink}. ${additionalInfo ? 'Info: ' + additionalInfo : ''}
 
-CHIẾN THUẬT NỘI DUNG (MANDATORY):
-1. HOOK MẠNH: Dòng đầu tiên phải cực cháy.
-2. ĐÁNH VÀO NỖI ĐAU (PAIN POINTS).
-3. GIẢI PHÁP & LỢI ÍCH (NOT FEATURES).
-4. VĂN PHONG "NGƯỜI THẬT": Dùng từ ngữ đời thường, tránh robot.
-5. CẤU TRÚC DỄ ĐỌC.
-6. CTA THÔI THÚC: Kèm link affiliate ${affiliateLink}.
-7. HASHTAGS: 5-10 trending.
-8. PROMPT TẠO ẢNH (IMAGE PROMPT): Cung cấp 1 câu lệnh tiếng Anh cực kỳ chi tiết để tạo ảnh dọc (9:16) dùng cho Midjourney/Imagen. Cấu trúc chuẩn: [Chủ đề/Nhân vật chi tiết] + [Hành động] + [Bối cảnh xung quanh] + [Ánh sáng/Phong cách điện ảnh] + --ar 9:16. (Ví dụ: "A photorealistic portrait of an elegant Vietnamese woman wearing an apron, using the product in a modern, bright kitchen, smiling, cinematic lighting, 8k, --ar 9:16")
-9. PROMPT TẠO VIDEO (GOOGLE LABS VEO/GEN-3): Cung cấp 1 câu lệnh tiếng Anh để tạo chuyển động từ bức ảnh trên. Cấu trúc chuẩn: [Chuyển động của camera/nhân vật] + [Môi trường/Ánh sáng/Hiệu ứng] + [Chất lượng]. (Ví dụ: "A cinematic shot of a Vietnamese woman in an apron, smoothly stirring a pot, steam rising beautifully, natural lighting, smooth motion, photorealistic")
-10. KỊCH BẢN VIDEO (VIDEO SCRIPT): Soạn kịch bản Video Reels cực kỳ chi tiết theo từng giây (tổng 15-30s). Phải chia rõ: [Thời gian cụ thể] - [Mô tả hình ảnh/chuyển động trên màn hình] - [Lời thoại/Voice-over].
-11. COMMENT SEEDING: Tạo 3-5 bình luận ngắn kèm link affiliate ${affiliateLink}.
+YÊU CẦU:
+1. Hook cực cháy, đánh vào nỗi đau, giải pháp & lợi ích.
+2. Văn phong "người thật", dễ đọc, CTA mạnh.
+3. Tạo 3 BIẾN THỂ khác nhau hoàn toàn để tránh spam.
+4. Kèm kịch bản video Reels (15-30s), prompt ảnh/video AI tiếng Anh.
+5. COMMENT SEEDING: Tạo 3-5 bình luận mồi (seeding) tự nhiên. Bình luận cuối cùng BẮT BUỘC phải dán nguyên văn link: ${affiliateLink}.
 
-Output JSON schema:
+Output JSON:
 {
-  "hooks": ["3 câu mở đầu gây tò mò nhất"],
-  "shortVersion": "Bản ngắn: Bao gồm nội dung + Hashtags",
-  "longVersion": "Bản dài: Bao gồm nội dung + Hashtags",
-  "imagePrompt": "English prompt for Text-to-Image AI...",
-  "videoPrompt": "English prompt for Text-to-Video AI (e.g. Veo, Gen-3)...",
-  "videoScript": "Kịch bản quay Video Reels/TikTok bằng tiếng Việt (Cảnh 1: ... Lời thoại: ...)",
-  "commentSeedings": ["Bình luận 1 kèm link", "Bình luận 2...", "Bình luận 3..."]
+  "hooks": ["3 câu mở đầu"],
+  "shortVersion": "Bản ngắn mặc định",
+  "longVersion": "Bản dài mặc định",
+  "variants": [
+    { "short": "Biến thể ngắn 1", "long": "Biến thể dài 1" },
+    { "short": "Biến thể ngắn 2", "long": "Biến thể dài 2" },
+    { "short": "Biến thể ngắn 3", "long": "Biến thể dài 3" }
+  ],
+  "imagePrompt": "English Image Prompt...",
+  "videoPrompt": "English Video Prompt...",
+  "videoScript": "Kịch bản Video tiếng Việt...",
+  "commentSeedings": [
+    "Bình luận 1: Hỏi về giá/chất lượng",
+    "Bình luận 2: Review đã nhận hàng rất ưng",
+    "Bình luận 3: Mọi người mua ở đây nhé: ${affiliateLink}"
+  ]
 }
-Return ONLY JSON.`;
+Return ONLY JSON. No preamble.`;
 }
 
 /**
